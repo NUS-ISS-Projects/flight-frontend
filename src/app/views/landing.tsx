@@ -5,8 +5,11 @@ import Image from "next/image";
 import { ThemeProvider, Container, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import theme from "../themes/theme";
+import Link from "next/link";
+
 
 import FlightSearchForm from "../components/FlightSearchForm";
+import LoginRedirectButton from "../components/LoginRedirectButton";
 
 const SectionWrapper = styled("div")({
   paddingTop: 100,
@@ -16,6 +19,8 @@ const SectionWrapper = styled("div")({
 // =============================|| LANDING PAGE MAIN ||============================= //
 
 const Landing = () => {
+
+
   const [formData, setFormData] = useState({
     destination: "",
     departureDate: "",
@@ -38,6 +43,7 @@ const Landing = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="lg">
+      <LoginRedirectButton></LoginRedirectButton>
         <Box textAlign="center" my={4}>
           <Image
             src="/skyscoutlogo.png"
