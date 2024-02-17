@@ -4,6 +4,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#6246ea",
+      dark: "#4431a3",
     },
     secondary: {
       main: "##d1d1e9",
@@ -20,7 +21,7 @@ const theme = createTheme({
           color: "#fffffe",
           backgroundColor: "#6246ea",
           "&:hover": {
-            backgroundColor: "##6246ea",
+            backgroundColor: "#4431a3",
           },
         },
       },
