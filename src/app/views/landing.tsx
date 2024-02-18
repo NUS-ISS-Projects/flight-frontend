@@ -1,24 +1,33 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { ThemeProvider, Container, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import theme from "../themes/theme";
 import Link from "next/link";
 
 
+<<<<<<< HEAD
 import FlightSearchForm from "../components/FlightSearchForm";
 import LoginRedirectButton from "../components/LoginRedirectButton";
+=======
+import NavBar from "../components/landingpage/NavBar";
+import FlightSearchForm from "../components/landingpage/FlightSearchForm";
+import HeroSection1 from "../components/landingpage/HeroSection1";
+import HeroSection2 from "../components/landingpage/HeroSection2";
+import CardSection from "../components/landingpage/CardSection";
+import CardSection2 from "../components/landingpage/CardSection2";
+import FooterSection from "../components/landingpage/FooterSection";
+>>>>>>> 7891a5be5a1e4d8bde23106d7e323b522419bfc1
 
 const SectionWrapper = styled("div")({
-  paddingTop: 100,
-  paddingBottom: 100,
+  paddingTop: 50,
+  paddingBottom: 30,
 });
 
 // =============================|| LANDING PAGE MAIN ||============================= //
 
 const Landing = () => {
+<<<<<<< HEAD
 
 
   const [formData, setFormData] = useState({
@@ -52,17 +61,35 @@ const Landing = () => {
             height={180}
             priority
           />
+=======
+  return (
+    <ThemeProvider theme={theme}>
+      {/* Nav Bar*/}
+      <NavBar />
+      {/*Search Component*/}
+      <SectionWrapper>
+        <FlightSearchForm />
+      </SectionWrapper>
+>>>>>>> 7891a5be5a1e4d8bde23106d7e323b522419bfc1
 
-          <Box mt={2}>
-            <Typography variant="h4" component="h1" gutterBottom>
-              Flight Search
-            </Typography>
-          </Box>
+      {/*Hero section 1 */}
+      <HeroSection1 />
 
-          {/*Flight Search Component*/}
-          <FlightSearchForm />
-        </Box>
-      </Container>
+      {/*card section */}
+      <SectionWrapper>
+        <CardSection />
+      </SectionWrapper>
+
+      {/*Hero section 2 */}
+      <HeroSection2 />
+
+      {/*List section */}
+      <SectionWrapper>
+        <CardSection2 />
+      </SectionWrapper>
+
+      {/*Footer section */}
+      <FooterSection />
     </ThemeProvider>
   );
 };
