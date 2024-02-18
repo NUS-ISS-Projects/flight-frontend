@@ -3,6 +3,8 @@
 import { ThemeProvider, Container, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import theme from "../themes/theme";
+import Link from "next/link";
+
 
 import NavBar from "../components/landingpage/NavBar";
 import FlightSearchForm from "../components/landingpage/FlightSearchForm";

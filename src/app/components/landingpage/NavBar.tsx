@@ -58,7 +58,7 @@ const NavBar = ({ ...others }) => {
               <Button
                 color="inherit"
                 component={Link}
-                href=""
+                href="/"
                 sx={{
                   color: "black",
                   backgroundColor: "white",
