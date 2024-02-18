@@ -1,11 +1,11 @@
 "use client";
 
-import NavBar from "../components/landingpage/NavBar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ThemeProvider, Typography, Box, Button, TextField } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import theme from "../themes/theme";
 import Link from "next/link";
+import theme from "../themes/theme";
+import NavBar from "../components/landingpage/NavBar";
 
 const SectionWrapper = styled("div")({
   paddingTop: 50,
@@ -16,41 +16,43 @@ const SectionWrapper = styled("div")({
   minHeight: "calc(100vh - 64px)", // Adjust based on your Navbar height
 });
 
-const LoginForm = styled("form")({
+const RegisterForm = styled("form")({
   display: "flex",
   flexDirection: "column",
   gap: "20px",
 });
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement your login logic here
-    console.log("Logging in with:", username, password);
+    // Implement your registration logic here
+    console.log("Registering with:", username, email, password);
   };
-
-  useEffect(() => {
-    // This code runs only on the client-side
-    // You can place any client-side specific logic here
-  }, []); // Empty dependency array ensures this effect runs only once after component mount
 
   return (
     <ThemeProvider theme={theme}>
-      <NavBar />
+        <NavBar />
       <SectionWrapper>
         <Box>
           <Typography variant="h4" align="center" gutterBottom>
-            Login
+            Register
           </Typography>
-          <LoginForm onSubmit={handleLogin}>
+          <RegisterForm onSubmit={handleRegister}>
             <TextField
               label="Username"
               variant="outlined"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+            />
+            <TextField
+              label="Email"
+              variant="outlined"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               label="Password"
@@ -60,13 +62,13 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button variant="contained" type="submit" color="primary" fullWidth>
-              Login
-            </Button>
-          </LoginForm>
-          <Typography variant="body2" align="center">
-            Do not have an account?{" "}
-            <Link href="/register" passHref>
               Register
+            </Button>
+          </RegisterForm>
+          <Typography variant="body2" align="center">
+            Already have an account?{" "}
+            <Link href="/login" passHref>
+              Login
             </Link>
           </Typography>
         </Box>
@@ -75,4 +77,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
