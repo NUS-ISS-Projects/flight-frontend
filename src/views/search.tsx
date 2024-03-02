@@ -6,6 +6,7 @@ import theme from "../themes/theme";
 
 import NavBar from "../components/landingpage/NavBar";
 import FlightSearchForm from "../components/landingpage/FlightSearchForm";
+import SearchResults from "../components/flightsResults/departingFlights";
 import FooterSection from "../components/landingpage/FooterSection";
 
 const SectionWrapper = styled("div")({
@@ -35,7 +36,9 @@ const searchPage = () => {
       <DividerContainer>
         <Divider />
       </DividerContainer>
-      <SectionWrapper></SectionWrapper>
+      <SectionWrapper>
+        <SearchResults />
+      </SectionWrapper>
       <FooterSection />
     </ThemeProvider>
   );
