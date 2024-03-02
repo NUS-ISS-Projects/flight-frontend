@@ -1,11 +1,10 @@
 import Layout from "@/app/layout";
-import LoginPage from "@/app/views/login";
-
+import LoginPage from "@/views/login";
 
 export default function LoginPageWrapper() {
-    return (
-      <Layout>
-        <LoginPage />
-      </Layout>
-    );
-  }
+  return (
+    <Layout>
+      <LoginPage />
+    </Layout>
+  );
+}

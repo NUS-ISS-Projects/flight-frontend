@@ -1,10 +1,8 @@
 "use client";
 
-import { ThemeProvider, Container, Typography, Box } from "@mui/material";
+import { ThemeProvider, Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import theme from "../themes/theme";
-import Link from "next/link";
-
 
 import NavBar from "../components/landingpage/NavBar";
 import FlightSearchForm from "../components/landingpage/FlightSearchForm";
@@ -18,6 +16,10 @@ const SectionWrapper = styled("div")({
   paddingTop: 50,
   paddingBottom: 30,
 });
+const HeaderContainer = styled(Box)(() => ({
+  maxWidth: "1150px",
+  margin: "auto",
+}));
 
 // =============================|| LANDING PAGE MAIN ||============================= //
 
@@ -28,6 +30,13 @@ const Landing = () => {
       <NavBar />
       {/*Search Component*/}
       <SectionWrapper>
+        <HeaderContainer>
+          <Box mt={5} mb={3}>
+            <Typography style={{ fontWeight: "700", fontSize: "2rem" }}>
+              Millions of cheap flights. One simple search.
+            </Typography>
+          </Box>
+        </HeaderContainer>
         <FlightSearchForm />
       </SectionWrapper>
 

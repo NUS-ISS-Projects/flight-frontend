@@ -2,7 +2,13 @@
 
 import NavBar from "../components/landingpage/NavBar";
 import { useState, useEffect } from "react";
-import { ThemeProvider, Typography, Box, Button, TextField } from "@mui/material";
+import {
+  ThemeProvider,
+  Typography,
+  Box,
+  Button,
+  TextField,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import theme from "../themes/theme";
 import Link from "next/link";

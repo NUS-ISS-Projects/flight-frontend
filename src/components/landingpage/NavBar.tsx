@@ -71,6 +71,21 @@ const NavBar = ({ ...others }) => {
                 Home
               </Button>
               <Button
+                color="inherit"
+                component={Link}
+                href="/register"
+                sx={{
+                  color: "black",
+                  backgroundColor: "white",
+                  "&:hover": {
+                    backgroundColor: "#DCDCDC",
+                  },
+                  fontWeight: "bold",
+                }}
+              >
+                Sign up
+              </Button>
+              <Button
                 component={Link}
                 href="/login"
                 disableElevation

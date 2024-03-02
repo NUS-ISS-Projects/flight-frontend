@@ -1,6 +1,5 @@
 import Layout from "./layout";
-import Landing from "./views/landing";
-import LoginPage from "./views/login";
+import Landing from "../views/landing";
 
 // ==============================|| HOME PAGE ||============================== //
 

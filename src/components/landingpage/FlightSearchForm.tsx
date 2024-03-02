@@ -43,11 +43,6 @@ const FlightSearchForm = () => {
 
   return (
     <Container>
-      <Box mt={5} mb={3}>
-        <Typography style={{ fontWeight: "700", fontSize: "2rem" }}>
-          Millions of cheap flights. One simple search.
-        </Typography>
-      </Box>
       <Box
         component="form"
         onSubmit={handleSubmit}

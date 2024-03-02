@@ -1,6 +1,6 @@
 // register/page.tsx
 import Layout from "@/app/layout";
-import RegisterPage from "@/app/views/register";
+import RegisterPage from "@/views/register";
 
 export default function RegisterPageWrapper() {
   return (

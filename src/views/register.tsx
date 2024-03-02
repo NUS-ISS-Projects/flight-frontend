@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { ThemeProvider, Typography, Box, Button, TextField } from "@mui/material";
+import {
+  ThemeProvider,
+  Typography,
+  Box,
+  Button,
+  TextField,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Link from "next/link";
 import theme from "../themes/theme";
@@ -35,7 +41,7 @@ const RegisterPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
-        <NavBar />
+      <NavBar />
       <SectionWrapper>
         <Box>
           <Typography variant="h4" align="center" gutterBottom>

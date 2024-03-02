@@ -9,7 +9,6 @@ import {
   Container,
 } from "@mui/material";
 
-import { motion } from "framer-motion";
 import FadeInWhenVisible from "./Animation";
 
 const HeroSection2 = () => {
