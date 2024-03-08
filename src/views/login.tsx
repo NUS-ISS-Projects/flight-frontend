@@ -1,83 +1,127 @@
 "use client";
 
 import NavBar from "../components/landingpage/NavBar";
-import { useState, useEffect } from "react";
-import {
-  ThemeProvider,
-  Typography,
-  Box,
-  Button,
-  TextField,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
-import theme from "../themes/theme";
+import Image from "next/image";
+import { Typography, useMediaQuery, Grid, Stack, Divider } from "@mui/material";
+import { styled, useTheme } from "@mui/material/styles";
 import Link from "next/link";
+import AuthLogin from "@/components/authentication/AuthLogin";
+import AuthCardWrapper from "@/components/authentication/AuthCardWrapper";
+import useAuth from "@/hooks/useAuth";
 
-const SectionWrapper = styled("div")({
-  paddingTop: 50,
-  paddingBottom: 30,
+const SectionWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  minHeight: "calc(100vh - 64px)", // Adjust based on your Navbar height
-});
-
-const LoginForm = styled("form")({
-  display: "flex",
-  flexDirection: "column",
-  gap: "20px",
-});
+  minHeight: "100vh",
+  backgroundColor: theme.palette.grey[100],
+}));
 
 const LoginPage = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Implement your login logic here
-    console.log("Logging in with:", username, password);
-  };
-
-  useEffect(() => {
-    // This code runs only on the client-side
-    // You can place any client-side specific logic here
-  }, []); // Empty dependency array ensures this effect runs only once after component mount
+  const theme = useTheme();
+  //const { isLoggedIn } = useAuth();
+  const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <ThemeProvider theme={theme}>
-      <NavBar />
-      <SectionWrapper>
-        <Box>
-          <Typography variant="h4" align="center" gutterBottom>
-            Login
-          </Typography>
-          <LoginForm onSubmit={handleLogin}>
-            <TextField
-              label="Username"
-              variant="outlined"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <TextField
-              label="Password"
-              variant="outlined"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <Button variant="contained" type="submit" color="primary" fullWidth>
-              Login
-            </Button>
-          </LoginForm>
-          <Typography variant="body2" align="center">
-            Do not have an account?{" "}
-            <Link href="/register" passHref>
-              Register
-            </Link>
-          </Typography>
-        </Box>
-      </SectionWrapper>
-    </ThemeProvider>
+    <SectionWrapper>
+      <Grid
+        container
+        direction="column"
+        justifyContent="flex-end"
+        sx={{ minHeight: "100vh" }}
+      >
+        <Grid item xs={12}>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            sx={{ minHeight: "calc(100vh - 68px)" }}
+          >
+            <Grid item sx={{ m: { xs: 1, sm: 3 }, mb: 0 }}>
+              <AuthCardWrapper>
+                <Grid
+                  container
+                  spacing={2}
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Grid item sx={{ mb: 0.5 }}>
+                    <Link href="/" aria-label="theme-logo">
+                      <Image
+                        src="/skyscoutlogo-menu.svg"
+                        alt="Logo"
+                        style={{ height: "50px" }}
+                        width={1080}
+                        height={1080}
+                      />
+                    </Link>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Grid
+                      container
+                      direction={matchDownSM ? "column-reverse" : "row"}
+                      alignItems="center"
+                      justifyContent="center"
+                    >
+                      <Grid item>
+                        <Stack
+                          alignItems="center"
+                          justifyContent="center"
+                          spacing={1}
+                        >
+                          <Typography
+                            color="#6246ea"
+                            gutterBottom
+                            variant={matchDownSM ? "h3" : "h5"}
+                            sx={{ fontWeight: "bold" }}
+                          >
+                            Hi, Welcome Back
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            fontSize="16px"
+                            textAlign={matchDownSM ? "center" : "inherit"}
+                          >
+                            Enter your credentials to continue
+                          </Typography>
+                        </Stack>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <AuthLogin loginProp={2} />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Divider />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Grid
+                      item
+                      container
+                      direction="column"
+                      alignItems="center"
+                      xs={12}
+                    >
+                      <Typography
+                        component={Link}
+                        href={"/"}
+                        variant="subtitle1"
+                        sx={{ textDecoration: "none" }}
+                      >
+                        Don&apos;t have an account?
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </AuthCardWrapper>
+            </Grid>
+          </Grid>
+        </Grid>
+        {/* <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
+          <Footer />
+        </Grid> */}
+      </Grid>
+    </SectionWrapper>
   );
 };
 
