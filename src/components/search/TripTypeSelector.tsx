@@ -14,7 +14,6 @@ import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined
 import CheckIcon from "@mui/icons-material/Check";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import MultipleStopOutlinedIcon from "@mui/icons-material/MultipleStopOutlined";
 
 const TripTypeSelector = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -39,8 +38,6 @@ const TripTypeSelector = () => {
     switch (tripType) {
       case "One Way":
         return <ArrowRightAltOutlinedIcon />;
-      case "Multi-City":
-        return <MultipleStopOutlinedIcon />;
       case "Round Trip":
       default:
         return <SyncAltIcon />;
@@ -77,7 +74,7 @@ const TripTypeSelector = () => {
         </IconButton>
       </Tooltip>
       <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-        {["Round Trip", "One Way", "Multi-City"].map((tripType) => (
+        {["Round Trip", "One Way"].map((tripType) => (
           <MenuItem
             key={tripType}
             onClick={() => handleSelect(tripType)}

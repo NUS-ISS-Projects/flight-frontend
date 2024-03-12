@@ -36,7 +36,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
   const theme = useTheme();
   const router = useRouter();
-  //   const { login } = useAuth();
+  const { login } = useAuth();
   const scriptedRef = useScriptRef();
 
   const [checked, setChecked] = React.useState(true);

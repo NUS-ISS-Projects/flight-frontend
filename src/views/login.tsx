@@ -1,4 +1,5 @@
 "use client";
+import { ReactElement } from "react";
 
 import NavBar from "../components/landingpage/NavBar";
 import Image from "next/image";
@@ -8,6 +9,8 @@ import Link from "next/link";
 import AuthLogin from "@/components/authentication/AuthLogin";
 import AuthCardWrapper from "@/components/authentication/AuthCardWrapper";
 import useAuth from "@/hooks/useAuth";
+import LAYOUT from "@/constants";
+import Layout from "@/layout";
 
 const SectionWrapper = styled("div")(({ theme }) => ({
   display: "flex",
@@ -19,7 +22,6 @@ const SectionWrapper = styled("div")(({ theme }) => ({
 
 const LoginPage = () => {
   const theme = useTheme();
-  //const { isLoggedIn } = useAuth();
   const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
@@ -89,7 +91,7 @@ const LoginPage = () => {
                     </Grid>
                   </Grid>
                   <Grid item xs={12}>
-                    <AuthLogin loginProp={2} />
+                    <AuthLogin />
                   </Grid>
                   <Grid item xs={12}>
                     <Divider />
@@ -104,7 +106,7 @@ const LoginPage = () => {
                     >
                       <Typography
                         component={Link}
-                        href={"/"}
+                        href={"/register"}
                         variant="subtitle1"
                         sx={{ textDecoration: "none" }}
                       >
@@ -123,6 +125,9 @@ const LoginPage = () => {
       </Grid>
     </SectionWrapper>
   );
+};
+LoginPage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout variant={LAYOUT.noauth}>{page}</Layout>;
 };
 
 export default LoginPage;

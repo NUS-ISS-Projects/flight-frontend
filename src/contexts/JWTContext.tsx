@@ -1,9 +1,9 @@
 "use client";
 
-import React, { createContext, useEffect, useReducer } from "react";
+import React, { createContext, useEffect, useReducer, ReactNode } from "react";
 
 // third-party
-import jwtDecode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 
 // reducer - state management
 import { LOGIN, LOGOUT } from "@/store/actions";
@@ -23,16 +23,16 @@ const initialState: InitialLoginContextProps = {
   user: null,
 };
 
-// const verifyToken: (st: string) => boolean = (serviceToken) => {
-//   if (!serviceToken) {
-//     return false;
-//   }
-//   const decoded: KeyedObject = jwtDecode(serviceToken);
-//   /**
-//    * Property 'exp' does not exist on type '<T = unknown>(token: string, options?: JwtDecodeOptions | undefined) => T'.
-//    */
-//   return decoded.exp > Date.now() / 1000;
-// };
+const verifyToken: (st: string) => boolean = (serviceToken) => {
+  if (!serviceToken) {
+    return false;
+  }
+  const decoded: KeyedObject = jwtDecode(serviceToken);
+  /**
+   * Property 'exp' does not exist on type '<T = unknown>(token: string, options?: JwtDecodeOptions | undefined) => T'.
+   */
+  return decoded.exp > Date.now() / 1000;
+};
 
 const setSession = (serviceToken?: string | null) => {
   if (serviceToken) {
@@ -47,7 +47,7 @@ const setSession = (serviceToken?: string | null) => {
 // ==============================|| JWT CONTEXT & PROVIDER ||============================== //
 const JWTContext = createContext<JWTContextType | null>(null);
 
-export const JWTProvider = ({ children }: { children: React.ReactElement }) => {
+export const JWTProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(accountReducer, initialState);
 
   useEffect(() => {

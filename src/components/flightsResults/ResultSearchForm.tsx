@@ -43,11 +43,6 @@ const FlightSearchForm = () => {
 
   return (
     <Container>
-      <Box mt={5} mb={3}>
-        <Typography style={{ fontWeight: "700", fontSize: "2rem" }}>
-          Millions of cheap flights. One simple search.
-        </Typography>
-      </Box>
       <Box
         component="form"
         onSubmit={handleSubmit}
@@ -56,7 +51,6 @@ const FlightSearchForm = () => {
         sx={{
           p: 3,
           pb: 0.4,
-          boxShadow: 3,
           borderRadius: 2,
           my: 2,
           position: "relative",
@@ -134,30 +128,6 @@ const FlightSearchForm = () => {
             />
           </Grid>
         </Grid>
-
-        {/* Submit Button */}
-        <Box
-          display="flex"
-          justifyContent="center"
-          mt={0.5}
-          sx={{
-            transform: "translateY(50%)",
-            "& > *": {
-              borderRadius: "20px",
-            },
-          }}
-        >
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            sx={{ px: 5, zIndex: 1 }}
-            startIcon={<SearchIcon />}
-            onClick={handleSubmit}
-          >
-            Explore
-          </Button>
-        </Box>
       </Box>
     </Container>
   );
