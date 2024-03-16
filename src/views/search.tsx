@@ -5,19 +5,14 @@ import { styled } from "@mui/material/styles";
 import theme from "../themes/theme";
 
 import NavBar from "../components/landingpage/NavBar";
-import FlightSearchForm from "../components/landingpage/FlightSearchForm";
+import FlightSearchForm from "../components/flightsResults/ResultSearchForm";
 import SearchResults from "../components/flightsResults/departingFlights";
 import FooterSection from "../components/landingpage/FooterSection";
 
 const SectionWrapper = styled("div")({
-  paddingTop: 100,
+  paddingTop: 50,
   paddingBottom: 30,
 });
-
-const FormContainer = styled(Box)(() => ({
-  maxWidth: "1200px",
-  margin: "auto",
-}));
 
 const DividerContainer = styled(Box)(() => ({
   maxWidth: "1150px",
@@ -29,9 +24,7 @@ const searchPage = () => {
     <ThemeProvider theme={theme}>
       <NavBar />
       <SectionWrapper>
-        <FormContainer>
-          <FlightSearchForm />
-        </FormContainer>
+        <FlightSearchForm />
       </SectionWrapper>
       <DividerContainer>
         <Divider />

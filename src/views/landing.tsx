@@ -16,10 +16,6 @@ const SectionWrapper = styled("div")({
   paddingTop: 50,
   paddingBottom: 30,
 });
-const HeaderContainer = styled(Box)(() => ({
-  maxWidth: "1150px",
-  margin: "auto",
-}));
 
 // =============================|| LANDING PAGE MAIN ||============================= //
 
@@ -30,13 +26,6 @@ const Landing = () => {
       <NavBar />
       {/*Search Component*/}
       <SectionWrapper>
-        <HeaderContainer>
-          <Box mt={5} mb={3}>
-            <Typography style={{ fontWeight: "700", fontSize: "2rem" }}>
-              Millions of cheap flights. One simple search.
-            </Typography>
-          </Box>
-        </HeaderContainer>
         <FlightSearchForm />
       </SectionWrapper>
 

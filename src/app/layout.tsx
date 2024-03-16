@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import { Roboto } from "next/font/google";
 import "../styles/globals.css";
 
+//Project Imports
+import ProviderWrapper from "@/store/ProviderWrapper";
+
 const inter = Inter({ subsets: ["latin"] });
 
 const roboto = Roboto({
@@ -27,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <ProviderWrapper>
+        <body className={roboto.className}>{children}</body>
+      </ProviderWrapper>
     </html>
   );
 }
