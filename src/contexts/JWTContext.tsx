@@ -124,7 +124,8 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
         {
           email,
           password,
-          name: `${firstName} ${lastName}`,
+          username,
+          name,
         },
       ];
     }
