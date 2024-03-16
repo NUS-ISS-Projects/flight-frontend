@@ -87,7 +87,7 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
       password,
     });
     console.log(response);
-    const { serviceToken, user } = response.data;
+    const { serviceToken, user } = response.data;   
     setSession(serviceToken);
     dispatch({
       type: LOGIN,
@@ -96,21 +96,23 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
         user,
       },
     });
+    
   };
 
   const register = async (
+    name: string,
+    username: string,
     email: string,
-    password: string,
-    firstName: string,
-    lastName: string
+    password: string
   ) => {
-    const response = await axios.post("/api/register", {
+    const response = await axios.post("http://localhost:8888/api/signup", {
+      name,
+      username,
       email,
       password,
-      firstName,
-      lastName,
     });
     let users = response.data;
+    console.log(response)
 
     if (
       window.localStorage.getItem("users") !== undefined &&
@@ -122,11 +124,11 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
         {
           email,
           password,
-          name: `${firstName} ${lastName}`,
+          username,
+          name,
         },
       ];
     }
-
     window.localStorage.setItem("users", JSON.stringify(users));
   };
 

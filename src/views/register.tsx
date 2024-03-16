@@ -1,116 +1,132 @@
 "use client";
+import { ReactElement } from "react";
 
-import { useState } from "react";
-import {
-  ThemeProvider,
-  Typography,
-  Box,
-  Button,
-  TextField,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
+import Image from "next/image";
+import React from 'react';
+import { Typography, useMediaQuery, Grid, Stack, Divider } from "@mui/material";
+import { styled, useTheme } from "@mui/material/styles";
 import Link from "next/link";
-import theme from "../themes/theme";
-import NavBar from "../components/landingpage/NavBar";
+import LAYOUT from "@/constants";
+import Layout from "@/layout";
+import RegisterCardWrapper from "@/components/registration/RegisterCardWrapper";
+import RegistrationForm from "@/components/registration/RegistrationForm";
 
-const SectionWrapper = styled("div")({
-  paddingTop: 50,
-  paddingBottom: 30,
+// Define the styled SectionWrapper
+const SectionWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  minHeight: "calc(100vh - 64px)", // Adjust based on your Navbar height
-});
+  minHeight: "100vh",
+  backgroundColor: theme.palette.grey[100],
+}));
 
-const RegisterForm = styled("form")({
-  display: "flex",
-  flexDirection: "column",
-  gap: "20px",
-});
 
 const RegisterPage = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-
-  const handleRegister = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Implement your registration logic here
-    console.log("Registering with:", name,username, email, password);
-    try {
-      const response =  fetch("http://localhost:8888/api/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: name,
-          username: username,
-          email: email,
-          password: password,
-        }),
-      });
-      if ((await response).ok) {
-        console.log("Registration successful");
-        
-      } else {
-        console.error("Registration failed");
-        
-      }
-    } catch (error) {
-      console.error("Error registering:", error);
-    }
-  };
+  const theme = useTheme();
+  const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <ThemeProvider theme={theme}>
-      <NavBar />
-      <SectionWrapper>
-        <Box>
-          <Typography variant="h4" align="center" gutterBottom>
-            Register
-          </Typography>
-          <RegisterForm onSubmit={handleRegister}>
-            <TextField
-              label="Name"
-              variant="outlined"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <TextField
-              label="Username"
-              variant="outlined"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <TextField
-              label="Email"
-              variant="outlined"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <TextField
-              label="Password"
-              variant="outlined"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <Button variant="contained" type="submit" color="primary" fullWidth>
-              Register
-            </Button>
-          </RegisterForm>
-          <Typography variant="body2" align="center">
-            Already have an account?{" "}
-            <Link href="/login" passHref>
-              Login
-            </Link>
-          </Typography>
-        </Box>
-      </SectionWrapper>
-    </ThemeProvider>
+    <SectionWrapper>
+      <Grid
+        container
+        direction="column"
+        justifyContent="flex-end"
+        sx={{ minHeight: "100vh" }}
+      >
+        <Grid item xs={12}>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            sx={{ minHeight: "calc(100vh - 68px)" }}
+          >
+            <Grid item sx={{ m: { xs: 1, sm: 3 }, mb: 0 }}>
+              <RegisterCardWrapper>
+                <Grid
+                  container
+                  spacing={2}
+                  alignItems="center"
+                  justifyContent="center">
+                  <Grid item sx={{ mb: 0.5 }}>
+                    <Link href="/" aria-label="theme-logo">
+                      <Image
+                        src="/skyscoutlogo-menu.svg"
+                        alt="Logo"
+                        style={{ height: "50px" }}
+                        width={1080}
+                        height={1080}
+                      />
+                    </Link>
+                  </Grid>    
+                  <Grid item xs={12}>
+                  
+                    <Grid
+                      container
+                      direction={matchDownSM ? "column-reverse" : "row"}
+                      alignItems="center"
+                      justifyContent="center"
+                    >
+                      <Grid item>
+                        <Stack
+                          alignItems="center"
+                          justifyContent="center"
+                          spacing={1}
+                        >
+                          <Typography
+                            color="#6246ea"
+                            gutterBottom
+                            variant={matchDownSM ? "h3" : "h5"}
+                            sx={{ fontWeight: "bold" }}
+                          >
+                            Hi, Welcome please register to continue
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            fontSize="16px"
+                            textAlign={matchDownSM ? "center" : "inherit"}
+                          >
+                            Enter your credentials to continue
+                          </Typography>
+                        </Stack>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <RegistrationForm />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Divider />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Grid
+                      item
+                      container
+                      direction="column"
+                      alignItems="center"
+                      xs={12}
+                    >
+                      <Typography
+                        component={Link}
+                        href={"/login"}
+                        variant="subtitle1"
+                        sx={{ textDecoration: "none" }}
+                      >
+                        Have a account?
+                      </Typography>
+                    </Grid>
+                  </Grid>
+               
+                </Grid>
+              </RegisterCardWrapper>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </SectionWrapper>
   );
+};
+RegisterPage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout variant={LAYOUT.noauth}>{page}</Layout>;
 };
 
 export default RegisterPage;

@@ -22,15 +22,11 @@ const SectionWrapper = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.grey[100],
 }));
 
-// Define the LoginPage component
+
 const LoginPage = () => {
   const theme = useTheme();
   const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
 
-  // Define the login function
-  const login = async (email: string, password: string) => {
-      console.log("Login credentials:", email, password);
-  };  
   return (
     <SectionWrapper>
       <Grid
