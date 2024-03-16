@@ -32,11 +32,35 @@ const RegisterPage = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     // Implement your registration logic here
-    console.log("Registering with:", username, email, password);
+    console.log("Registering with:", name,username, email, password);
+    try {
+      const response =  fetch("http://localhost:8888/api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          username: username,
+          email: email,
+          password: password,
+        }),
+      });
+      if ((await response).ok) {
+        console.log("Registration successful");
+        
+      } else {
+        console.error("Registration failed");
+        
+      }
+    } catch (error) {
+      console.error("Error registering:", error);
+    }
   };
 
   return (
@@ -48,6 +72,12 @@ const RegisterPage = () => {
             Register
           </Typography>
           <RegisterForm onSubmit={handleRegister}>
+            <TextField
+              label="Name"
+              variant="outlined"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
             <TextField
               label="Username"
               variant="outlined"

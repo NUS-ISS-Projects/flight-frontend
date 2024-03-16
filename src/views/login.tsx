@@ -3,6 +3,7 @@ import { ReactElement } from "react";
 
 import NavBar from "../components/landingpage/NavBar";
 import Image from "next/image";
+import React from 'react';
 import { Typography, useMediaQuery, Grid, Stack, Divider } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 import Link from "next/link";
@@ -12,6 +13,7 @@ import useAuth from "@/hooks/useAuth";
 import LAYOUT from "@/constants";
 import Layout from "@/layout";
 
+// Define the styled SectionWrapper
 const SectionWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
@@ -20,10 +22,15 @@ const SectionWrapper = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.grey[100],
 }));
 
+// Define the LoginPage component
 const LoginPage = () => {
   const theme = useTheme();
   const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
 
+  // Define the login function
+  const login = async (email: string, password: string) => {
+      console.log("Login credentials:", email, password);
+  };  
   return (
     <SectionWrapper>
       <Grid
@@ -45,8 +52,7 @@ const LoginPage = () => {
                   container
                   spacing={2}
                   alignItems="center"
-                  justifyContent="center"
-                >
+                  justifyContent="center">
                   <Grid item sx={{ mb: 0.5 }}>
                     <Link href="/" aria-label="theme-logo">
                       <Image
@@ -57,8 +63,9 @@ const LoginPage = () => {
                         height={1080}
                       />
                     </Link>
-                  </Grid>
+                  </Grid>    
                   <Grid item xs={12}>
+                  
                     <Grid
                       container
                       direction={matchDownSM ? "column-reverse" : "row"}
@@ -114,14 +121,12 @@ const LoginPage = () => {
                       </Typography>
                     </Grid>
                   </Grid>
+               
                 </Grid>
               </AuthCardWrapper>
             </Grid>
           </Grid>
         </Grid>
-        {/* <Grid item xs={12} sx={{ m: 3, mt: 1 }}>
-          <Footer />
-        </Grid> */}
       </Grid>
     </SectionWrapper>
   );

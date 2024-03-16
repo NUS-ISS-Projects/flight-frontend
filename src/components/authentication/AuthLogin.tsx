@@ -30,13 +30,15 @@ import useScriptRef from "@/hooks/useScriptRef";
 // assets
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import login from "@/views/login";
 
 // ===============================|| JWT LOGIN ||=============================== //
 
 const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
   const theme = useTheme();
   const router = useRouter();
-  const { login } = useAuth();
+  //const { login } = useAuth();
+
   const scriptedRef = useScriptRef();
 
   const [checked, setChecked] = React.useState(true);
@@ -50,30 +52,47 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
     event.preventDefault()!;
   };
 
+
+  const login = async (username: any, password: any) => {
+    console.log("Login credentials:", username, password);
+    const response = await fetch('http://localhost:8888/api/login', {
+      method: 'POST',
+      body: JSON.stringify({ username, password }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    if (!response.ok) {
+      throw new Error('Failed to login'); // Handle error response
+    }
+    const data = await response.text();
+    console.log("Response from server:", data);
+
+  };
+
+
   return (
     <Formik
       initialValues={{
-        email: "",
+        username: "",
         password: "",
         submit: null,
       }}
       validationSchema={Yup.object().shape({
-        email: Yup.string()
-          .email("Must be a valid email")
-          .max(255)
-          .required("Email is required"),
+        username: Yup.string().max(255).required("Username is required"),
+      
         password: Yup.string().max(255).required("Password is required"),
       })}
-      onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
+      onSubmit={async (values: { username: any; password: any; }, { setErrors, setStatus, setSubmitting }: any) => {
         try {
-          await login(values.email, values.password);
+          login(values.username, values.password);
           if (scriptedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
           }
         } catch (err: any) {
           console.error(err);
-          if (scriptedRef.current) {
+          if (scriptedRef.current) {631
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
@@ -93,7 +112,7 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
         <form noValidate onSubmit={handleSubmit} {...others}>
           <FormControl
             fullWidth
-            error={Boolean(touched.email && errors.email)}
+            error={Boolean(touched.username && errors.username)}
             sx={{ mb: 2 }}
           >
             <InputLabel htmlFor="outlined-adornment-email-login">
@@ -101,20 +120,20 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
             </InputLabel>
             <OutlinedInput
               id="outlined-adornment-email-login"
-              type="email"
-              value={values.email}
-              name="email"
+              type="username"
+              value={values.username}
+              name="username"
               onBlur={handleBlur}
               onChange={handleChange}
               label="Email Address / Username"
               inputProps={{}}
             />
-            {touched.email && errors.email && (
+            {touched.username && errors.username && (
               <FormHelperText
                 error
                 id="standard-weight-helper-text-email-login"
               >
-                {errors.email}
+                {errors.username}
               </FormHelperText>
             )}
           </FormControl>
