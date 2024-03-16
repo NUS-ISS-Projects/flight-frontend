@@ -32,12 +32,12 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 
-// ===============================|| JWT LOGIN ||=============================== //
+// ===============================|| JWT REGISTER ||=============================== //
 
-const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
+const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => {
   const theme = useTheme();
   const router = useRouter();
-  const { login } = useAuth();
+  const { register } = useAuth();
 
   const scriptedRef = useScriptRef();
 
@@ -56,17 +56,26 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
     <Formik
       initialValues={{
         username: "",
+        email: "",
+        name: "",
         password: "",
         submit: null,
       }}
       validationSchema={Yup.object().shape({
         username: Yup.string().max(255).required("Username is required"),
-      
+        name: Yup.string().max(255).required("Name is required"),
+        email: Yup.string()
+          .email("Must be a valid email")
+          .max(255)
+          .required("Email is required"),
         password: Yup.string().max(255).required("Password is required"),
       })}
-      onSubmit={async (values: { username: any; password: any; }, { setErrors, setStatus, setSubmitting }: any) => {
+      onSubmit={async (values: {
+          name: string;
+          email: string; username: any; password: any; 
+}, { setErrors, setStatus, setSubmitting }: any) => {
         try {
-          login(values.username, values.password);
+          register(values.name,values.email,values.username, values.password);
           if (scriptedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
@@ -91,13 +100,71 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
         values,
       }) => (
         <form noValidate onSubmit={handleSubmit} {...others}>
+            <FormControl
+            fullWidth
+            error={Boolean(touched.email && errors.email)}
+            sx={{ mb: 2 }}
+          >
+            <InputLabel htmlFor="outlined-adornment-email-login">
+              Email
+            </InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-email-login"
+              type="email"
+              value={values.email}
+              name="email"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              label="Email Address "
+              inputProps={{}}
+            />
+            {touched.email && errors.email && (
+              <FormHelperText
+                error
+                id="standard-weight-helper-text-email-login"
+              >
+                {errors.email}
+              </FormHelperText>
+            )}
+          </FormControl>
+
+
+          <FormControl
+            fullWidth
+            error={Boolean(touched.name && errors.name)}
+            sx={{ mb: 2 }}
+          >
+            <InputLabel htmlFor="outlined-adornment-email-login">
+              Name
+            </InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-email-login"
+              type="name"
+              value={values.name}
+              name="name"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              label="Name"
+              inputProps={{}}
+            />
+            {touched.name && errors.name && (
+              <FormHelperText
+                error
+                id="standard-weight-helper-text-email-login"
+              >
+                {errors.name}
+              </FormHelperText>
+            )}
+          </FormControl>
+                
+
           <FormControl
             fullWidth
             error={Boolean(touched.username && errors.username)}
             sx={{ mb: 2 }}
           >
             <InputLabel htmlFor="outlined-adornment-email-login">
-              Email Address / Username
+              Username
             </InputLabel>
             <OutlinedInput
               id="outlined-adornment-email-login"
@@ -106,7 +173,7 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
               name="username"
               onBlur={handleBlur}
               onChange={handleChange}
-              label="Email Address / Username"
+              label="Username"
               inputProps={{}}
             />
             {touched.username && errors.username && (
@@ -118,7 +185,7 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
               </FormHelperText>
             )}
           </FormControl>
-
+                
           <FormControl
             fullWidth
             error={Boolean(touched.password && errors.password)}
@@ -219,4 +286,4 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
   );
 };
 
-export default JWTLogin;
+export default JWTRegister;
