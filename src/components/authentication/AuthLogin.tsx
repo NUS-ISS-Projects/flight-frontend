@@ -30,14 +30,14 @@ import useScriptRef from "@/hooks/useScriptRef";
 // assets
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import login from "@/views/login";
+
 
 // ===============================|| JWT LOGIN ||=============================== //
 
 const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
   const theme = useTheme();
   const router = useRouter();
-  //const { login } = useAuth();
+  const { login } = useAuth();
 
   const scriptedRef = useScriptRef();
 
@@ -52,23 +52,6 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
     event.preventDefault()!;
   };
 
-
-  const login = async (username: any, password: any) => {
-    console.log("Login credentials:", username, password);
-    const response = await fetch('http://localhost:8888/api/login', {
-      method: 'POST',
-      body: JSON.stringify({ username, password }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    if (!response.ok) {
-      throw new Error('Failed to login'); // Handle error response
-    }
-    const data = await response.text();
-    console.log("Response from server:", data);
-
-  };
 
 
   return (
