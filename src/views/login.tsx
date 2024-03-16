@@ -98,7 +98,7 @@ const LoginPage = () => {
                     </Grid>
                   </Grid>
                   <Grid item xs={12}>
-                      <AuthLogin/> {/* Pass login function to AuthLogin */}
+                    <AuthLogin />
                   </Grid>
                   <Grid item xs={12}>
                     <Divider />
