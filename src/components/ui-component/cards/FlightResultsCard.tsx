@@ -10,8 +10,12 @@ import {
   CardActions,
   Divider,
 } from "@mui/material";
+import { useRouter } from "next/navigation";
+
+//Icons Import
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import AirlineSeatLegroomExtraIcon from "@mui/icons-material/AirlineSeatLegroomExtra";
 import UsbIcon from "@mui/icons-material/Usb";
 import WifiIcon from "@mui/icons-material/Wifi";
@@ -42,6 +46,7 @@ interface FlightData {
 
 interface FlightCardProps {
   data: FlightData;
+  isReturnView?: boolean;
 }
 
 const features = [
@@ -51,11 +56,20 @@ const features = [
   { text: "Stream media to your device", Icon: CastIcon },
 ];
 
-export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
+export const FlightCard: React.FC<FlightCardProps> = ({
+  data,
+  isReturnView,
+}) => {
   const [expanded, setExpanded] = useState(false);
+  const [favorited, setFavorited] = useState(false);
+  const router = useRouter();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+  };
+
+  const toggleFavorite = () => {
+    setFavorited(!favorited);
   };
 
   return (
@@ -119,9 +133,10 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
           </Box>
         </CardContent>
         <CardActions disableSpacing>
-          {expanded && (
+          {expanded && data.trip === "round trip" && isReturnView && (
             <Button
               variant="contained"
+              onClick={() => router.push("/search-return")}
               sx={{
                 marginRight: 2,
                 backgroundColor: "white",
@@ -152,8 +167,12 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
               {data.trip}
             </Typography>
           </Box>
-          <IconButton aria-label="add to favorites">
-            <FavoriteBorderIcon />
+          <IconButton aria-label="add to favorites" onClick={toggleFavorite}>
+            {favorited ? (
+              <FavoriteIcon color="error" />
+            ) : (
+              <FavoriteBorderIcon />
+            )}
           </IconButton>
           <IconButton
             onClick={handleExpandClick}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import type { NextPage } from "next";
+import { styled, keyframes } from "@mui/system";
 import {
   Container,
   Box,
@@ -12,11 +13,37 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
-import CheckIcon from "@mui/icons-material/Check";
+import { useRouter } from "next/navigation";
+
 import SwapVertIcon from "@mui/icons-material/SwapVert";
+import CheckIcon from "@mui/icons-material/Check";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { FlightCard } from "../ui-component/cards/FlightResultsCard";
 
-//assets
+//styling
+const FlightLink = styled("span")(({ theme }) => ({
+  color: theme.palette.primary.main,
+  fontWeight: "bold",
+  textDecoration: "none",
+  cursor: "pointer",
+  position: "relative",
+  display: "inline-block",
+  "&:hover::after": {
+    content: '"Change"',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.background.paper,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+}));
+
+//Mock Data
 
 export const mockFlightsData = [
   {
@@ -146,6 +173,8 @@ const DepartingFlights: NextPage = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [viewMore, setViewMore] = useState(false);
   const open = Boolean(anchorEl);
+  const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
 
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
@@ -167,10 +196,26 @@ const DepartingFlights: NextPage = () => {
   return (
     <Container sx={{ mt: -7 }}>
       <Box sx={{ my: 4 }}>
-        <Grid container alignItems="center">
+        <Grid container alignItems="center" wrap="nowrap">
+          <FlightLink
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onClick={() => router.push("/search-depart")}
+          >
+            {isHovered ? "Change" : "SIN-NRT"}
+          </FlightLink>
+          <ArrowForwardIosIcon sx={{ fontSize: "1rem", mx: 0.5 }} />
+          <Typography
+            variant="subtitle2"
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            Choose return to Singapore
+          </Typography>
+        </Grid>
+        <Grid container alignItems="center" sx={{ mt: 2 }}>
           <Grid item xs={8}>
             <Typography variant="h6" gutterBottom>
-              Departing flights
+              Return flights
             </Typography>
             <Typography
               variant="caption"
@@ -229,7 +274,7 @@ const DepartingFlights: NextPage = () => {
         </Grid>
       </Box>
       {mockFlightsData.slice(0, viewMore ? undefined : 2).map((flight) => (
-        <FlightCard key={flight.id} data={flight} isReturnView={true} />
+        <FlightCard key={flight.id} data={flight} isReturnView={false} />
       ))}
       {!viewMore && mockFlightsData.length > 2 && (
         <Box
