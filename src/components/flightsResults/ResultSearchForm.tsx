@@ -40,6 +40,12 @@ const FlightSearchForm = () => {
     console.log("Form data submitted:", formData);
     // TODO: Send formData to an API endpoint
   };
+  const [selectedOriginCountry, setSelectedOriginCountry] = useState("");
+  const [selectedReturnCountry, setSelectedReturnCountry] = useState("");
+  const [selectedTripType, setSelectedTripType] = useState("Round Trip");
+  const [totalAdults, setTotalAdults] = useState(1);
+  const [totalChildren, setTotalChildren] = useState(0);
+  const [selectedCabinClass, setSelectedCabinClass] = useState("Economy");
 
   return (
     <Container>
@@ -59,13 +65,24 @@ const FlightSearchForm = () => {
       >
         <Grid container spacing={1} alignItems="center">
           <Grid item style={selectorStyle}>
-            <TripTypeSelector />
+            <TripTypeSelector
+              selectedTripType={selectedTripType}
+              setSelectedTripType={setSelectedTripType}
+            />
           </Grid>
           <Grid item>
-            <TravellerSelector />
+            <TravellerSelector
+              totalAdults={totalAdults}
+              setTotalAdults={setTotalAdults}
+              totalChildren={totalChildren}
+              setTotalChildren={setTotalChildren}
+            />
           </Grid>
           <Grid item>
-            <CabinClassSelector />
+            <CabinClassSelector
+              selectedCabinClass={selectedCabinClass}
+              setSelectedCabinClass={setSelectedCabinClass}
+            />
           </Grid>
         </Grid>
         <Grid

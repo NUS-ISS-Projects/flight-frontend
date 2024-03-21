@@ -211,7 +211,7 @@ const DepartingFlights: NextPage = () => {
                   <MenuItem
                     key={sortType}
                     onClick={() => handleSelect(sortType)}
-                    sx={{ fontSize: "0.875rem", pl: 4 }} // Adjusted padding to maintain gap
+                    sx={{ fontSize: "0.875rem", pl: 4 }}
                   >
                     {selectedSortType === sortType && (
                       <CheckIcon

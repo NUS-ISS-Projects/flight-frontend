@@ -13,32 +13,65 @@ import {
 import TripTypeSelector from "../search/TripTypeSelector";
 import CabinClassSelector from "../search/CabinClassSelector";
 import TravellerSelector from "../search/TravellerSelector";
+import OriginLocationSelector from "../search/OriginLocationSelector";
+import ReturnLocationSelector from "../search/ReturnLocationSelector";
 
 import SearchIcon from "@mui/icons-material/Search";
+import { useRouter } from "next/navigation";
 
 const selectorStyle = {
   width: "150px",
 };
 
 const FlightSearchForm = () => {
-  const [formData, setFormData] = useState({
-    destination: "",
-    departureDate: "",
-    returnDate: "",
-    travelers: 1,
-    cabinClass: "Economy",
-    tripType: "Round Trip",
+  const router = useRouter();
+  const [selectedOriginCountry, setSelectedOriginCountry] = useState("");
+  const [selectedReturnCountry, setSelectedReturnCountry] = useState("");
+  const [selectedTripType, setSelectedTripType] = useState("Round Trip");
+  const [totalAdults, setTotalAdults] = useState(1);
+  const [totalChildren, setTotalChildren] = useState(0);
+  const [selectedCabinClass, setSelectedCabinClass] = useState("Economy");
+  const [selectedDepartureDate, setSelectedDepartureDate] = useState(() => {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1;
+    let dd = today.getDate();
+    return `${yyyy}-${mm < 10 ? `0${mm}` : mm}-${dd < 10 ? `0${dd}` : dd}`;
   });
+  const [selectedReturnDate, setSelectedReturnDate] = useState("");
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+  const data = {
+    selectedTripType,
+    selectedCabinClass,
+    selectedDepartureDate,
+    selectedReturnDate,
+    selectedOriginCountry,
+    selectedReturnCountry,
+    totalAdults,
+    totalChildren,
+  };
+
+  const handleDepartureDateChange = (e: any) => {
+    setSelectedDepartureDate(e.target.value);
+  };
+  const handleReturnDateChange = (e: any) => {
+    setSelectedReturnDate(e.target.value);
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Form data submitted:", formData);
-    // TODO: Send formData to an API endpoint
+    console.log(data);
+    const queryParams = new URLSearchParams({
+      selectedTripType,
+      selectedCabinClass,
+      selectedDepartureDate,
+      selectedReturnDate,
+      selectedOriginCountry,
+      selectedReturnCountry,
+      totalAdults: totalAdults.toString(),
+      totalChildren: totalChildren.toString(),
+    }).toString();
+    router.push(`/search-depart?${queryParams}`);
   };
 
   return (
@@ -65,13 +98,24 @@ const FlightSearchForm = () => {
       >
         <Grid container spacing={1} alignItems="center">
           <Grid item style={selectorStyle}>
-            <TripTypeSelector />
+            <TripTypeSelector
+              selectedTripType={selectedTripType}
+              setSelectedTripType={setSelectedTripType}
+            />
           </Grid>
           <Grid item>
-            <TravellerSelector />
+            <TravellerSelector
+              totalAdults={totalAdults}
+              setTotalAdults={setTotalAdults}
+              totalChildren={totalChildren}
+              setTotalChildren={setTotalChildren}
+            />
           </Grid>
           <Grid item>
-            <CabinClassSelector />
+            <CabinClassSelector
+              selectedCabinClass={selectedCabinClass}
+              setSelectedCabinClass={setSelectedCabinClass}
+            />
           </Grid>
         </Grid>
         <Grid
@@ -81,27 +125,15 @@ const FlightSearchForm = () => {
           justifyContent="space-between"
         >
           <Grid item xs={12} sm={6} md={3}>
-            <TextField
-              fullWidth
-              label="From Where"
-              name="destination"
-              value={formData.destination}
-              onChange={handleChange}
-              margin="normal"
-              variant="outlined"
-              required
+            <OriginLocationSelector
+              selectedCountryCode={selectedOriginCountry}
+              setSelectedCountry={setSelectedOriginCountry}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <TextField
-              fullWidth
-              label="Where to"
-              name="destination"
-              value={formData.destination}
-              onChange={handleChange}
-              margin="normal"
-              variant="outlined"
-              required
+            <ReturnLocationSelector
+              selectedCountryCode={selectedReturnCountry}
+              setSelectedCountry={setSelectedReturnCountry}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -110,8 +142,8 @@ const FlightSearchForm = () => {
               type="date"
               label="Departure"
               name="departureDate"
-              value={formData.departureDate}
-              onChange={handleChange}
+              value={selectedDepartureDate || ""}
+              onChange={handleDepartureDateChange}
               margin="normal"
               variant="outlined"
               InputLabelProps={{ shrink: true }}
@@ -125,12 +157,13 @@ const FlightSearchForm = () => {
               type="date"
               label="Return"
               name="returnDate"
-              value={formData.returnDate}
-              onChange={handleChange}
+              value={selectedReturnDate || ""}
+              onChange={handleReturnDateChange}
               margin="normal"
               variant="outlined"
               InputLabelProps={{ shrink: true }}
               required
+              disabled={selectedTripType === "One Way"}
             />
           </Grid>
         </Grid>

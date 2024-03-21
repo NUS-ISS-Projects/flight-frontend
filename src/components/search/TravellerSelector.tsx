@@ -17,11 +17,27 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-const TravellerSelector = () => {
+interface TravellerSelectorProps {
+  totalAdults: number;
+  setTotalAdults: React.Dispatch<React.SetStateAction<number>>;
+  totalChildren: number;
+  setTotalChildren: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const TravellerSelector: React.FC<TravellerSelectorProps> = ({
+  totalAdults,
+  setTotalAdults,
+  totalChildren,
+  setTotalChildren,
+}) => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [pax, setPax] = useState({ adults: 1, children: 0 });
-  const [totalPax, setTotalPax] = useState(1);
+  const [pax, setPax] = useState<{ adults: number; children: number }>({
+    adults: 1,
+    children: 0,
+  });
   const open = Boolean(anchorEl);
+  type PaxType = "adults" | "children";
+  const totalPax = pax.adults + pax.children;
 
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
@@ -31,15 +47,25 @@ const TravellerSelector = () => {
     setAnchorEl(null);
   };
 
-  const handlePaxChange = (type: "adults" | "children", delta: number) => {
+  const handleAdultPaxChange = (type: PaxType, delta: number) => {
+    const updatedCount = Math.max(1, pax[type] + delta);
     setPax((prev) => ({
       ...prev,
-      [type]: Math.max(1, prev[type] + delta),
+      [type]: updatedCount,
+    }));
+  };
+
+  const handleChildPaxChange = (type: PaxType, delta: number) => {
+    const updatedCount = Math.max(0, pax[type] + delta);
+    setPax((prev) => ({
+      ...prev,
+      [type]: updatedCount,
     }));
   };
 
   const handleDone = () => {
-    setTotalPax(pax.adults + pax.children);
+    setTotalAdults(pax.adults);
+    setTotalChildren(pax.children);
     handleClose();
   };
 
@@ -78,7 +104,7 @@ const TravellerSelector = () => {
         <MenuItem>
           <ListItemText primary="Adults" />
           <IconButton
-            onClick={() => handlePaxChange("adults", -1)}
+            onClick={() => handleAdultPaxChange("adults", -1)}
             color="secondary"
             size="small"
             sx={{ fontSize: "0.875rem" }}
@@ -87,7 +113,7 @@ const TravellerSelector = () => {
           </IconButton>
           <Typography variant="body1">{pax.adults}</Typography>
           <IconButton
-            onClick={() => handlePaxChange("adults", 1)}
+            onClick={() => handleAdultPaxChange("adults", 1)}
             color="secondary"
             size="small"
             sx={{ fontSize: "0.875rem" }}
@@ -98,7 +124,7 @@ const TravellerSelector = () => {
         <MenuItem>
           <ListItemText primary="Children" />
           <IconButton
-            onClick={() => handlePaxChange("children", -1)}
+            onClick={() => handleChildPaxChange("children", -1)}
             color="secondary"
             size="small"
             sx={{ fontSize: "0.875rem" }}
@@ -107,7 +133,7 @@ const TravellerSelector = () => {
           </IconButton>
           <Typography variant="body1">{pax.children}</Typography>
           <IconButton
-            onClick={() => handlePaxChange("children", 1)}
+            onClick={() => handleChildPaxChange("children", 1)}
             color="secondary"
             size="small"
             sx={{ fontSize: "0.875rem" }}

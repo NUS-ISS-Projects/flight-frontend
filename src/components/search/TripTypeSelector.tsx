@@ -15,9 +15,16 @@ import CheckIcon from "@mui/icons-material/Check";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-const TripTypeSelector = () => {
+interface TripTypeProps {
+  selectedTripType: string;
+  setSelectedTripType: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const TripTypeSelector: React.FC<TripTypeProps> = ({
+  selectedTripType,
+  setSelectedTripType,
+}) => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedTripType, setSelectedTripType] = useState("Round Trip");
   const open = Boolean(anchorEl);
 
   const handleClick = (event: any) => {

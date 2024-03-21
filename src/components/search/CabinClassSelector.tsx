@@ -12,9 +12,16 @@ import CheckIcon from "@mui/icons-material/Check";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-const CabinClassSelector = () => {
+interface CabinClassProps {
+  selectedCabinClass: string;
+  setSelectedCabinClass: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const CabinClassSelector: React.FC<CabinClassProps> = ({
+  selectedCabinClass,
+  setSelectedCabinClass,
+}) => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedCabinClass, setSelectedCabinClass] = useState("Economy");
   const open = Boolean(anchorEl);
 
   const handleClick = (event: any) => {
