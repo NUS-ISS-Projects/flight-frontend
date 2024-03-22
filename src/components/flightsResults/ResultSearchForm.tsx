@@ -1,51 +1,89 @@
-import { useState } from "react";
-import React from "react";
-import {
-  TextField,
-  Button,
-  Box,
-  Grid,
-  Container,
-  Typography,
-} from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { TextField, Box, Grid, Container, Button } from "@mui/material";
 
 //Icons Import
+import SearchIcon from "@mui/icons-material/Search";
+
+//Project Import
 import TripTypeSelector from "../search/TripTypeSelector";
 import CabinClassSelector from "../search/CabinClassSelector";
 import TravellerSelector from "../search/TravellerSelector";
-
-import SearchIcon from "@mui/icons-material/Search";
+import OriginLocationSelector from "../search/OriginLocationSelector";
+import ReturnLocationSelector from "../search/ReturnLocationSelector";
 
 const selectorStyle = {
   width: "150px",
 };
 
+const getSavedSearchQuery = () => {
+  const savedValue = localStorage.getItem("SearchQuery");
+  console.log(savedValue);
+  if (savedValue) {
+    try {
+      return JSON.parse(savedValue);
+    } catch (error) {
+      console.error("Parsing error for saved search query", error);
+    }
+  }
+  return {
+    selectedTripType: "Round Trip",
+    selectedCabinClass: "Economy",
+    selectedDepartureDate: "",
+    selectedReturnDate: "",
+    selectedOriginCountry: "",
+    selectedOriginCountryName: "",
+    selectedReturnCountry: "",
+    selectedReturnCountryName: "",
+    totalAdults: 1,
+    totalChildren: 0,
+  };
+};
+
 const FlightSearchForm = () => {
-  const [formData, setFormData] = useState({
-    destination: "",
-    departureDate: "",
-    returnDate: "",
-    travelers: 1,
-    cabinClass: "Economy",
-    tripType: "Round Trip",
+  const savedQuery = getSavedSearchQuery();
+  const [selectedOriginCountry, setSelectedOriginCountry] = useState(
+    savedQuery.selectedOriginCountry
+  );
+  const [selectedOriginCountryName, setSelectedOriginCountryName] = useState(
+    savedQuery.selectedOriginCountryName
+  );
+  const [selectedReturnCountry, setSelectedReturnCountry] = useState(
+    savedQuery.selectedReturnCountry
+  );
+  const [selectedReturnCountryName, setSelectedReturnCountryName] = useState(
+    savedQuery.selectedReturnCountryName
+  );
+  const [selectedTripType, setSelectedTripType] = useState(
+    savedQuery.selectedTripType
+  );
+  const [totalAdults, setTotalAdults] = useState(savedQuery.totalAdults);
+  const [totalChildren, setTotalChildren] = useState(savedQuery.totalChildren);
+  const [selectedCabinClass, setSelectedCabinClass] = useState(
+    savedQuery.selectedCabinClass
+  );
+  const [selectedDepartureDate, setSelectedDepartureDate] = useState(
+    savedQuery.selectedDepartureDate
+  );
+  const [selectedReturnDate, setSelectedReturnDate] = useState(
+    savedQuery.selectedReturnDate
+  );
+
+  useEffect(() => {
+    console.log(localStorage.getItem("SearchQuery"));
   });
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+  const handleDepartureDateChange = (e: any) => {
+    setSelectedDepartureDate(e.target.value);
+  };
+  const handleReturnDateChange = (e: any) => {
+    setSelectedReturnDate(e.target.value);
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Form data submitted:", formData);
+    console.log("Form data submitted:");
     // TODO: Send formData to an API endpoint
   };
-  const [selectedOriginCountry, setSelectedOriginCountry] = useState("");
-  const [selectedReturnCountry, setSelectedReturnCountry] = useState("");
-  const [selectedTripType, setSelectedTripType] = useState("Round Trip");
-  const [totalAdults, setTotalAdults] = useState(1);
-  const [totalChildren, setTotalChildren] = useState(0);
-  const [selectedCabinClass, setSelectedCabinClass] = useState("Economy");
 
   return (
     <Container>
@@ -92,27 +130,19 @@ const FlightSearchForm = () => {
           justifyContent="space-between"
         >
           <Grid item xs={12} sm={6} md={3}>
-            <TextField
-              fullWidth
-              label="From Where"
-              name="destination"
-              value={formData.destination}
-              onChange={handleChange}
-              margin="normal"
-              variant="outlined"
-              required
+            <OriginLocationSelector
+              selectedCountryCode={selectedOriginCountry}
+              selectedCountryName={selectedOriginCountryName}
+              setSelectedCountry={setSelectedOriginCountry}
+              setselectedCountryName={setSelectedOriginCountryName}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <TextField
-              fullWidth
-              label="Where to"
-              name="destination"
-              value={formData.destination}
-              onChange={handleChange}
-              margin="normal"
-              variant="outlined"
-              required
+            <ReturnLocationSelector
+              selectedCountryCode={selectedReturnCountry}
+              SelectedCountryName={selectedReturnCountryName}
+              setSelectedCountry={setSelectedReturnCountry}
+              setSelectedCountryName={setSelectedReturnCountryName}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -121,8 +151,8 @@ const FlightSearchForm = () => {
               type="date"
               label="Departure"
               name="departureDate"
-              value={formData.departureDate}
-              onChange={handleChange}
+              value={selectedDepartureDate || ""}
+              onChange={handleDepartureDateChange}
               margin="normal"
               variant="outlined"
               InputLabelProps={{ shrink: true }}
@@ -136,15 +166,39 @@ const FlightSearchForm = () => {
               type="date"
               label="Return"
               name="returnDate"
-              value={formData.returnDate}
-              onChange={handleChange}
+              value={selectedReturnDate || ""}
+              onChange={handleReturnDateChange}
               margin="normal"
               variant="outlined"
               InputLabelProps={{ shrink: true }}
               required
+              disabled={selectedTripType === "One Way"}
             />
           </Grid>
+          {/* Submit Button */}
         </Grid>
+        <Box
+          display="flex"
+          justifyContent="center"
+          mt={0.5}
+          sx={{
+            transform: "translateY(50%)",
+            "& > *": {
+              borderRadius: "20px",
+            },
+          }}
+        >
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            sx={{ px: 5, zIndex: 1 }}
+            startIcon={<SearchIcon />}
+            onClick={handleSubmit}
+          >
+            Explore more
+          </Button>
+        </Box>
       </Box>
     </Container>
   );

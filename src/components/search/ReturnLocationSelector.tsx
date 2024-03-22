@@ -11,7 +11,9 @@ interface Location {
 }
 interface LocationSelectorProps {
   selectedCountryCode: string;
+  SelectedCountryName: string;
   setSelectedCountry: React.Dispatch<React.SetStateAction<string>>;
+  setSelectedCountryName: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const toTitleCase = (str: string) => {
@@ -24,14 +26,18 @@ const toTitleCase = (str: string) => {
 
 const ReturnLocationSelector: React.FC<LocationSelectorProps> = ({
   selectedCountryCode,
+  SelectedCountryName,
   setSelectedCountry,
+  setSelectedCountryName,
 }) => {
   const [locations, setLocations] = useState<Location[]>([]);
   const [inputValue, setInputValue] = useState("");
 
   const fetchLocations = async (keyword: string) => {
     axios
-      .get(`http://localhost:8888/api/locations?keyword=${keyword}`)
+      .get(
+        `${process.env.NEXT_PUBLIC_WEB_API_URL}/locations?keyword=${keyword}`
+      )
       .then((response) => {
         //console.log(response.data);
         setLocations(response.data);
@@ -76,6 +82,7 @@ const ReturnLocationSelector: React.FC<LocationSelectorProps> = ({
             selectedCountryCode?.address.countryCode
           );
           setSelectedCountry(selectedCountryCode?.address.countryCode || "");
+          setSelectedCountryName(value || "");
         }}
       />
     </Box>

@@ -26,7 +26,11 @@ const selectorStyle = {
 const FlightSearchForm = () => {
   const router = useRouter();
   const [selectedOriginCountry, setSelectedOriginCountry] = useState("");
+  const [selectedOriginCountryName, setSelectedOriginCountryName] =
+    useState("");
   const [selectedReturnCountry, setSelectedReturnCountry] = useState("");
+  const [selectedReturnCountryName, setSelectedReturnCountryName] =
+    useState("");
   const [selectedTripType, setSelectedTripType] = useState("Round Trip");
   const [totalAdults, setTotalAdults] = useState(1);
   const [totalChildren, setTotalChildren] = useState(0);
@@ -46,7 +50,9 @@ const FlightSearchForm = () => {
     selectedDepartureDate,
     selectedReturnDate,
     selectedOriginCountry,
+    selectedOriginCountryName,
     selectedReturnCountry,
+    selectedReturnCountryName,
     totalAdults,
     totalChildren,
   };
@@ -60,7 +66,6 @@ const FlightSearchForm = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(data);
     const queryParams = new URLSearchParams({
       selectedTripType,
       selectedCabinClass,
@@ -71,6 +76,9 @@ const FlightSearchForm = () => {
       totalAdults: totalAdults.toString(),
       totalChildren: totalChildren.toString(),
     }).toString();
+    console.log(JSON.stringify(data));
+    localStorage.setItem("SearchQuery", JSON.stringify(data));
+    console.log(queryParams);
     router.push(`/search-depart?${queryParams}`);
   };
 
@@ -127,13 +135,17 @@ const FlightSearchForm = () => {
           <Grid item xs={12} sm={6} md={3}>
             <OriginLocationSelector
               selectedCountryCode={selectedOriginCountry}
+              selectedCountryName={selectedOriginCountryName}
               setSelectedCountry={setSelectedOriginCountry}
+              setselectedCountryName={setSelectedOriginCountryName}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <ReturnLocationSelector
               selectedCountryCode={selectedReturnCountry}
+              SelectedCountryName={selectedReturnCountryName}
               setSelectedCountry={setSelectedReturnCountry}
+              setSelectedCountryName={setSelectedReturnCountryName}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>

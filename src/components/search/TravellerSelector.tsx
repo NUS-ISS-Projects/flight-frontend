@@ -32,8 +32,8 @@ const TravellerSelector: React.FC<TravellerSelectorProps> = ({
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [pax, setPax] = useState<{ adults: number; children: number }>({
-    adults: 1,
-    children: 0,
+    adults: totalAdults,
+    children: totalChildren,
   });
   const open = Boolean(anchorEl);
   type PaxType = "adults" | "children";
