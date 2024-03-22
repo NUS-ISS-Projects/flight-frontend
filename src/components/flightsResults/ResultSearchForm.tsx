@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { TextField, Box, Grid, Container, Button } from "@mui/material";
 
 //Icons Import
@@ -16,13 +16,15 @@ const selectorStyle = {
 };
 
 const getSavedSearchQuery = () => {
-  const savedValue = localStorage.getItem("SearchQuery");
-  console.log(savedValue);
-  if (savedValue) {
-    try {
-      return JSON.parse(savedValue);
-    } catch (error) {
-      console.error("Parsing error for saved search query", error);
+  if (typeof window !== "undefined") {
+    const savedValue = localStorage.getItem("SearchQuery");
+    //console.log(savedValue);
+    if (savedValue) {
+      try {
+        return JSON.parse(savedValue);
+      } catch (error) {
+        console.error("Parsing error for saved search query", error);
+      }
     }
   }
   return {
@@ -68,10 +70,6 @@ const FlightSearchForm = () => {
     savedQuery.selectedReturnDate
   );
 
-  useEffect(() => {
-    console.log(localStorage.getItem("SearchQuery"));
-  });
-
   const handleDepartureDateChange = (e: any) => {
     setSelectedDepartureDate(e.target.value);
   };
@@ -79,10 +77,23 @@ const FlightSearchForm = () => {
     setSelectedReturnDate(e.target.value);
   };
 
+  const data = {
+    selectedTripType,
+    selectedCabinClass,
+    selectedDepartureDate,
+    selectedReturnDate,
+    selectedOriginCountry,
+    selectedOriginCountryName,
+    selectedReturnCountry,
+    selectedReturnCountryName,
+    totalAdults,
+    totalChildren,
+  };
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Form data submitted:");
-    // TODO: Send formData to an API endpoint
+    localStorage.setItem("SearchQuery", JSON.stringify(data));
+    window.location.reload();
   };
 
   return (
@@ -140,7 +151,7 @@ const FlightSearchForm = () => {
           <Grid item xs={12} sm={6} md={3}>
             <ReturnLocationSelector
               selectedCountryCode={selectedReturnCountry}
-              SelectedCountryName={selectedReturnCountryName}
+              selectedCountryName={selectedReturnCountryName}
               setSelectedCountry={setSelectedReturnCountry}
               setSelectedCountryName={setSelectedReturnCountryName}
             />
@@ -159,7 +170,6 @@ const FlightSearchForm = () => {
               required
             />
           </Grid>
-
           <Grid item xs={12} sm={6} md={3}>
             <TextField
               fullWidth
@@ -196,7 +206,7 @@ const FlightSearchForm = () => {
             startIcon={<SearchIcon />}
             onClick={handleSubmit}
           >
-            Explore more
+            Search again?
           </Button>
         </Box>
       </Box>

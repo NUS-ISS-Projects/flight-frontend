@@ -66,16 +66,12 @@ const FlightSearchForm = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    const queryParams = new URLSearchParams({
-      selectedTripType,
-      selectedCabinClass,
-      selectedDepartureDate,
-      selectedReturnDate,
-      selectedOriginCountry,
-      selectedReturnCountry,
-      totalAdults: totalAdults.toString(),
-      totalChildren: totalChildren.toString(),
-    }).toString();
+    const queryParams = new URLSearchParams(
+      Object.entries(data).reduce((acc, [key, value]) => {
+        acc[key] = typeof value === "number" ? value.toString() : value;
+        return acc;
+      }, {} as Record<string, string>)
+    ).toString();
     console.log(JSON.stringify(data));
     localStorage.setItem("SearchQuery", JSON.stringify(data));
     console.log(queryParams);
@@ -143,7 +139,7 @@ const FlightSearchForm = () => {
           <Grid item xs={12} sm={6} md={3}>
             <ReturnLocationSelector
               selectedCountryCode={selectedReturnCountry}
-              SelectedCountryName={selectedReturnCountryName}
+              selectedCountryName={selectedReturnCountryName}
               setSelectedCountry={setSelectedReturnCountry}
               setSelectedCountryName={setSelectedReturnCountryName}
             />
@@ -162,7 +158,6 @@ const FlightSearchForm = () => {
               required
             />
           </Grid>
-
           <Grid item xs={12} sm={6} md={3}>
             <TextField
               fullWidth

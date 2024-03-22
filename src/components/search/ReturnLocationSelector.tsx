@@ -11,7 +11,7 @@ interface Location {
 }
 interface LocationSelectorProps {
   selectedCountryCode: string;
-  SelectedCountryName: string;
+  selectedCountryName: string;
   setSelectedCountry: React.Dispatch<React.SetStateAction<string>>;
   setSelectedCountryName: React.Dispatch<React.SetStateAction<string>>;
 }
@@ -26,7 +26,7 @@ const toTitleCase = (str: string) => {
 
 const ReturnLocationSelector: React.FC<LocationSelectorProps> = ({
   selectedCountryCode,
-  SelectedCountryName,
+  selectedCountryName,
   setSelectedCountry,
   setSelectedCountryName,
 }) => {
@@ -54,6 +54,7 @@ const ReturnLocationSelector: React.FC<LocationSelectorProps> = ({
         freeSolo
         autoComplete
         autoHighlight
+        value={selectedCountryName}
         options={Array.from(
           new Set(
             locations.map((location) =>

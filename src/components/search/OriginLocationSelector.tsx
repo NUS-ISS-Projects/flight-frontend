@@ -54,6 +54,7 @@ const OriginLocationSelector: React.FC<LocationSelectorProps> = ({
         freeSolo
         autoComplete
         autoHighlight
+        value={selectedCountryName}
         options={Array.from(
           new Set(
             locations.map((location) =>
