@@ -50,6 +50,7 @@ const getSavedSearchQuery = () => {
 
 const FlightSearchForm = () => {
   const savedQuery = getSavedSearchQuery();
+  const [labelClass, setLabelClass] = useState("");
   const [selectedOriginAirportName, setSelectedOriginAirportName] = useState(
     savedQuery.selectedOriginAirportName
   );
@@ -167,7 +168,7 @@ const FlightSearchForm = () => {
             <TextField
               fullWidth
               type="date"
-              //label="Departure"
+              label="Departure"
               name="departureDate"
               value={selectedDepartureDate || ""}
               onChange={handleDepartureDateChange}
@@ -181,7 +182,7 @@ const FlightSearchForm = () => {
             <TextField
               fullWidth
               type="date"
-              //label="Return"
+              label="Return"
               name="returnDate"
               value={selectedReturnDate || ""}
               onChange={handleReturnDateChange}

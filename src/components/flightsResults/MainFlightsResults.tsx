@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import {
   Container,
@@ -12,6 +12,7 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
+import axios from "axios";
 import CheckIcon from "@mui/icons-material/Check";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import { FlightCard } from "../ui-component/cards/FlightResultsCard";
@@ -141,11 +142,61 @@ export const mockFlightsData = [
   },
 ];
 
+const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
+
 const MainFlightsFlightResult: NextPage = () => {
   const [selectedSortType, setSelectedSortType] = useState("Best Flight");
   const [anchorEl, setAnchorEl] = useState(null);
   const [viewMore, setViewMore] = useState(false);
   const open = Boolean(anchorEl);
+  const [flightData, setFlightData] = useState({
+    selectedTripType: "",
+    selectedCabinClass: "",
+    selectedDepartureDate: "",
+    selectedReturnDate: "",
+    selectedOriginAirportName: "",
+    selectedOriginAirportCode: "",
+    selectedReturnAirportName: "",
+    selectedReturnAirportCode: "",
+    totalAdults: 0,
+    totalChildren: 0,
+  });
+
+  useEffect(() => {
+    const storedFlightData = localStorage.getItem("SearchQuery");
+    if (storedFlightData) {
+      const parsedData = JSON.parse(storedFlightData);
+      setFlightData(parsedData);
+      console.log(parsedData);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (
+      flightData.selectedOriginAirportCode &&
+      flightData.selectedReturnAirportCode &&
+      flightData.selectedDepartureDate
+    ) {
+      axios
+        .get(`${API_URL}/flights`, {
+          params: {
+            origin: flightData.selectedOriginAirportCode,
+            destination: flightData.selectedReturnAirportCode,
+            departDate: flightData.selectedDepartureDate,
+            returnDate: flightData.selectedReturnDate,
+            travelClass: flightData.selectedCabinClass.toUpperCase(),
+            adults: flightData.totalAdults,
+            children: flightData.totalChildren,
+          },
+        })
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching flight data", error);
+        });
+    }
+  }, [flightData]);
 
   const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
@@ -229,7 +280,7 @@ const MainFlightsFlightResult: NextPage = () => {
         </Grid>
       </Box>
       {mockFlightsData.slice(0, viewMore ? undefined : 2).map((flight) => (
-        <FlightCard key={flight.id} data={flight} isReturnView={true} />
+        <FlightCard key={flight.id} data={flight} />
       ))}
       {!viewMore && mockFlightsData.length > 2 && (
         <Box

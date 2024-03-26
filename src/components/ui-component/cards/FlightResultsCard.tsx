@@ -56,10 +56,7 @@ const features = [
   { text: "Stream media to your device", Icon: CastIcon },
 ];
 
-export const FlightCard: React.FC<FlightCardProps> = ({
-  data,
-  isReturnView,
-}) => {
+export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
   const [favorited, setFavorited] = useState(false);
   const router = useRouter();
@@ -133,27 +130,6 @@ export const FlightCard: React.FC<FlightCardProps> = ({
           </Box>
         </CardContent>
         <CardActions disableSpacing>
-          {expanded && data.trip === "round trip" && isReturnView && (
-            <Button
-              variant="contained"
-              onClick={() => router.push("/search-return")}
-              sx={{
-                marginRight: 2,
-                backgroundColor: "white",
-                boxShadow: "none",
-                border: "1px solid #e0e0e0",
-                color: "primary.main",
-                textTransform: "none",
-                borderRadius: "18px",
-                "&:hover": {
-                  backgroundColor: "primary.light",
-                  color: "white",
-                },
-              }}
-            >
-              Select flight
-            </Button>
-          )}
           <Box
             sx={{
               display: "flex",
