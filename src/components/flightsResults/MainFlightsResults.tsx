@@ -141,7 +141,7 @@ export const mockFlightsData = [
   },
 ];
 
-const DepartingFlights: NextPage = () => {
+const MainFlightsFlightResult: NextPage = () => {
   const [selectedSortType, setSelectedSortType] = useState("Best Flight");
   const [anchorEl, setAnchorEl] = useState(null);
   const [viewMore, setViewMore] = useState(false);
@@ -170,7 +170,7 @@ const DepartingFlights: NextPage = () => {
         <Grid container alignItems="center">
           <Grid item xs={8}>
             <Typography variant="h6" gutterBottom>
-              Departing flights
+              Best flights deals
             </Typography>
             <Typography
               variant="caption"
@@ -253,4 +253,4 @@ const DepartingFlights: NextPage = () => {
   );
 };
 
-export default DepartingFlights;
+export default MainFlightsFlightResult;

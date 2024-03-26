@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { TextField, Box, Grid, Container, Button } from "@mui/material";
+import {
+  TextField,
+  Box,
+  Grid,
+  Container,
+  Button,
+  Typography,
+} from "@mui/material";
 
 //Icons Import
 import SearchIcon from "@mui/icons-material/Search";
@@ -32,10 +39,10 @@ const getSavedSearchQuery = () => {
     selectedCabinClass: "Economy",
     selectedDepartureDate: "",
     selectedReturnDate: "",
-    selectedOriginCountry: "",
-    selectedOriginCountryName: "",
-    selectedReturnCountry: "",
-    selectedReturnCountryName: "",
+    selectedOriginAirportName: "",
+    selectedOriginAirportCode: "",
+    selectedReturnAirportName: "",
+    selectedReturnAirportCode: "",
     totalAdults: 1,
     totalChildren: 0,
   };
@@ -43,17 +50,17 @@ const getSavedSearchQuery = () => {
 
 const FlightSearchForm = () => {
   const savedQuery = getSavedSearchQuery();
-  const [selectedOriginCountry, setSelectedOriginCountry] = useState(
-    savedQuery.selectedOriginCountry
+  const [selectedOriginAirportName, setSelectedOriginAirportName] = useState(
+    savedQuery.selectedOriginAirportName
   );
-  const [selectedOriginCountryName, setSelectedOriginCountryName] = useState(
-    savedQuery.selectedOriginCountryName
+  const [selectedOriginAirportCode, setSelectedOriginAirportCode] = useState(
+    savedQuery.selectedOriginAirportCode
   );
-  const [selectedReturnCountry, setSelectedReturnCountry] = useState(
-    savedQuery.selectedReturnCountry
+  const [selectedReturnAirportName, setSelectedReturnAirportName] = useState(
+    savedQuery.selectedReturnAirportName
   );
-  const [selectedReturnCountryName, setSelectedReturnCountryName] = useState(
-    savedQuery.selectedReturnCountryName
+  const [selectedReturnAirportCode, setSelectedReturnAirportCode] = useState(
+    savedQuery.selectedReturnAirportCode
   );
   const [selectedTripType, setSelectedTripType] = useState(
     savedQuery.selectedTripType
@@ -82,10 +89,10 @@ const FlightSearchForm = () => {
     selectedCabinClass,
     selectedDepartureDate,
     selectedReturnDate,
-    selectedOriginCountry,
-    selectedOriginCountryName,
-    selectedReturnCountry,
-    selectedReturnCountryName,
+    selectedOriginAirportName,
+    selectedOriginAirportCode,
+    selectedReturnAirportName,
+    selectedReturnAirportCode,
     totalAdults,
     totalChildren,
   };
@@ -142,25 +149,25 @@ const FlightSearchForm = () => {
         >
           <Grid item xs={12} sm={6} md={3}>
             <OriginLocationSelector
-              selectedCountryCode={selectedOriginCountry}
-              selectedCountryName={selectedOriginCountryName}
-              setSelectedCountry={setSelectedOriginCountry}
-              setselectedCountryName={setSelectedOriginCountryName}
+              selectedAirportName={selectedOriginAirportName}
+              selectedAirportCode={selectedOriginAirportCode}
+              setSelectedAirportName={setSelectedOriginAirportName}
+              setSelectedAirportCode={setSelectedOriginAirportCode}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <ReturnLocationSelector
-              selectedCountryCode={selectedReturnCountry}
-              selectedCountryName={selectedReturnCountryName}
-              setSelectedCountry={setSelectedReturnCountry}
-              setSelectedCountryName={setSelectedReturnCountryName}
+              selectedAirportName={selectedReturnAirportName}
+              selectedAirportCode={selectedReturnAirportCode}
+              setSelectedAirportName={setSelectedReturnAirportName}
+              setSelectedAirportCode={setSelectedReturnAirportCode}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <TextField
               fullWidth
               type="date"
-              label="Departure"
+              //label="Departure"
               name="departureDate"
               value={selectedDepartureDate || ""}
               onChange={handleDepartureDateChange}
@@ -174,7 +181,7 @@ const FlightSearchForm = () => {
             <TextField
               fullWidth
               type="date"
-              label="Return"
+              //label="Return"
               name="returnDate"
               value={selectedReturnDate || ""}
               onChange={handleReturnDateChange}
@@ -206,7 +213,9 @@ const FlightSearchForm = () => {
             startIcon={<SearchIcon />}
             onClick={handleSubmit}
           >
-            Search again?
+            <Typography variant="button" style={{ fontWeight: "bold" }}>
+              Search again?
+            </Typography>
           </Button>
         </Box>
       </Box>

@@ -45,9 +45,10 @@ const NavBar = ({ ...others }) => {
               <Image
                 src="/skyscoutlogo-menu.svg"
                 alt="Logo"
-                style={{ height: "50px" }}
+                style={{ width: "auto", height: "50px" }}
                 width={200}
                 height={200}
+                priority
               />
             </Typography>
             <Stack

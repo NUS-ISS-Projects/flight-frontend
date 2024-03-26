@@ -6,7 +6,7 @@ import theme from "../themes/theme";
 
 import NavBar from "../components/landingpage/NavBar";
 import FlightSearchForm from "../components/flightsResults/ResultSearchForm";
-import SearchResults from "../components/flightsResults/departingFlights";
+import SearchResults from "../components/flightsResults/MainFlightsResults";
 import FooterSection from "../components/landingpage/FooterSection";
 
 const SectionWrapper = styled("div")({

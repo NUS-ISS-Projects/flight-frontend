@@ -25,11 +25,14 @@ const selectorStyle = {
 
 const FlightSearchForm = () => {
   const router = useRouter();
-  const [selectedOriginCountry, setSelectedOriginCountry] = useState("");
-  const [selectedOriginCountryName, setSelectedOriginCountryName] =
+  const [selectedOriginAirportName, setSelectedOriginAirportName] =
     useState("");
-  const [selectedReturnCountry, setSelectedReturnCountry] = useState("");
-  const [selectedReturnCountryName, setSelectedReturnCountryName] =
+  const [selectedOriginAirportCode, setSelectedOriginAirportCode] =
+    useState("");
+
+  const [selectedReturnAirportName, setSelectedReturnAirportName] =
+    useState("");
+  const [selectedReturnAirportCode, setSelectedReturnAirportCode] =
     useState("");
   const [selectedTripType, setSelectedTripType] = useState("Round Trip");
   const [totalAdults, setTotalAdults] = useState(1);
@@ -49,10 +52,10 @@ const FlightSearchForm = () => {
     selectedCabinClass,
     selectedDepartureDate,
     selectedReturnDate,
-    selectedOriginCountry,
-    selectedOriginCountryName,
-    selectedReturnCountry,
-    selectedReturnCountryName,
+    selectedOriginAirportName,
+    selectedOriginAirportCode,
+    selectedReturnAirportName,
+    selectedReturnAirportCode,
     totalAdults,
     totalChildren,
   };
@@ -130,18 +133,18 @@ const FlightSearchForm = () => {
         >
           <Grid item xs={12} sm={6} md={3}>
             <OriginLocationSelector
-              selectedCountryCode={selectedOriginCountry}
-              selectedCountryName={selectedOriginCountryName}
-              setSelectedCountry={setSelectedOriginCountry}
-              setselectedCountryName={setSelectedOriginCountryName}
+              selectedAirportName={selectedOriginAirportName}
+              selectedAirportCode={selectedOriginAirportCode}
+              setSelectedAirportName={setSelectedOriginAirportName}
+              setSelectedAirportCode={setSelectedOriginAirportCode}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <ReturnLocationSelector
-              selectedCountryCode={selectedReturnCountry}
-              selectedCountryName={selectedReturnCountryName}
-              setSelectedCountry={setSelectedReturnCountry}
-              setSelectedCountryName={setSelectedReturnCountryName}
+              selectedAirportName={selectedReturnAirportName}
+              selectedAirportCode={selectedReturnAirportCode}
+              setSelectedAirportName={setSelectedReturnAirportName}
+              setSelectedAirportCode={setSelectedReturnAirportCode}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
