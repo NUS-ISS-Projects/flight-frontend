@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const LoginRedirectButton = () => {
   return (
-    <Link href="/pages/login">
+    <Link href="/login">
       <button>Login</button>
     </Link>
   );

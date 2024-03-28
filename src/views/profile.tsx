@@ -4,6 +4,7 @@ import axios from 'axios';
 import { UserProfile } from '@/types/user-profile';
 import { styled, useTheme } from "@mui/material/styles";
 import NavBar from '@/components/landingpage/NavBar';
+import LoginRedirectButton from '@/components/LoginRedirectButton';
 
 
 const SectionWrapper = styled("div")(({ theme }) => ({
@@ -21,7 +22,9 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.post('http://localhost:8888/api/userProfile/asd')
+        const userNameFromSession = localStorage.getItem('sessionUsername')
+        console.log(userNameFromSession)
+        const response = await axios.post('http://localhost:8888/api/userProfile/'+userNameFromSession)
         const userData = response.data; // Assuming response.data is in the format { id: string, name: string, email: string, ... }
         console.log(userData)
         // Extract the properties from the string
@@ -66,7 +69,7 @@ const ProfilePage = () => {
       ) : (
         <div>
           <h1>Please log in</h1>
-          <a href="/login">Login</a>
+          <LoginRedirectButton/>
         </div>
       )}
     </div>

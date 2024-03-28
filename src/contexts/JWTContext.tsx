@@ -90,7 +90,7 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
     console.log(response);
     const { serviceToken, user } = response.data;   
     setSession(serviceToken);
-    localStorage.setItem('username', username);
+    localStorage.setItem('sessionUsername', username);
     dispatch({
       type: LOGIN,
       payload: {
@@ -135,6 +135,7 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const logout = () => {
+    localStorage.setItem('sessionUsername', "")
     setSession(null);
     dispatch({ type: LOGOUT });
   };
