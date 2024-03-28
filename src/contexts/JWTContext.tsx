@@ -82,6 +82,7 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const login = async (username: string, password: string) => {
+    
     const response = await axios.post("http://localhost:8888/api/login", {
       username,
       password,
@@ -89,6 +90,7 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
     console.log(response);
     const { serviceToken, user } = response.data;   
     setSession(serviceToken);
+    localStorage.setItem('username', username);
     dispatch({
       type: LOGIN,
       payload: {

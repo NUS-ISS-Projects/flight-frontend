@@ -95,6 +95,16 @@ const NavBar = ({ ...others }) => {
               >
                 Log in
               </Button>
+              <Button
+                component={Link}
+                href="/profile"
+                disableElevation
+                variant="contained"
+                color="secondary"
+                sx={{ fontWeight: "bold" }}
+              >
+                Profile
+              </Button>
             </Stack>
           </Toolbar>
         </Container>
