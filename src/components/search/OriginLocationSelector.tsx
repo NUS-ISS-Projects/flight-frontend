@@ -3,11 +3,6 @@ import { Box, TextField, Typography } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import countriesData from "@/store/countries.json";
 
-interface Airport {
-  code: string;
-  name: string;
-}
-
 interface CountryAirport {
   label: string;
   countryName: string;

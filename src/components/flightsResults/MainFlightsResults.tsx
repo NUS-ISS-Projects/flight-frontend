@@ -283,12 +283,12 @@ const MainFlightsFlightResult = () => {
           </Grid>
         </Grid>
       </Box>
-      {mockFlightsData
+      {flightsResult
         .slice(0, viewMore ? undefined : 2)
         .map((flight, index) => (
           <FlightCard key={index} data={flight} queryData={flightData} />
         ))}
-      {!viewMore && mockFlightsData.length > 2 && (
+      {!viewMore && flightsResult.length > 2 && (
         <Box
           sx={{
             display: "flex",

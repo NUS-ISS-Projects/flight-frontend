@@ -18,7 +18,7 @@ const PlaneFeatures = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        marginLeft: 20,
+        marginLeft: 40,
       }}
     >
       {features.map(({ text, Icon }, index) => (
