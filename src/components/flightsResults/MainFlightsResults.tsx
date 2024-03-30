@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import type { NextPage } from "next";
 import {
   Container,
   Box,
@@ -15,7 +14,7 @@ import {
 import axios from "axios";
 import CheckIcon from "@mui/icons-material/Check";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
-import { FlightCard } from "../ui-component/cards/FlightResultsCard";
+import FlightCard from "../ui-component/cards/FlightResultsCard";
 
 //assets
 
@@ -147,7 +146,7 @@ export const mockFlightsData = [
 
 const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
 
-const MainFlightsFlightResult: NextPage = () => {
+const MainFlightsFlightResult = () => {
   const [selectedSortType, setSelectedSortType] = useState("Best Flight");
   const [anchorEl, setAnchorEl] = useState(null);
   const [viewMore, setViewMore] = useState(false);
@@ -284,9 +283,11 @@ const MainFlightsFlightResult: NextPage = () => {
           </Grid>
         </Grid>
       </Box>
-      {flightsResult.slice(0, viewMore ? undefined : 2).map((flight, index) => (
-        <FlightCard key={index} data={flight} />
-      ))}
+      {mockFlightsData
+        .slice(0, viewMore ? undefined : 2)
+        .map((flight, index) => (
+          <FlightCard key={index} data={flight} queryData={flightData} />
+        ))}
       {!viewMore && mockFlightsData.length > 2 && (
         <Box
           sx={{

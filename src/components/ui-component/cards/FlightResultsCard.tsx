@@ -10,24 +10,15 @@ import {
   Divider,
 } from "@mui/material";
 
+//Project Import
+import PlaneFeatures from "./PlaneFeatures";
+import RouteInfo from "./RouteInfo";
+import PlaneDetails from "./PlaneDetails";
+
 //Icons Import
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import AirlineSeatLegroomExtraIcon from "@mui/icons-material/AirlineSeatLegroomExtra";
-import UsbIcon from "@mui/icons-material/Usb";
-import WifiIcon from "@mui/icons-material/Wifi";
-import CastIcon from "@mui/icons-material/Cast";
-
-interface PlaneDetails {
-  airportFrom: string;
-  airportTo: string;
-  travelTime: string;
-  planeSeries: string;
-  class: string;
-  family: string;
-  model: string;
-}
 
 interface FlightData {
   id: string;
@@ -38,24 +29,38 @@ interface FlightData {
   duration: string;
   route: string;
   price: string;
-  planeDetails: PlaneDetails;
+  planeDetails: PlaneDetail;
   stop: string;
   trip: string;
 }
 
-interface FlightCardProps {
-  data: FlightData;
-  isReturnView?: boolean;
+interface PlaneDetail {
+  airportFrom: string;
+  airportTo: string;
+  travelTime: string;
+  planeSeries: string;
+  class: string;
+  family: string;
+  model: string;
 }
 
-const features = [
-  { text: "Great legroom", Icon: AirlineSeatLegroomExtraIcon },
-  { text: "In-seat USB Outlet", Icon: UsbIcon },
-  { text: "Wifi available", Icon: WifiIcon },
-  { text: "Stream media to your device", Icon: CastIcon },
-];
+interface QueryData {
+  selectedTripType: string;
+  selectedCabinClass: string;
+  selectedOriginAirportName: string;
+  selectedOriginAirportCode: string;
+  selectedReturnAirportName: string;
+  selectedReturnAirportCode: string;
+  selectedDepartureDate: string;
+  selectedReturnDate: string;
+}
 
-export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
+interface FlightCardProps {
+  data: FlightData;
+  queryData: QueryData;
+}
+
+const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
   const [expanded, setExpanded] = useState(false);
   const [favorited, setFavorited] = useState(false);
 
@@ -113,7 +118,8 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
                   {data.duration}
                 </Typography>
                 <Typography variant="caption" sx={{ color: "grey.600" }}>
-                  {data.route}・ {data.stop}
+                  {queryData.selectedOriginAirportCode}-
+                  {queryData.selectedReturnAirportCode}・ {data.stop}
                 </Typography>
               </>
             )}
@@ -141,7 +147,8 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
                   {data.duration}
                 </Typography>
                 <Typography variant="caption" sx={{ color: "grey.600" }}>
-                  {data.route} ・ {data.stop}
+                  {queryData.selectedReturnAirportCode}-
+                  {queryData.selectedOriginAirportCode} ・ {data.stop}
                 </Typography>
               </>
             )}
@@ -158,7 +165,7 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
           >
             <Typography sx={{ fontWeight: "bold" }}>{data.price}</Typography>
             <Typography variant="caption" sx={{ color: "grey.600" }}>
-              {data.trip}
+              {queryData.selectedTripType}
             </Typography>
           </Box>
           <IconButton aria-label="add to favorites" onClick={toggleFavorite}>
@@ -178,7 +185,7 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
         </CardActions>
       </Box>
 
-      {/* Dropdown information */}
+      {/*Departure Plane information */}
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <Divider />
         <Box
@@ -199,107 +206,10 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginRight: 2,
-                marginLeft: 10,
-              }}
-            >
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-
-              {/* Dotted Line */}
-              <Box
-                sx={{
-                  borderLeft: "4px dotted #dadce0",
-                  marginBottom: "4px",
-                  marginTop: "4px",
-                  width: "4px",
-                  height: "40px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              <Typography variant="body1" sx={{ marginBottom: 1.5 }}>
-                {data.flightTime.split(" - ")[0]} ・{" "}
-                {data.planeDetails.airportFrom}
-              </Typography>
-              <Typography
-                variant="body2"
-                color="#70757a"
-                sx={{ marginBottom: 1.5 }}
-              >
-                Travel time: {data.duration}
-              </Typography>
-              <Typography variant="body1">
-                {data.flightTime.split(" - ")[1]}・{data.planeDetails.airportTo}
-              </Typography>
-            </Box>
-          </Box>
-
-          {/* Deperature Plane information */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              marginLeft: 20,
-            }}
-          >
-            {features.map(({ text, Icon }, index) => (
-              <Box
-                key={index}
-                sx={{ display: "flex", alignItems: "center", marginBottom: 1 }}
-              >
-                <Icon
-                  sx={{ color: "#70757a", marginRight: 1.5, fontSize: "18px" }}
-                />{" "}
-                <Typography variant="caption" sx={{ color: "#70757a" }}>
-                  {text}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
+          <RouteInfo data={data} />
+          <PlaneFeatures />
         </CardContent>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            marginLeft: 16,
-            marginBottom: 1.5,
-          }}
-        >
-          <Typography variant="caption" color="#70757a">
-            {data.planeDetails.planeSeries}・ {data.planeDetails.class}・{" "}
-            {data.planeDetails.family}・ {data.planeDetails.model}
-          </Typography>
-        </Box>
+        <PlaneDetails data={data} />
         <Divider
           sx={{
             display: "flex",
@@ -308,114 +218,17 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
             marginRight: 16,
           }}
         />
-        {/*IF THERE IS MULTIPLE STOPS*/}
+        {/*Multiple Stops*/}
         <CardContent
           sx={{
             display: "flex",
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginRight: 2,
-                marginLeft: 10,
-              }}
-            >
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-
-              {/* Dotted Line */}
-              <Box
-                sx={{
-                  borderLeft: "4px dotted #dadce0",
-                  marginBottom: "4px",
-                  marginTop: "4px",
-                  width: "4px",
-                  height: "40px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              <Typography variant="body1" sx={{ marginBottom: 1.5 }}>
-                {data.flightTime.split(" - ")[0]} ・{" "}
-                {data.planeDetails.airportFrom}
-              </Typography>
-              <Typography
-                variant="body2"
-                color="#70757a"
-                sx={{ marginBottom: 1.5 }}
-              >
-                Travel time: {data.duration}
-              </Typography>
-              <Typography variant="body1">
-                {data.flightTime.split(" - ")[1]}・{data.planeDetails.airportTo}
-              </Typography>
-            </Box>
-          </Box>
-
-          {/* Deperature Plane information */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              marginLeft: 20,
-            }}
-          >
-            {features.map(({ text, Icon }, index) => (
-              <Box
-                key={index}
-                sx={{ display: "flex", alignItems: "center", marginBottom: 1 }}
-              >
-                <Icon
-                  sx={{ color: "#70757a", marginRight: 1.5, fontSize: "18px" }}
-                />{" "}
-                <Typography variant="caption" sx={{ color: "#70757a" }}>
-                  {text}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
+          <RouteInfo data={data} />
+          <PlaneDetails data={data} />
         </CardContent>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            marginLeft: 16,
-            marginBottom: 1.5,
-          }}
-        >
-          <Typography variant="caption" color="#70757a">
-            {data.planeDetails.planeSeries}・ {data.planeDetails.class}・{" "}
-            {data.planeDetails.family}・ {data.planeDetails.model}
-          </Typography>
-        </Box>
+        <PlaneDetails data={data} />
 
         {/* Return Plane information */}
         <Divider />
@@ -437,108 +250,12 @@ export const FlightCard: React.FC<FlightCardProps> = ({ data }) => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginRight: 2,
-                marginLeft: 10,
-              }}
-            >
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-
-              {/* Dotted Line */}
-              <Box
-                sx={{
-                  borderLeft: "4px dotted #dadce0",
-                  marginBottom: "4px",
-                  marginTop: "4px",
-                  width: "4px",
-                  height: "40px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              <Typography variant="body1" sx={{ marginBottom: 1.5 }}>
-                {data.flightTime.split(" - ")[0]} ・{" "}
-                {data.planeDetails.airportFrom}
-              </Typography>
-              <Typography
-                variant="body2"
-                color="#70757a"
-                sx={{ marginBottom: 1.5 }}
-              >
-                Travel time: {data.duration}
-              </Typography>
-              <Typography variant="body1">
-                {data.flightTime.split(" - ")[1]}・{data.planeDetails.airportTo}
-              </Typography>
-            </Box>
-          </Box>
-
-          {/* Plane information */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              marginLeft: 20,
-            }}
-          >
-            {features.map(({ text, Icon }, index) => (
-              <Box
-                key={index}
-                sx={{ display: "flex", alignItems: "center", marginBottom: 1 }}
-              >
-                <Icon
-                  sx={{ color: "#70757a", marginRight: 1.5, fontSize: "18px" }}
-                />{" "}
-                <Typography variant="caption" sx={{ color: "#70757a" }}>
-                  {text}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
+          <RouteInfo data={data} />
+          <PlaneFeatures />
         </CardContent>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            marginLeft: 16,
-            marginBottom: 1.5,
-          }}
-        >
-          <Typography variant="caption" color="#70757a">
-            {data.planeDetails.planeSeries}・ {data.planeDetails.class}・{" "}
-            {data.planeDetails.family}・ {data.planeDetails.model}
-          </Typography>
-        </Box>
+        <PlaneDetails data={data} />
       </Collapse>
     </Card>
   );
 };
+export default FlightCard;
