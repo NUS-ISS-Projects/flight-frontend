@@ -1,89 +1,96 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, TextField } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
-import axios from "axios";
+import countriesData from "@/store/countries.json";
 
-interface Location {
-  address: {
-    countryName: string;
-    countryCode: string;
-  };
-}
-interface LocationSelectorProps {
-  selectedCountryCode: string;
-  selectedCountryName: string;
-  setSelectedCountry: React.Dispatch<React.SetStateAction<string>>;
-  setSelectedCountryName: React.Dispatch<React.SetStateAction<string>>;
+interface Airport {
+  code: string;
+  name: string;
 }
 
-const toTitleCase = (str: string) => {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-};
+interface CountryAirport {
+  label: string;
+  countryName: string;
+  airportName: string;
+  airportCode: string;
+}
+interface CountrySelectorProps {
+  selectedAirportName: string;
+  selectedAirportCode: string;
+  setSelectedAirportName: React.Dispatch<React.SetStateAction<string>>;
+  setSelectedAirportCode: React.Dispatch<React.SetStateAction<string>>;
+}
 
-const ReturnLocationSelector: React.FC<LocationSelectorProps> = ({
-  selectedCountryCode,
-  selectedCountryName,
-  setSelectedCountry,
-  setSelectedCountryName,
+const ReturnLocationSelector: React.FC<CountrySelectorProps> = ({
+  selectedAirportName,
+  selectedAirportCode,
+  setSelectedAirportName,
+  setSelectedAirportCode,
 }) => {
-  const [locations, setLocations] = useState<Location[]>([]);
   const [inputValue, setInputValue] = useState("");
+  const [options, setOptions] = useState<CountryAirport[]>([]);
 
-  const fetchLocations = async (keyword: string) => {
-    axios
-      .get(
-        `${process.env.NEXT_PUBLIC_WEB_API_URL}/locations?keyword=${keyword}`
-      )
-      .then((response) => {
-        //console.log(response.data);
-        setLocations(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching locations", error);
+  useEffect(() => {
+    if (inputValue.length > 0) {
+      const newOptions: CountryAirport[] = [];
+      Object.entries(countriesData).forEach(([countryName, cities]) => {
+        Object.entries(cities).forEach(([airportName, airports]) => {
+          airports.forEach((airport) => {
+            newOptions.push({
+              label: `${airportName} (${airport.code})`,
+              countryName: countryName,
+              airportName: airportName,
+              airportCode: airport.code,
+            });
+          });
+        });
       });
-  };
+      setOptions(
+        newOptions
+          .filter((option) =>
+            option.label.toLowerCase().includes(inputValue.toLowerCase())
+          )
+          .slice(0, 8)
+      );
+    } else {
+      setOptions([]);
+    }
+  }, [inputValue]);
 
   return (
-    <Box sx={{ mt: 1, position: "relative" }}>
+    <Box sx={{ mt: 2 }}>
       <Autocomplete
         fullWidth
         freeSolo
-        autoComplete
-        autoHighlight
-        value={selectedCountryName}
-        options={Array.from(
-          new Set(
-            locations.map((location) =>
-              toTitleCase(location.address.countryName)
-            )
-          )
-        )}
+        value={selectedAirportName}
+        options={options}
+        getOptionLabel={(option) => {
+          if (typeof option === "string") return option;
+          return option.label || "";
+        }}
         renderInput={(params) => (
           <TextField
             {...params}
-            variant="outlined"
             label="Where to?"
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-              const newValue = event.target.value;
-              setInputValue(newValue);
-              fetchLocations(newValue);
-            }}
+            variant="outlined"
+            onChange={(e) => setInputValue(e.target.value)}
           />
         )}
-        onChange={(event: React.SyntheticEvent, value: string | null) => {
-          const selectedCountryCode = locations.find(
-            (location) => toTitleCase(location.address.countryName) === value
-          );
-          console.log(
-            "Selected country code:",
-            selectedCountryCode?.address.countryCode
-          );
-          setSelectedCountry(selectedCountryCode?.address.countryCode || "");
-          setSelectedCountryName(value || "");
+        onChange={(
+          event: React.SyntheticEvent,
+          value: string | CountryAirport | null
+        ) => {
+          if (value && typeof value === "object" && "countryName" in value) {
+            console.log(
+              "Selected country and airport - Return:",
+              value.airportName,
+              value.airportCode
+            );
+            setSelectedAirportName(value.airportName || "");
+            setSelectedAirportCode(value.airportCode || "");
+          } else if (typeof value === "string") {
+            setSelectedAirportName(value);
+          }
         }}
       />
     </Box>

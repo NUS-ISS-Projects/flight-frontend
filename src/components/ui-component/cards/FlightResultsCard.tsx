@@ -6,22 +6,39 @@ import {
   IconButton,
   Collapse,
   Box,
-  Button,
   CardActions,
   Divider,
 } from "@mui/material";
-import { useRouter } from "next/navigation";
+
+//Project Import
+import PlaneFeatures from "./PlaneFeatures";
+import RouteInfo from "./RouteInfo";
+import PlaneDetails from "./PlaneDetails";
 
 //Icons Import
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import AirlineSeatLegroomExtraIcon from "@mui/icons-material/AirlineSeatLegroomExtra";
-import UsbIcon from "@mui/icons-material/Usb";
-import WifiIcon from "@mui/icons-material/Wifi";
-import CastIcon from "@mui/icons-material/Cast";
+import { Segment } from "@mui/icons-material";
 
-interface PlaneDetails {
+const logoUrl = "assets/images/airline/sgairlines.png";
+
+//Mock Data Interface
+interface MockFlightData {
+  id: string;
+  logoUrl: string;
+  flightTime: string;
+  departureDate: string;
+  returnDate: string;
+  duration: string;
+  route: string;
+  price: string;
+  planeDetails: MockPlaneDetail;
+  stop: string;
+  trip: string;
+}
+
+interface MockPlaneDetail {
   airportFrom: string;
   airportTo: string;
   travelTime: string;
@@ -33,36 +50,84 @@ interface PlaneDetails {
 
 interface FlightData {
   id: string;
-  logoUrl: string;
-  flightTime: string;
-  departureDate: string;
+  itineraries: ItinerariesDetails[];
+  price: FlightPrice;
+}
+
+interface ItinerariesDetails {
   duration: string;
-  route: string;
-  price: string;
-  planeDetails: PlaneDetails;
-  stop: string;
-  trip: string;
+  segments: Segment[];
+}
+interface FlightPrice {
+  total: number;
+  currency: string;
+}
+
+interface Segment {
+  departure: DepartureArrivalDetails;
+  arrival: DepartureArrivalDetails;
+  carrierCode: string;
+  number: string; //flight number
+  aircraft: AircraftDetails;
+  duration: string;
+  numberOfStops: number;
+}
+interface DepartureArrivalDetails {
+  iataCode: string;
+  terminal?: string;
+  at: string;
+}
+interface AircraftDetails {
+  code: string;
+}
+
+interface QueryData {
+  selectedTripType: string;
+  selectedCabinClass: string;
+  selectedOriginAirportName: string;
+  selectedOriginAirportCode: string;
+  selectedReturnAirportName: string;
+  selectedReturnAirportCode: string;
+  selectedDepartureDate: string;
+  selectedReturnDate: string;
 }
 
 interface FlightCardProps {
   data: FlightData;
-  isReturnView?: boolean;
+  queryData: QueryData;
 }
 
-const features = [
-  { text: "Great legroom", Icon: AirlineSeatLegroomExtraIcon },
-  { text: "In-seat USB Outlet", Icon: UsbIcon },
-  { text: "Wifi available", Icon: WifiIcon },
-  { text: "Stream media to your device", Icon: CastIcon },
-];
+const formatDuration = (duration: string): string => {
+  let formattedDuration = duration
+    .replace("PT", "")
+    .replace("H", " hrs ")
+    .replace("M", " min");
+  return formattedDuration;
+};
+const formatDateTimeToTime = (dateTime: string): string => {
+  const date = new Date(dateTime);
+  let hours = date.getHours();
+  const minutes = date.getMinutes();
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  const minutesStr = minutes < 10 ? "0" + minutes : minutes;
+  return `${hours}:${minutesStr} ${ampm}`;
+};
 
-export const FlightCard: React.FC<FlightCardProps> = ({
-  data,
-  isReturnView,
-}) => {
+const formatDate = (dateStr: string): string => {
+  const dateObj = new Date(dateStr);
+  const options: Intl.DateTimeFormatOptions = {
+    weekday: "short",
+    month: "long",
+    day: "2-digit",
+  };
+  return dateObj.toLocaleDateString("en-US", options);
+};
+
+const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
   const [expanded, setExpanded] = useState(false);
   const [favorited, setFavorited] = useState(false);
-  const router = useRouter();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -91,7 +156,7 @@ export const FlightCard: React.FC<FlightCardProps> = ({
         <CardContent sx={{ display: "flex", alignItems: "center" }}>
           <Box
             component="img"
-            src={data.logoUrl}
+            src={logoUrl}
             sx={{ width: 50, height: 50, marginRight: 4 }}
           />
           <Box
@@ -99,12 +164,69 @@ export const FlightCard: React.FC<FlightCardProps> = ({
           >
             <Typography sx={{ fontWeight: "bold" }}>
               {expanded
-                ? `Departure ・ ${data.departureDate}`
-                : data.flightTime}
+                ? `Departure・ ${formatDuration(
+                    data.itineraries[0]?.duration
+                  )} ・ ${
+                    data.itineraries[0]?.segments.length - 1 == 0
+                      ? "Non-Stop"
+                      : `${data.itineraries[0]?.segments.length - 1} Stops`
+                  }`
+                : `${formatDateTimeToTime(
+                    data.itineraries[0].segments[0].departure.at
+                  )} - ${formatDateTimeToTime(
+                    data.itineraries[0].segments[
+                      data.itineraries[0].segments.length - 1
+                    ].arrival.at
+                  )}`}
             </Typography>
             {!expanded && (
               <Typography variant="caption" sx={{ color: "grey.600" }}>
-                {data.planeDetails.planeSeries}
+                Deperature ・ {queryData.selectedOriginAirportCode} -{" "}
+                {queryData.selectedReturnAirportCode}
+              </Typography>
+            )}
+          </Box>
+
+          <Box
+            sx={{ display: "flex", flexDirection: "column", marginRight: 5 }}
+          >
+            {!expanded && (
+              <>
+                <Typography sx={{ fontWeight: "bold" }}>
+                  {formatDuration(data.itineraries[0]?.duration)}
+                </Typography>
+                <Typography variant="caption" sx={{ color: "grey.600" }}>
+                  {data.itineraries[0]?.segments.length - 1 == 0
+                    ? "Non-Stop"
+                    : `${data.itineraries[0]?.segments.length - 1} Stops`}
+                </Typography>
+              </>
+            )}
+          </Box>
+          <Box
+            sx={{ display: "flex", flexDirection: "column", marginRight: 4 }}
+          >
+            <Typography sx={{ fontWeight: "bold" }}>
+              {expanded
+                ? `Return・ ${formatDuration(
+                    data.itineraries[1]?.duration
+                  )} ・  ${
+                    data.itineraries[1]?.segments.length - 1 == 0
+                      ? "Non-Stop"
+                      : `${data.itineraries[1]?.segments.length - 1} Stops`
+                  }`
+                : `${formatDateTimeToTime(
+                    data.itineraries[1].segments[0].departure.at
+                  )} - ${formatDateTimeToTime(
+                    data.itineraries[1].segments[
+                      data.itineraries[1].segments.length - 1
+                    ].arrival.at
+                  )}`}
+            </Typography>
+            {!expanded && (
+              <Typography variant="caption" sx={{ color: "grey.600" }}>
+                Return ・ {queryData.selectedReturnAirportCode} -{" "}
+                {queryData.selectedOriginAirportCode}
               </Typography>
             )}
           </Box>
@@ -114,46 +236,18 @@ export const FlightCard: React.FC<FlightCardProps> = ({
             {!expanded && (
               <>
                 <Typography sx={{ fontWeight: "bold" }}>
-                  {data.duration}
+                  {formatDuration(data.itineraries[1]?.duration)}
                 </Typography>
                 <Typography variant="caption" sx={{ color: "grey.600" }}>
-                  {data.route}
+                  {data.itineraries[1]?.segments.length - 1 == 0
+                    ? "Non-Stop"
+                    : `${data.itineraries[1]?.segments.length - 1} Stops`}
                 </Typography>
-              </>
-            )}
-          </Box>
-          <Box
-            sx={{ display: "flex", flexDirection: "column", marginRight: 5 }}
-          >
-            {!expanded && (
-              <>
-                <Typography>{data.stop}</Typography>
               </>
             )}
           </Box>
         </CardContent>
         <CardActions disableSpacing>
-          {expanded && data.trip === "round trip" && isReturnView && (
-            <Button
-              variant="contained"
-              onClick={() => router.push("/search-return")}
-              sx={{
-                marginRight: 2,
-                backgroundColor: "white",
-                boxShadow: "none",
-                border: "1px solid #e0e0e0",
-                color: "primary.main",
-                textTransform: "none",
-                borderRadius: "18px",
-                "&:hover": {
-                  backgroundColor: "primary.light",
-                  color: "white",
-                },
-              }}
-            >
-              Select flight
-            </Button>
-          )}
           <Box
             sx={{
               display: "flex",
@@ -162,9 +256,11 @@ export const FlightCard: React.FC<FlightCardProps> = ({
               marginRight: 2,
             }}
           >
-            <Typography sx={{ fontWeight: "bold" }}>{data.price}</Typography>
+            <Typography sx={{ fontWeight: "bold" }}>
+              SGD ${data.price.total}
+            </Typography>
             <Typography variant="caption" sx={{ color: "grey.600" }}>
-              {data.trip}
+              {queryData.selectedTripType}
             </Typography>
           </Box>
           <IconButton aria-label="add to favorites" onClick={toggleFavorite}>
@@ -184,117 +280,117 @@ export const FlightCard: React.FC<FlightCardProps> = ({
         </CardActions>
       </Box>
 
-      {/* Dropdown information */}
+      {/*Departure Plane information */}
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <Divider />
+        <Box
+          sx={{
+            alignItems: "center",
+            marginLeft: 16,
+            marginTop: 2.5,
+            marginBottom: -1,
+          }}
+        >
+          <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+            Departuring Flight ・ {formatDate(queryData.selectedDepartureDate)}
+          </Typography>
+        </Box>
         <CardContent
           sx={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          {data.itineraries[0].segments.map((segment, index, array) => (
             <Box
+              key={index}
+              sx={{
+                width: "100%",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                <RouteInfo segment={segment} />
+                <PlaneFeatures />
+              </Box>
+              <PlaneDetails data={segment} searchQuery={queryData} />
+              {index < array.length - 1 && (
+                <Divider
+                  sx={{
+                    display: "flex",
+                    my: 2,
+                    marginLeft: 8,
+                    marginRight: 25,
+                  }}
+                />
+              )}
+            </Box>
+          ))}
+        </CardContent>
+
+        {/* Return Plane information */}
+        {queryData.selectedTripType === "Round Trip" && (
+          <>
+            <Divider />
+            <Box
+              sx={{
+                alignItems: "center",
+                marginLeft: 16,
+                marginTop: 2.5,
+                marginBottom: -1,
+              }}
+            >
+              <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                Returning Flight ・ {formatDate(queryData.selectedReturnDate)}
+              </Typography>
+            </Box>
+            <CardContent
               sx={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                marginRight: 2,
-                marginLeft: 10,
               }}
             >
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-
-              {/* Dotted Line */}
-              <Box
-                sx={{
-                  borderLeft: "4px dotted #dadce0",
-                  marginBottom: "4px",
-                  marginTop: "4px",
-                  width: "4px",
-                  height: "40px",
-                }}
-              ></Box>
-              <Box
-                sx={{
-                  bgcolor: "white",
-                  border: "2px solid #dadce0",
-                  borderRadius: "50%",
-                  width: 12,
-                  height: 12,
-                }}
-              ></Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              <Typography variant="body1" sx={{ marginBottom: 1.5 }}>
-                {data.flightTime.split(" - ")[0]} ・{" "}
-                {data.planeDetails.airportFrom}
-              </Typography>
-              <Typography
-                variant="body2"
-                color="#70757a"
-                sx={{ marginBottom: 1.5 }}
-              >
-                Travel time: {data.duration}
-              </Typography>
-              <Typography variant="body1">
-                {data.flightTime.split(" - ")[1]}・{data.planeDetails.airportTo}
-              </Typography>
-            </Box>
-          </Box>
-
-          {/* Plane information */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              marginLeft: 20,
-            }}
-          >
-            {features.map(({ text, Icon }, index) => (
-              <Box
-                key={index}
-                sx={{ display: "flex", alignItems: "center", marginBottom: 1 }}
-              >
-                <Icon
-                  sx={{ color: "#70757a", marginRight: 1.5, fontSize: "18px" }}
-                />{" "}
-                <Typography variant="caption" sx={{ color: "#70757a" }}>
-                  {text}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-        </CardContent>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            marginLeft: 16,
-            marginBottom: 1.5,
-          }}
-        >
-          <Typography variant="caption" color="#70757a">
-            {data.planeDetails.planeSeries}・ {data.planeDetails.class}・{" "}
-            {data.planeDetails.family}・ {data.planeDetails.model}
-          </Typography>
-        </Box>
+              {data.itineraries[1].segments.map((segment, index, array) => (
+                <Box
+                  key={index}
+                  sx={{
+                    width: "100%",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                    }}
+                  >
+                    <RouteInfo segment={segment} />
+                    <PlaneFeatures />
+                  </Box>
+                  <PlaneDetails data={segment} searchQuery={queryData} />
+                  {index < array.length - 1 && (
+                    <Divider
+                      sx={{
+                        display: "flex",
+                        my: 2,
+                        marginLeft: 8,
+                        marginRight: 25,
+                      }}
+                    />
+                  )}
+                </Box>
+              ))}
+            </CardContent>
+          </>
+        )}
+        {/* <PlaneDetails data={data} /> */}
       </Collapse>
     </Card>
   );
 };
+export default FlightCard;

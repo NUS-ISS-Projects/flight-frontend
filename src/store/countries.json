@@ -1,0 +1,10431 @@
+{
+  "Afghanistan": {
+    "Jalalabad": [
+      {
+        "code": "JAA"
+      }
+    ],
+    "Kabul - Khwaja Rawash Airport": [
+      {
+        "code": "KBL"
+      }
+    ],
+    "Uruzgan": [
+      {
+        "code": "URZ"
+      }
+    ]
+  },
+  "Albania": {
+    "Tirana - Rinas": [
+      {
+        "code": "TIA"
+      }
+    ]
+  },
+  "Algeria": {
+    "Algiers, Houari Boumediene Airport": [
+      {
+        "code": "ALG"
+      }
+    ],
+    "Annaba": [
+      {
+        "code": "AAE"
+      }
+    ],
+    "Constantine": [
+      {
+        "code": "CZL"
+      }
+    ],
+    "Jijel": [
+      {
+        "code": "GJL"
+      }
+    ],
+    "Oran (Ouahran)": [
+      {
+        "code": "ORN"
+      }
+    ]
+  },
+  "American Samoa": {
+    "Pago Pago": [
+      {
+        "code": "PPG"
+      }
+    ]
+  },
+  "Andorra": {
+    "Andorra La Vella - Heliport": [
+      {
+        "code": "ALV"
+      }
+    ]
+  },
+  "Angola": {
+    "Benguela": [
+      {
+        "code": "BUG"
+      }
+    ],
+    "Cabinda": [
+      {
+        "code": "CAB"
+      }
+    ],
+    "Jamba": [
+      {
+        "code": "JMB"
+      }
+    ],
+    "Luanda - 4 de Fevereiro": [
+      {
+        "code": "LAD"
+      }
+    ],
+    "Uige": [
+      {
+        "code": "UGO"
+      }
+    ]
+  },
+  "Anguilla": {
+    "Anguilla": [
+      {
+        "code": "AXA"
+      }
+    ]
+  },
+  "Antigua and Barbuda": {
+    "Antigua, V.C. Bird International": [
+      {
+        "code": "ANU"
+      }
+    ]
+  },
+  "Argentina": {
+    "Buenos Aires": [
+      {
+        "code": "BUE"
+      }
+    ],
+    "Buenos Aires, Ezeiza International Airport": [
+      {
+        "code": "EZE"
+      }
+    ],
+    "Buenos Aires, Jorge Newbery": [
+      {
+        "code": "AEP"
+      }
+    ],
+    "Cordoba": [
+      {
+        "code": "COR"
+      }
+    ],
+    "Iguazu, Cataratas": [
+      {
+        "code": "IGR"
+      }
+    ],
+    "Jose De San Martin": [
+      {
+        "code": "JSM"
+      }
+    ],
+    "Jujuy - El Cadillal Airport": [
+      {
+        "code": "JUJ"
+      }
+    ],
+    "Junin": [
+      {
+        "code": "JNI"
+      }
+    ],
+    "Mar del Plata": [
+      {
+        "code": "MDQ"
+      }
+    ],
+    "Mendoza": [
+      {
+        "code": "MDZ"
+      }
+    ],
+    "Rosario": [
+      {
+        "code": "ROS"
+      }
+    ],
+    "Salta, Gen Belgrano": [
+      {
+        "code": "SLA"
+      }
+    ],
+    "San Carlos de Bariloche": [
+      {
+        "code": "BRC"
+      }
+    ],
+    "Santa Rosa": [
+      {
+        "code": "RSA"
+      }
+    ],
+    "Ushuaia - Islas Malvinas Airport": [
+      {
+        "code": "USH"
+      }
+    ]
+  },
+  "Armenia": {
+    "Eriwan (Yerevan, Jerevan)": [
+      {
+        "code": "EVN"
+      }
+    ]
+  },
+  "Aruba": {
+    "Aruba - Reina Beatrix International, Oranjestad": [
+      {
+        "code": "AUA"
+      }
+    ],
+    "Oranjestad - Reina Beatrix International": [
+      {
+        "code": "AUA"
+      }
+    ]
+  },
+  "Australia": {
+    "Adelaide": [
+      {
+        "code": "ADL"
+      }
+    ],
+    "Albany": [
+      {
+        "code": "ALH"
+      }
+    ],
+    "Albury": [
+      {
+        "code": "ABX"
+      }
+    ],
+    "Alice Springs": [
+      {
+        "code": "ASP"
+      }
+    ],
+    "Ayers Rock - Connellan": [
+      {
+        "code": "AYQ"
+      }
+    ],
+    "Ayr": [
+      {
+        "code": "AYR"
+      }
+    ],
+    "Ballina": [
+      {
+        "code": "BNK"
+      }
+    ],
+    "Bamaga": [
+      {
+        "code": "ABM"
+      }
+    ],
+    "Blackwater": [
+      {
+        "code": "BLT"
+      }
+    ],
+    "Bowen": [
+      {
+        "code": "ZBO"
+      }
+    ],
+    "Brampton Island": [
+      {
+        "code": "BMP"
+      }
+    ],
+    "Brisbane": [
+      {
+        "code": "BNE"
+      }
+    ],
+    "Broken Hill": [
+      {
+        "code": "BHQ"
+      }
+    ],
+    "Broome": [
+      {
+        "code": "BME"
+      }
+    ],
+    "Bundaberg": [
+      {
+        "code": "BDB"
+      }
+    ],
+    "Burnie (Wynyard)": [
+      {
+        "code": "BWT"
+      }
+    ],
+    "Cairns": [
+      {
+        "code": "CNS"
+      }
+    ],
+    "Canberra - Canberra Airport": [
+      {
+        "code": "CBR"
+      }
+    ],
+    "Carnarvon": [
+      {
+        "code": "CVQ"
+      }
+    ],
+    "Casino": [
+      {
+        "code": "CSI"
+      }
+    ],
+    "Ceduna": [
+      {
+        "code": "CED"
+      }
+    ],
+    "Cessnock": [
+      {
+        "code": "CES"
+      }
+    ],
+    "Charters Towers": [
+      {
+        "code": "CXT"
+      }
+    ],
+    "Clermont": [
+      {
+        "code": "CMQ"
+      }
+    ],
+    "Coffs Harbour": [
+      {
+        "code": "CFS"
+      }
+    ],
+    "Collinsville": [
+      {
+        "code": "KCE"
+      }
+    ],
+    "Coober Pedy": [
+      {
+        "code": "CPD"
+      }
+    ],
+    "Cooktown": [
+      {
+        "code": "CTN"
+      }
+    ],
+    "Cooma": [
+      {
+        "code": "OOM"
+      }
+    ],
+    "Dalby": [
+      {
+        "code": "DBY"
+      }
+    ],
+    "Darwin": [
+      {
+        "code": "DRW"
+      }
+    ],
+    "Daydream Island": [
+      {
+        "code": "DDI"
+      }
+    ],
+    "Derby": [
+      {
+        "code": "DRB"
+      }
+    ],
+    "Devonport": [
+      {
+        "code": "DPO"
+      }
+    ],
+    "Dubbo": [
+      {
+        "code": "DBO"
+      }
+    ],
+    "Dunk Island": [
+      {
+        "code": "DKI"
+      }
+    ],
+    "Dysart": [
+      {
+        "code": "DYA"
+      }
+    ],
+    "Emerald": [
+      {
+        "code": "EDR"
+      },
+      {
+        "code": "EMD"
+      }
+    ],
+    "Esperance": [
+      {
+        "code": "EPR"
+      }
+    ],
+    "Geelong": [
+      {
+        "code": "GEX"
+      }
+    ],
+    "Geraldton": [
+      {
+        "code": "GET"
+      }
+    ],
+    "Gladstone": [
+      {
+        "code": "GLT"
+      }
+    ],
+    "Gold Coast": [
+      {
+        "code": "OOL"
+      }
+    ],
+    "Goondiwindi": [
+      {
+        "code": "GOO"
+      }
+    ],
+    "Gove (Nhulunbuy)": [
+      {
+        "code": "GOV"
+      }
+    ],
+    "Great Keppel Island": [
+      {
+        "code": "GKL"
+      }
+    ],
+    "Griffith": [
+      {
+        "code": "GFF"
+      }
+    ],
+    "Groote Eylandt - Alyangula": [
+      {
+        "code": "GTE"
+      }
+    ],
+    "Gympie": [
+      {
+        "code": "GYP"
+      }
+    ],
+    "Hamilton": [
+      {
+        "code": "HLT"
+      }
+    ],
+    "Hamilton Island": [
+      {
+        "code": "HTI"
+      }
+    ],
+    "Hayman Island": [
+      {
+        "code": "HIS"
+      }
+    ],
+    "Hervey Bay": [
+      {
+        "code": "HVB"
+      }
+    ],
+    "Hinchinbrook Island": [
+      {
+        "code": "HNK"
+      }
+    ],
+    "Hobart": [
+      {
+        "code": "HBA"
+      }
+    ],
+    "Home Hill": [
+      {
+        "code": "HMH"
+      }
+    ],
+    "Ingham": [
+      {
+        "code": "IGH"
+      }
+    ],
+    "Innisfail": [
+      {
+        "code": "IFL"
+      }
+    ],
+    "Jandakot": [
+      {
+        "code": "JAD"
+      }
+    ],
+    "Julia Creek": [
+      {
+        "code": "JCK"
+      }
+    ],
+    "Jundah": [
+      {
+        "code": "JUN"
+      }
+    ],
+    "Kalgoorlie": [
+      {
+        "code": "KGI"
+      }
+    ],
+    "Karratha": [
+      {
+        "code": "KTA"
+      }
+    ],
+    "Karumba": [
+      {
+        "code": "KRB"
+      }
+    ],
+    "Katherine": [
+      {
+        "code": "KTR"
+      }
+    ],
+    "Kingscote": [
+      {
+        "code": "KGC"
+      }
+    ],
+    "Kowanyama": [
+      {
+        "code": "KWM"
+      }
+    ],
+    "Kununurra": [
+      {
+        "code": "KNX"
+      }
+    ],
+    "Launceston": [
+      {
+        "code": "LST"
+      }
+    ],
+    "Laverton": [
+      {
+        "code": "LVO"
+      }
+    ],
+    "Learmouth (Exmouth)": [
+      {
+        "code": "LEA"
+      }
+    ],
+    "Leinster": [
+      {
+        "code": "LER"
+      }
+    ],
+    "Leonora": [
+      {
+        "code": "LNO"
+      }
+    ],
+    "Lindeman Island": [
+      {
+        "code": "LDC"
+      }
+    ],
+    "Lismore": [
+      {
+        "code": "LSY"
+      }
+    ],
+    "Lizard Island": [
+      {
+        "code": "LZR"
+      }
+    ],
+    "Lockhart River": [
+      {
+        "code": "IRG"
+      }
+    ],
+    "Longreach": [
+      {
+        "code": "LRE"
+      }
+    ],
+    "Mackay": [
+      {
+        "code": "MKY"
+      }
+    ],
+    "Maitland": [
+      {
+        "code": "MTL"
+      }
+    ],
+    "Maryborough": [
+      {
+        "code": "MBH"
+      }
+    ],
+    "Meekatharra": [
+      {
+        "code": "MKR"
+      }
+    ],
+    "Melbourne - Melbourne Airport (Tullamarine)": [
+      {
+        "code": "MEL"
+      }
+    ],
+    "Merimbula": [
+      {
+        "code": "MIM"
+      }
+    ],
+    "Middlemount": [
+      {
+        "code": "MMM"
+      }
+    ],
+    "Mildura": [
+      {
+        "code": "MQL"
+      }
+    ],
+    "Moranbah": [
+      {
+        "code": "MOV"
+      }
+    ],
+    "Moree": [
+      {
+        "code": "MRZ"
+      }
+    ],
+    "Moruya": [
+      {
+        "code": "MYA"
+      }
+    ],
+    "Mount Gambier": [
+      {
+        "code": "MGB"
+      }
+    ],
+    "Mount Magnet": [
+      {
+        "code": "MMG"
+      }
+    ],
+    "Mt. Isa": [
+      {
+        "code": "ISA"
+      }
+    ],
+    "Narrabri": [
+      {
+        "code": "NAA"
+      }
+    ],
+    "Narrandera": [
+      {
+        "code": "NRA"
+      }
+    ],
+    "Newcastle - Belmont": [
+      {
+        "code": "BEO"
+      }
+    ],
+    "Newcastle - Williamtown": [
+      {
+        "code": "NTL"
+      }
+    ],
+    "Newman": [
+      {
+        "code": "ZNE"
+      }
+    ],
+    "Noosa": [
+      {
+        "code": "NSA"
+      }
+    ],
+    "Norfolk Island": [
+      {
+        "code": "NLK"
+      }
+    ],
+    "Olympic Dam": [
+      {
+        "code": "OLP"
+      }
+    ],
+    "Orange": [
+      {
+        "code": "OAG"
+      }
+    ],
+    "Orpheus Island": [
+      {
+        "code": "ORS"
+      }
+    ],
+    "Paraburdoo": [
+      {
+        "code": "PBO"
+      }
+    ],
+    "Perth International": [
+      {
+        "code": "PER"
+      }
+    ],
+    "Port Augusta": [
+      {
+        "code": "PUG"
+      }
+    ],
+    "Port Hedland": [
+      {
+        "code": "PHE"
+      }
+    ],
+    "Port Lincoln": [
+      {
+        "code": "PLO"
+      }
+    ],
+    "Port Macquarie": [
+      {
+        "code": "PQQ"
+      }
+    ],
+    "Portland": [
+      {
+        "code": "PTJ"
+      }
+    ],
+    "Prosperpine": [
+      {
+        "code": "PPP"
+      }
+    ],
+    "Queenstown": [
+      {
+        "code": "UEE"
+      }
+    ],
+    "Rockhampton": [
+      {
+        "code": "ROK"
+      }
+    ],
+    "Scone": [
+      {
+        "code": "NSO"
+      }
+    ],
+    "Shute Harbour": [
+      {
+        "code": "JHQ"
+      }
+    ],
+    "Singleton": [
+      {
+        "code": "SIX"
+      }
+    ],
+    "South Molle Island": [
+      {
+        "code": "SOI"
+      }
+    ],
+    "Streaky Bay": [
+      {
+        "code": "KBY"
+      }
+    ],
+    "Sunshine Coast": [
+      {
+        "code": "MCY"
+      }
+    ],
+    "Sydney - Sydney Airport": [
+      {
+        "code": "SYD"
+      }
+    ],
+    "Tamworth": [
+      {
+        "code": "TMW"
+      }
+    ],
+    "Taree": [
+      {
+        "code": "TRO"
+      }
+    ],
+    "Temora": [
+      {
+        "code": "TEM"
+      }
+    ],
+    "Tennant Creek": [
+      {
+        "code": "TCA"
+      }
+    ],
+    "Thursday Island": [
+      {
+        "code": "TIS"
+      }
+    ],
+    "Tom Price": [
+      {
+        "code": "TPR"
+      }
+    ],
+    "Toowoomba": [
+      {
+        "code": "TWB"
+      }
+    ],
+    "Townsville": [
+      {
+        "code": "TSV"
+      }
+    ],
+    "Wagga": [
+      {
+        "code": "WGA"
+      }
+    ],
+    "Warrnambool": [
+      {
+        "code": "WMB"
+      }
+    ],
+    "Weipa": [
+      {
+        "code": "WEI"
+      }
+    ],
+    "Whitsunday Resort": [
+      {
+        "code": "HAP"
+      }
+    ],
+    "Whyalla": [
+      {
+        "code": "WYA"
+      }
+    ],
+    "Wickham": [
+      {
+        "code": "WHM"
+      }
+    ],
+    "Wiluna": [
+      {
+        "code": "WUN"
+      }
+    ],
+    "Wollongong": [
+      {
+        "code": "WOL"
+      }
+    ],
+    "Woomera": [
+      {
+        "code": "UMR"
+      }
+    ],
+    "Wyndham": [
+      {
+        "code": "WYN"
+      }
+    ]
+  },
+  "Austria": {
+    "Graz": [
+      {
+        "code": "GRZ"
+      }
+    ],
+    "Innsbruck - Kranebitten": [
+      {
+        "code": "INN"
+      }
+    ],
+    "Klagenfurt": [
+      {
+        "code": "KLU"
+      }
+    ],
+    "Linz - Hoersching": [
+      {
+        "code": "LNZ"
+      }
+    ],
+    "Salzburg - W.A. Mozart": [
+      {
+        "code": "SZG"
+      }
+    ],
+    "Wien (Vienna) - Vienna International": [
+      {
+        "code": "VIE"
+      }
+    ]
+  },
+  "Azerbaijan": {
+    "Baku - Heydar Aliyev International Airport": [
+      {
+        "code": "BAK"
+      }
+    ],
+    "Nakhichevan": [
+      {
+        "code": "NAJ"
+      }
+    ]
+  },
+  "Bahamas": {
+    "Chub Cay": [
+      {
+        "code": "CCZ"
+      }
+    ],
+    "Freeport - Grand Bahama International Airport": [
+      {
+        "code": "FPO"
+      }
+    ],
+    "Govenors Harbour": [
+      {
+        "code": "GHB"
+      }
+    ],
+    "Grand Bahama International": [
+      {
+        "code": "FPO"
+      }
+    ],
+    "Marsh Harbour": [
+      {
+        "code": "MHH"
+      }
+    ],
+    "Nassau": [
+      {
+        "code": "NAS"
+      }
+    ],
+    "North Eleuthera": [
+      {
+        "code": "ELH"
+      }
+    ],
+    "Rock Sound": [
+      {
+        "code": "RSD"
+      }
+    ],
+    "San Salvador": [
+      {
+        "code": "ZSA"
+      }
+    ],
+    "Treasure Cay": [
+      {
+        "code": "TCB"
+      }
+    ]
+  },
+  "Bahrain": {
+    "Bahrain - Bahrain International Airport": [
+      {
+        "code": "BAH"
+      }
+    ]
+  },
+  "Bangladesh": {
+    "Barisal": [
+      {
+        "code": "BZL"
+      }
+    ],
+    "Chittagong": [
+      {
+        "code": "CGP"
+      }
+    ],
+    "Dhaka - Zia International Airport": [
+      {
+        "code": "DAC"
+      }
+    ],
+    "Jessore - Jessore Airport": [
+      {
+        "code": "JSR"
+      }
+    ],
+    "Sylhet": [
+      {
+        "code": "ZYL"
+      }
+    ]
+  },
+  "Barbados": {
+    "Bridgetown - Grantley Adams International": [
+      {
+        "code": "BGI"
+      }
+    ]
+  },
+  "Belarus": {
+    "Minsk, International": [
+      {
+        "code": "MSQ"
+      }
+    ]
+  },
+  "Belgium": {
+    "Antwerp": [
+      {
+        "code": "ANR"
+      }
+    ],
+    "Brussels - Brussels Airport": [
+      {
+        "code": "BRU"
+      }
+    ],
+    "Ghent (Gent)": [
+      {
+        "code": "GNE"
+      }
+    ],
+    "Liege": [
+      {
+        "code": "LGG"
+      }
+    ]
+  },
+  "Belize": {
+    "Belize City - Philip S.W.Goldson International": [
+      {
+        "code": "BZE"
+      }
+    ]
+  },
+  "Benin": {
+    "Cotonou - Cotonou Cadjehoun Airport": [
+      {
+        "code": "COO"
+      }
+    ]
+  },
+  "Bermuda": {
+    "Bermuda - L.F. Wade International Airport": [
+      {
+        "code": "BDA"
+      }
+    ]
+  },
+  "Bhutan": {
+    "Paro": [
+      {
+        "code": "PBH"
+      }
+    ]
+  },
+  "Bolivia": {
+    "Cochabamba": [
+      {
+        "code": "CBB"
+      }
+    ],
+    "La Paz - El Alto": [
+      {
+        "code": "LPB"
+      }
+    ],
+    "Santa Cruz de la Sierra": [
+      {
+        "code": "SRZ"
+      }
+    ],
+    "Santa Rosa": [
+      {
+        "code": "SRB"
+      }
+    ]
+  },
+  "Bosnia and Herzegovina": {
+    "Mostar": [
+      {
+        "code": "OMO"
+      }
+    ],
+    "Sarajevo": [
+      {
+        "code": "SJJ"
+      }
+    ]
+  },
+  "Botswana": {
+    "Francistown": [
+      {
+        "code": "FRW"
+      }
+    ],
+    "Gaborone - Sir Seretse Khama International Airport": [
+      {
+        "code": "GBE"
+      }
+    ],
+    "Jwaneng": [
+      {
+        "code": "JWA"
+      }
+    ],
+    "Maun": [
+      {
+        "code": "MUB"
+      }
+    ],
+    "Selibi Phikwe": [
+      {
+        "code": "PKW"
+      }
+    ]
+  },
+  "Brazil": {
+    "Aracaju": [
+      {
+        "code": "AJU"
+      }
+    ],
+    "Belem - Val de Cans International Airport": [
+      {
+        "code": "BEL"
+      }
+    ],
+    "Belo Horizonte - Tancredo Neves International Airport": [
+      {
+        "code": "CNF"
+      }
+    ],
+    "Boa Vista": [
+      {
+        "code": "BVB"
+      }
+    ],
+    "Brasilia - President Juscelino Kubitschek International": [
+      {
+        "code": "BSB"
+      }
+    ],
+    "Campo Grande": [
+      {
+        "code": "CGR"
+      }
+    ],
+    "Cuiaba - Marechal Rondon International Airport": [
+      {
+        "code": "CGB"
+      }
+    ],
+    "Curitiba - Afonso Pena International Airport": [
+      {
+        "code": "CWB"
+      }
+    ],
+    "Florianopolis": [
+      {
+        "code": "FLN"
+      }
+    ],
+    "Fortaleza - Pinto Martins Airport": [
+      {
+        "code": "FOR"
+      }
+    ],
+    "Goiania, Santa Genoveva Airport": [
+      {
+        "code": "GYN"
+      }
+    ],
+    "Jacobina ": [
+      {
+        "code": "JCM"
+      }
+    ],
+    "Jales": [
+      {
+        "code": "JLS"
+      }
+    ],
+    "Januaria": [
+      {
+        "code": "JNA"
+      }
+    ],
+    "Jatai": [
+      {
+        "code": "JTI"
+      }
+    ],
+    "Joacaba": [
+      {
+        "code": "JCB"
+      }
+    ],
+    "Joao Pessoa - Castro Pinto Airport": [
+      {
+        "code": "JPA"
+      }
+    ],
+    "Joinville - Cubatao Airport": [
+      {
+        "code": "JOI"
+      }
+    ],
+    "Juiz De Fora - Francisco De Assis Airport": [
+      {
+        "code": "JDF"
+      }
+    ],
+    "Macapa - Alberto Alcolumbre International Airport": [
+      {
+        "code": "MCP"
+      }
+    ],
+    "Maceio - Zumbi dos Palmares International Airport": [
+      {
+        "code": "MCZ"
+      }
+    ],
+    "Manaus - Eduardo Gomes International Airport": [
+      {
+        "code": "MAO"
+      }
+    ],
+    "Montenegro": [
+      {
+        "code": "QGF"
+      }
+    ],
+    "Natal - Augusto Severo International Airport": [
+      {
+        "code": "NAT"
+      }
+    ],
+    "Palmas": [
+      {
+        "code": "PMW"
+      }
+    ],
+    "Porto Alegre - Salgado Filho International Airport": [
+      {
+        "code": "POA"
+      }
+    ],
+    "Porto Velho": [
+      {
+        "code": "PVH"
+      }
+    ],
+    "Recife - Guararapes-Gilberto Freyre International": [
+      {
+        "code": "REC"
+      }
+    ],
+    "Rio Branco - Plcido de Castro International Airport": [
+      {
+        "code": "RBR"
+      }
+    ],
+    "Rio de Janeiro": [
+      {
+        "code": "RIO"
+      }
+    ],
+    "Rio de Janeiro - Galeao": [
+      {
+        "code": "GIG"
+      }
+    ],
+    "Rio de Janeiro - Santos Dumont": [
+      {
+        "code": "SDU"
+      }
+    ],
+    "Salvador - Salvador International Airport": [
+      {
+        "code": "SSA"
+      }
+    ],
+    "Santa Rosa": [
+      {
+        "code": "SRA"
+      }
+    ],
+    "Sao Luis - Marechal Cunha Machado International": [
+      {
+        "code": "SLZ"
+      }
+    ],
+    "Sao Paulo": [
+      {
+        "code": "SAO"
+      }
+    ],
+    "Sao Paulo - Congonhas": [
+      {
+        "code": "CGH"
+      }
+    ],
+    "Sao Paulo - Guarulhos": [
+      {
+        "code": "GRU"
+      }
+    ],
+    "Sao Paulo - Guarulhos International": [
+      {
+        "code": "GRU"
+      }
+    ],
+    "Sao Paulo - Viracopos": [
+      {
+        "code": "VCP"
+      }
+    ],
+    "Teresina": [
+      {
+        "code": "THE"
+      }
+    ],
+    "Uberaba": [
+      {
+        "code": "UBA"
+      }
+    ],
+    "Uberlandia - Eduardo Gomes Airport": [
+      {
+        "code": "UDI"
+      }
+    ],
+    "Urubupunga - Ernesto Pochler Airport": [
+      {
+        "code": "URB"
+      }
+    ],
+    "Uruguaiana - Ruben Berta Airport": [
+      {
+        "code": "URG"
+      }
+    ],
+    "Vitoria - Eurico de Aguiar Salles Airport": [
+      {
+        "code": "VIX"
+      }
+    ]
+  },
+  "British Virgin Islands": {
+    "Tortola": [
+      {
+        "code": "TOV"
+      }
+    ]
+  },
+  "Brunei": {
+    "Bandar Seri Begawan - Brunei International Airport": [
+      {
+        "code": "BWN"
+      }
+    ]
+  },
+  "Bulgaria": {
+    "Bourgas/Burgas": [
+      {
+        "code": "BOJ"
+      }
+    ],
+    "Gorna": [
+      {
+        "code": "GOZ"
+      }
+    ],
+    "Jambol": [
+      {
+        "code": "JAM"
+      }
+    ],
+    "Ruse": [
+      {
+        "code": "ROU"
+      }
+    ],
+    "Silistra": [
+      {
+        "code": "SLS"
+      }
+    ],
+    "Sofia - Vrazhdebna": [
+      {
+        "code": "SOF"
+      }
+    ],
+    "Targovishte": [
+      {
+        "code": "TGV"
+      }
+    ],
+    "Varna": [
+      {
+        "code": "VAR"
+      }
+    ],
+    "Vidin": [
+      {
+        "code": "VID"
+      }
+    ]
+  },
+  "Burkina Faso": {
+    "Bobo/Dioulasso": [
+      {
+        "code": "BOY"
+      }
+    ],
+    "Ouagadougou": [
+      {
+        "code": "OUA"
+      }
+    ]
+  },
+  "Burundi": {
+    "Bujumbura - Bujumbura International Airport": [
+      {
+        "code": "BJM"
+      }
+    ]
+  },
+  "Cambodia": {
+    "Phnom Penh - Pochentong": [
+      {
+        "code": "PNH"
+      }
+    ]
+  },
+  "Cameroon": {
+    "Douala": [
+      {
+        "code": "DLA"
+      }
+    ],
+    "Garoua": [
+      {
+        "code": "GOU"
+      }
+    ],
+    "Maroua": [
+      {
+        "code": "MVR"
+      }
+    ],
+    "N'Gaoundere": [
+      {
+        "code": "NGE"
+      }
+    ],
+    "Yaounde": [
+      {
+        "code": "YAO"
+      }
+    ]
+  },
+  "Canada": {
+    "Attawapiskat, NT": [
+      {
+        "code": "YAT"
+      }
+    ],
+    "Bonaventure, PQ": [
+      {
+        "code": "YVB"
+      }
+    ],
+    "Calgary - Calgary International Airport": [
+      {
+        "code": "YYC"
+      }
+    ],
+    "Cambridge Bay": [
+      {
+        "code": "YCB"
+      }
+    ],
+    "Churchill": [
+      {
+        "code": "YYQ"
+      }
+    ],
+    "Deer Lake/Corner Brook": [
+      {
+        "code": "YDF"
+      }
+    ],
+    "Edmonton": [
+      {
+        "code": "YEA"
+      }
+    ],
+    "Edmonton, International": [
+      {
+        "code": "YEG"
+      }
+    ],
+    "Edmonton, Municipal": [
+      {
+        "code": "YXD"
+      }
+    ],
+    "Flin Flon": [
+      {
+        "code": "YFO"
+      }
+    ],
+    "Fort Albert": [
+      {
+        "code": "YFA"
+      }
+    ],
+    "Fort McMurray": [
+      {
+        "code": "YMM"
+      }
+    ],
+    "Fort Smith": [
+      {
+        "code": "YSM"
+      }
+    ],
+    "Fort St. John": [
+      {
+        "code": "YXJ"
+      }
+    ],
+    "Fredericton": [
+      {
+        "code": "YFC"
+      }
+    ],
+    "Gander": [
+      {
+        "code": "YQX"
+      }
+    ],
+    "Gillam": [
+      {
+        "code": "YGX"
+      }
+    ],
+    "Goose Bay": [
+      {
+        "code": "YYR"
+      }
+    ],
+    "Halifax International": [
+      {
+        "code": "YHZ"
+      }
+    ],
+    "Hall Beach": [
+      {
+        "code": "YUX"
+      }
+    ],
+    "Hamilton": [
+      {
+        "code": "YHM"
+      }
+    ],
+    "Harrington Harbour, PQ": [
+      {
+        "code": "YHR"
+      }
+    ],
+    "Inuvik": [
+      {
+        "code": "YEV"
+      }
+    ],
+    "Iqaluit (Frobisher Bay)": [
+      {
+        "code": "YFB"
+      }
+    ],
+    "Kamloops, BC": [
+      {
+        "code": "YKA"
+      }
+    ],
+    "Kaschechawan, PQ": [
+      {
+        "code": "ZKE"
+      }
+    ],
+    "Kelowna, BC": [
+      {
+        "code": "YLW"
+      }
+    ],
+    "Kuujjuaq (FortChimo)": [
+      {
+        "code": "YVP"
+      }
+    ],
+    "Kuujjuarapik": [
+      {
+        "code": "YGW"
+      }
+    ],
+    "La Grande": [
+      {
+        "code": "YGL"
+      }
+    ],
+    "Lac Brochet, MB": [
+      {
+        "code": "XLB"
+      }
+    ],
+    "Leaf Rapids": [
+      {
+        "code": "YLR"
+      }
+    ],
+    "London": [
+      {
+        "code": "YXU"
+      }
+    ],
+    "Moncton": [
+      {
+        "code": "YQM"
+      }
+    ],
+    "Montreal": [
+      {
+        "code": "YMQ"
+      }
+    ],
+    "Montreal - Dorval (Montral-Trudeau)": [
+      {
+        "code": "YUL"
+      }
+    ],
+    "Montreal - Mirabel": [
+      {
+        "code": "YMX"
+      }
+    ],
+    "Nanisivik": [
+      {
+        "code": "YSR"
+      }
+    ],
+    "Norman Wells": [
+      {
+        "code": "YVQ"
+      }
+    ],
+    "Ottawa - Hull": [
+      {
+        "code": "YOW"
+      }
+    ],
+    "Port Menier, PQ": [
+      {
+        "code": "YPN"
+      }
+    ],
+    "Prince George": [
+      {
+        "code": "YXS"
+      }
+    ],
+    "Prince Rupert/Digby Island": [
+      {
+        "code": "YPR"
+      }
+    ],
+    "Pukatawagan": [
+      {
+        "code": "XPK"
+      }
+    ],
+    "Quebec - Quebec International": [
+      {
+        "code": "YQB"
+      }
+    ],
+    "Rainbow Lake, AB": [
+      {
+        "code": "YOP"
+      }
+    ],
+    "Regina": [
+      {
+        "code": "YQR"
+      }
+    ],
+    "Resolute Bay": [
+      {
+        "code": "YRB"
+      }
+    ],
+    "Saint John": [
+      {
+        "code": "YSJ"
+      }
+    ],
+    "Sandspit": [
+      {
+        "code": "YZP"
+      }
+    ],
+    "Saskatoon": [
+      {
+        "code": "YXE"
+      }
+    ],
+    "Shamattawa, MB": [
+      {
+        "code": "ZTM"
+      }
+    ],
+    "Smithers": [
+      {
+        "code": "YYD"
+      }
+    ],
+    "South Indian Lake, MB": [
+      {
+        "code": "XSI"
+      }
+    ],
+    "St. Augustin, PQ": [
+      {
+        "code": "YIF"
+      }
+    ],
+    "St. John's": [
+      {
+        "code": "YYT"
+      }
+    ],
+    "St. Pierre, NF": [
+      {
+        "code": "FSP"
+      }
+    ],
+    "Terrace": [
+      {
+        "code": "YXT"
+      }
+    ],
+    "The Pas": [
+      {
+        "code": "YQD"
+      }
+    ],
+    "Thompson": [
+      {
+        "code": "YTH"
+      }
+    ],
+    "Thunder Bay": [
+      {
+        "code": "YQT"
+      }
+    ],
+    "Toronto": [
+      {
+        "code": "YTO"
+      }
+    ],
+    "Toronto - Billy Bishop Toronto City Airport": [
+      {
+        "code": "YTZ"
+      }
+    ],
+    "Toronto - Toronto Pearson International Airport": [
+      {
+        "code": "YYZ"
+      }
+    ],
+    "Umiujaq": [
+      {
+        "code": "YUD"
+      }
+    ],
+    "Uranium City": [
+      {
+        "code": "YBE"
+      }
+    ],
+    "Val d'Or": [
+      {
+        "code": "YVO"
+      }
+    ],
+    "Vancouver - Vancouver International": [
+      {
+        "code": "YVR"
+      }
+    ],
+    "Victoria": [
+      {
+        "code": "YYJ"
+      }
+    ],
+    "Wabush": [
+      {
+        "code": "YWK"
+      }
+    ],
+    "Whale Cove, NT": [
+      {
+        "code": "YXN"
+      }
+    ],
+    "Whitehorse": [
+      {
+        "code": "YXY"
+      }
+    ],
+    "Windsor Ontario": [
+      {
+        "code": "YQG"
+      }
+    ],
+    "Winnipeg International": [
+      {
+        "code": "YWG"
+      }
+    ],
+    "Yellowknife": [
+      {
+        "code": "YZF"
+      }
+    ]
+  },
+  "Cape Verde": {
+    "Praia - Nelson Mandela International Airport": [
+      {
+        "code": "RAI"
+      }
+    ],
+    "Sal": [
+      {
+        "code": "SID"
+      }
+    ]
+  },
+  "Cayman Islands": {
+    "Grand Cayman - Owen Roberts International": [
+      {
+        "code": "GCM"
+      }
+    ]
+  },
+  "Central African Republic": {
+    "Bambari": [
+      {
+        "code": "BBY"
+      }
+    ],
+    "Bangassou": [
+      {
+        "code": "BGU"
+      }
+    ],
+    "Bangui - M'Poko International Airport": [
+      {
+        "code": "BGF"
+      }
+    ],
+    "Berberati": [
+      {
+        "code": "BBT"
+      }
+    ],
+    "Biraro": [
+      {
+        "code": "IRO"
+      }
+    ],
+    "Bria": [
+      {
+        "code": "BIV"
+      }
+    ],
+    "Carnot": [
+      {
+        "code": "CRF"
+      }
+    ],
+    "Ouadda": [
+      {
+        "code": "ODA"
+      }
+    ]
+  },
+  "Chad": {
+    "Abeche": [
+      {
+        "code": "AEH"
+      }
+    ],
+    "Moundou": [
+      {
+        "code": "MQQ"
+      }
+    ],
+    "N'Djamena": [
+      {
+        "code": "NDJ"
+      }
+    ]
+  },
+  "Channel Islands": {
+    "Alderney": [
+      {
+        "code": "ACI"
+      }
+    ],
+    "Guernsey": [
+      {
+        "code": "GCI"
+      }
+    ],
+    "Jersey": [
+      {
+        "code": "JER"
+      }
+    ]
+  },
+  "Chile": {
+    "Calama - El Loa": [
+      {
+        "code": "CJC"
+      }
+    ],
+    "Easter Island": [
+      {
+        "code": "IPC"
+      }
+    ],
+    "Punta Arenas - Presidente Carlos Ibez del Campo": [
+      {
+        "code": "PUQ"
+      }
+    ],
+    "Santiago de Chile - Arturo Merino Benitez": [
+      {
+        "code": "SCL"
+      }
+    ],
+    "Valparaiso": [
+      {
+        "code": "VAP"
+      }
+    ]
+  },
+  "China": {
+    "Beijing": [
+      {
+        "code": "PEK"
+      }
+    ],
+    "Beijing - Nanyuan Airport": [
+      {
+        "code": "NAY"
+      }
+    ],
+    "Shanghai - Hongqiao": [
+      {
+        "code": "SHA"
+      }
+    ],
+    "Shanghai - Pu Dong": [
+      {
+        "code": "PVG"
+      }
+    ],
+    "Tianjin": [
+      {
+        "code": "TSN"
+      }
+    ]
+  },
+  "Colombia": {
+    "Barranquilla": [
+      {
+        "code": "BAQ"
+      }
+    ],
+    "Bogota - El Nuevo Dorado International Airport": [
+      {
+        "code": "BOG"
+      }
+    ],
+    "Bucaramanga": [
+      {
+        "code": "BGA"
+      }
+    ],
+    "Cali": [
+      {
+        "code": "CLO"
+      }
+    ],
+    "Cartagena - Rafael Nez International Airport": [
+      {
+        "code": "CTG"
+      }
+    ],
+    "Medellin - Jos Mara Crdova International": [
+      {
+        "code": "MDE"
+      }
+    ],
+    "Pereira": [
+      {
+        "code": "PEI"
+      }
+    ],
+    "San Andres": [
+      {
+        "code": "ADZ"
+      }
+    ],
+    "Santa Rosalia": [
+      {
+        "code": "SSL"
+      }
+    ]
+  },
+  "Comoros (Comores)": {
+    "Anjouan - Anjouan Airport": [
+      {
+        "code": "AJN"
+      }
+    ],
+    "Moroni - Prince Said Ibrahim": [
+      {
+        "code": "HAH"
+      }
+    ]
+  },
+  "Congo (DRC)": {
+    "Kinshasa - N'Djili": [
+      {
+        "code": "FIH"
+      }
+    ],
+    "Kisangani": [
+      {
+        "code": "FKI"
+      }
+    ],
+    "Lisala": [
+      {
+        "code": "LIQ"
+      }
+    ],
+    "Lumbumbashi": [
+      {
+        "code": "FBM"
+      }
+    ]
+  },
+  "Congo (ROC)": {
+    "Brazzaville - Maya-Maya Airport": [
+      {
+        "code": "BZV"
+      }
+    ],
+    "Pointe Noire": [
+      {
+        "code": "PNR"
+      }
+    ]
+  },
+  "Cook Island": {
+    "Rarotonga": [
+      {
+        "code": "RAR"
+      }
+    ]
+  },
+  "Costa Rica": {
+    "San Jose": [
+      {
+        "code": "SJO"
+      }
+    ],
+    "Upala": [
+      {
+        "code": "UPL"
+      }
+    ]
+  },
+  "Cote d'Ivoire": {
+    "Abidjan": [
+      {
+        "code": "ABJ"
+      }
+    ],
+    "Bouake": [
+      {
+        "code": "BYK"
+      }
+    ],
+    "Daloa": [
+      {
+        "code": "DJO"
+      }
+    ],
+    "Korhogo": [
+      {
+        "code": "HGO"
+      }
+    ],
+    "Man": [
+      {
+        "code": "MJC"
+      }
+    ],
+    "San Pedro": [
+      {
+        "code": "SPY"
+      }
+    ],
+    "Sassandra": [
+      {
+        "code": "ZSS"
+      }
+    ]
+  },
+  "Croatia (Hrvatska)": {
+    "Dubrovnik": [
+      {
+        "code": "DBV"
+      }
+    ],
+    "Losinj - Losinj Arpt": [
+      {
+        "code": "LSZ"
+      }
+    ],
+    "Osijek": [
+      {
+        "code": "OSI"
+      }
+    ],
+    "Pula": [
+      {
+        "code": "PUY"
+      }
+    ],
+    "Rijeka": [
+      {
+        "code": "RJK"
+      }
+    ],
+    "Split": [
+      {
+        "code": "SPU"
+      }
+    ],
+    "Zadar": [
+      {
+        "code": "ZAD"
+      }
+    ],
+    "Zagreb - Zagreb Airport Pleso": [
+      {
+        "code": "ZAG"
+      }
+    ]
+  },
+  "Cuba": {
+    "Cienfuegos - Jaime Gonzlez Airport": [
+      {
+        "code": "CFG"
+      }
+    ],
+    "Havana - Jos Mart International": [
+      {
+        "code": "HAV"
+      }
+    ],
+    "Holguin": [
+      {
+        "code": "HOG"
+      }
+    ],
+    "Santiago - Antonio Maceo Airport": [
+      {
+        "code": "SCU"
+      }
+    ],
+    "Varadero": [
+      {
+        "code": "VRA"
+      }
+    ]
+  },
+  "Cyprus": {
+    "Akrotiri - RAF": [
+      {
+        "code": "AKT"
+      }
+    ],
+    "Larnaca": [
+      {
+        "code": "LCA"
+      }
+    ],
+    "Limassol": [
+      {
+        "code": "QLI"
+      }
+    ],
+    "Nicosia": [
+      {
+        "code": "NIC"
+      }
+    ],
+    "Paphos": [
+      {
+        "code": "PFO"
+      }
+    ]
+  },
+  "Czech Republic": {
+    "Prague - Vclav Havel Airport (formerly Ruzyne)": [
+      {
+        "code": "PRG"
+      }
+    ],
+    "Uherske Hradiste": [
+      {
+        "code": "UHE"
+      }
+    ]
+  },
+  "Cte d'Ivoire": {
+    "Yamoussoukro": [
+      {
+        "code": "ASK"
+      }
+    ]
+  },
+  "Denmark": {
+    "Aarhus": [
+      {
+        "code": "AAR"
+      }
+    ],
+    "Alborg": [
+      {
+        "code": "AAL"
+      }
+    ],
+    "Billund": [
+      {
+        "code": "BLL"
+      }
+    ],
+    "Copenhagen - Copenhagen Airport": [
+      {
+        "code": "CPH"
+      }
+    ],
+    "Esbjerg": [
+      {
+        "code": "EBJ"
+      }
+    ],
+    "Faroer - Vgar Airport": [
+      {
+        "code": "FAE"
+      }
+    ],
+    "Karup": [
+      {
+        "code": "KRP"
+      }
+    ],
+    "Odense": [
+      {
+        "code": "ODE"
+      }
+    ],
+    "Roenne": [
+      {
+        "code": "RNN"
+      }
+    ],
+    "Skrydstrup": [
+      {
+        "code": "SKS"
+      }
+    ],
+    "Soenderborg": [
+      {
+        "code": "SGD"
+      }
+    ],
+    "Thisted": [
+      {
+        "code": "TED"
+      }
+    ]
+  },
+  "Djibouti": {
+    "Djibouti (city) - Djibouti-Ambouli International Airport": [
+      {
+        "code": "JIB"
+      }
+    ]
+  },
+  "Dominica": {
+    "Melville Hall": [
+      {
+        "code": "DOM"
+      }
+    ]
+  },
+  "Dominican Republic": {
+    "Casa de Campo - La Romana International Airport": [
+      {
+        "code": "LRM"
+      }
+    ],
+    "Puerto Plata": [
+      {
+        "code": "POP"
+      }
+    ],
+    "Punta Cana - Punta Cana International": [
+      {
+        "code": "PUJ"
+      }
+    ],
+    "Samana - Saman El Catey International Airport": [
+      {
+        "code": "AZS"
+      }
+    ],
+    "Santo Domingo": [
+      {
+        "code": "SDQ"
+      }
+    ]
+  },
+  "Ecuador": {
+    "Guayaquil - Simon Bolivar": [
+      {
+        "code": "GYE"
+      }
+    ],
+    "Jipijapa": [
+      {
+        "code": "JIP"
+      }
+    ],
+    "Quito - Mariscal Sucre International Airport": [
+      {
+        "code": "UIO"
+      }
+    ],
+    "Salinas": [
+      {
+        "code": "SNC"
+      }
+    ]
+  },
+  "Egypt": {
+    "Abu Rudeis": [
+      {
+        "code": "AUE"
+      }
+    ],
+    "Abu Simbel": [
+      {
+        "code": "ABS"
+      }
+    ],
+    "Al Arish": [
+      {
+        "code": "AAC"
+      }
+    ],
+    "Alexandria - Borg el Arab Airport": [
+      {
+        "code": "HBH"
+      }
+    ],
+    "Alexandria - El Nhouza Airport": [
+      {
+        "code": "ALY"
+      }
+    ],
+    "Assiut": [
+      {
+        "code": "ATZ"
+      }
+    ],
+    "Aswan - Daraw Airport": [
+      {
+        "code": "ASW"
+      }
+    ],
+    "Cairo - Cairo International Airport": [
+      {
+        "code": "CAI"
+      }
+    ],
+    "El Minya": [
+      {
+        "code": "EMY"
+      }
+    ],
+    "Hurghada International": [
+      {
+        "code": "HRG"
+      }
+    ],
+    "Kharga - New Valley": [
+      {
+        "code": "UVL"
+      }
+    ],
+    "Luxor": [
+      {
+        "code": "LXR"
+      }
+    ],
+    "Marsa Alam": [
+      {
+        "code": "RMF"
+      }
+    ],
+    "Marsa Matrah (Marsa Matruh)": [
+      {
+        "code": "MUH"
+      }
+    ],
+    "New Valley - Kharga": [
+      {
+        "code": "UVL"
+      }
+    ],
+    "Port Said": [
+      {
+        "code": "PSD"
+      }
+    ],
+    "Santa Katarina - Mount Sinai": [
+      {
+        "code": "SKV"
+      }
+    ],
+    "Sharm El Sheikh": [
+      {
+        "code": "SSH"
+      }
+    ],
+    "Siwa": [
+      {
+        "code": "SEW"
+      }
+    ]
+  },
+  "El Salvador": {
+    "San Salvador": [
+      {
+        "code": "SAL"
+      }
+    ]
+  },
+  "Equatorial Guinea": {
+    "Malabo - Malabo International Airport": [
+      {
+        "code": "SSG"
+      }
+    ]
+  },
+  "Eritrea": {
+    "Asmara - Asmara International": [
+      {
+        "code": "ASM"
+      }
+    ]
+  },
+  "Estonia": {
+    "Tallinn - Pirita Harbour": [
+      {
+        "code": "QUF"
+      }
+    ],
+    "Tallinn - Ulemiste": [
+      {
+        "code": "TLL"
+      }
+    ]
+  },
+  "Ethiopia": {
+    "Addis Ababa - Bole International Airport": [
+      {
+        "code": "ADD"
+      }
+    ],
+    "Jijiga": [
+      {
+        "code": "JIJ"
+      }
+    ],
+    "Jimma": [
+      {
+        "code": "JIM"
+      }
+    ],
+    "Jinka - Baco/Jinka Airport": [
+      {
+        "code": "BCO"
+      }
+    ]
+  },
+  "Fiji": {
+    "Castaway": [
+      {
+        "code": "CST"
+      }
+    ],
+    "Nadi": [
+      {
+        "code": "NAN"
+      }
+    ],
+    "Suva - Nausori Airport (Luvuluvu)": [
+      {
+        "code": "SUV"
+      }
+    ]
+  },
+  "Fiji/Suva": {
+    "Nausori": [
+      {
+        "code": "SUV"
+      }
+    ]
+  },
+  "Finland": {
+    "Enontekioe": [
+      {
+        "code": "ENF"
+      }
+    ],
+    "Helsinki - Vantaa": [
+      {
+        "code": "HEL"
+      }
+    ],
+    "Ivalo": [
+      {
+        "code": "IVL"
+      }
+    ],
+    "Joensuu": [
+      {
+        "code": "JOE"
+      }
+    ],
+    "Jyvskyl (Jyvaskyla)": [
+      {
+        "code": "JYV"
+      }
+    ],
+    "Kajaani": [
+      {
+        "code": "KAJ"
+      }
+    ],
+    "Kauhajoki": [
+      {
+        "code": "KHJ"
+      }
+    ],
+    "Kemi/Tornio": [
+      {
+        "code": "KEM"
+      }
+    ],
+    "Kittil": [
+      {
+        "code": "KTT"
+      }
+    ],
+    "Kokkola/Pietarsaari": [
+      {
+        "code": "KOK"
+      }
+    ],
+    "Kuopio": [
+      {
+        "code": "KUO"
+      }
+    ],
+    "Kuusamo": [
+      {
+        "code": "KAO"
+      }
+    ],
+    "Lappeenranta": [
+      {
+        "code": "LPP"
+      }
+    ],
+    "Mariehamn (Maarianhamina)": [
+      {
+        "code": "MHQ"
+      }
+    ],
+    "Mikkeli": [
+      {
+        "code": "MIK"
+      }
+    ],
+    "Oulu": [
+      {
+        "code": "OUL"
+      }
+    ],
+    "Pori": [
+      {
+        "code": "POR"
+      }
+    ],
+    "Rovaniemi": [
+      {
+        "code": "RVN"
+      }
+    ],
+    "Savonlinna": [
+      {
+        "code": "SVL"
+      }
+    ],
+    "Seinaejoki": [
+      {
+        "code": "SJY"
+      }
+    ],
+    "Sodankylae": [
+      {
+        "code": "SOT"
+      }
+    ],
+    "Tampere": [
+      {
+        "code": "TMP"
+      }
+    ],
+    "Turku": [
+      {
+        "code": "TKU"
+      }
+    ],
+    "Vaasa": [
+      {
+        "code": "VAA"
+      }
+    ],
+    "Varkaus": [
+      {
+        "code": "VRK"
+      }
+    ]
+  },
+  "France": {
+    "Ajaccio": [
+      {
+        "code": "AJA"
+      }
+    ],
+    "Albi": [
+      {
+        "code": "LBI"
+      }
+    ],
+    "Annecy": [
+      {
+        "code": "NCY"
+      }
+    ],
+    "Aurillac": [
+      {
+        "code": "AUR"
+      }
+    ],
+    "Bastia": [
+      {
+        "code": "BIA"
+      }
+    ],
+    "Bergerac - Roumanieres": [
+      {
+        "code": "EGC"
+      }
+    ],
+    "Biarritz": [
+      {
+        "code": "BIQ"
+      }
+    ],
+    "Bordeaux - Bordeaux Airport": [
+      {
+        "code": "BOD"
+      }
+    ],
+    "Brest": [
+      {
+        "code": "BES"
+      }
+    ],
+    "Calvi": [
+      {
+        "code": "CLY"
+      }
+    ],
+    "Cannes - Mandelieu Airport": [
+      {
+        "code": "CEQ"
+      }
+    ],
+    "Chambery": [
+      {
+        "code": "CMF"
+      }
+    ],
+    "Clermont Ferrand": [
+      {
+        "code": "CFE"
+      }
+    ],
+    "Dinard": [
+      {
+        "code": "DNR"
+      }
+    ],
+    "Disneyland Paris": [
+      {
+        "code": "DLP"
+      }
+    ],
+    "Figari": [
+      {
+        "code": "FSC"
+      }
+    ],
+    "Frejus": [
+      {
+        "code": "FRJ"
+      }
+    ],
+    "Grenoble": [
+      {
+        "code": "GNB"
+      }
+    ],
+    "La Rochelle": [
+      {
+        "code": "LRH"
+      }
+    ],
+    "Lannion": [
+      {
+        "code": "LAI"
+      }
+    ],
+    "Lille - Lille Airport": [
+      {
+        "code": "LIL"
+      }
+    ],
+    "Limoges": [
+      {
+        "code": "LIG"
+      }
+    ],
+    "Lorient": [
+      {
+        "code": "LRT"
+      }
+    ],
+    "Lourdes/Tarbes": [
+      {
+        "code": "LDE"
+      }
+    ],
+    "Lyon - Lyon-Saint Exupry Airport": [
+      {
+        "code": "LYS"
+      }
+    ],
+    "Marseille - Marseille Provence Airport": [
+      {
+        "code": "MRS"
+      }
+    ],
+    "Metz - Frescaty": [
+      {
+        "code": "MZM"
+      }
+    ],
+    "Metz/Nancy Metz-Nancy-Lorraine": [
+      {
+        "code": "ETZ"
+      }
+    ],
+    "Montpellier - Montpellier-Mditerrane Airport": [
+      {
+        "code": "MPL"
+      }
+    ],
+    "Mulhouse": [
+      {
+        "code": "MLH"
+      }
+    ],
+    "Nancy": [
+      {
+        "code": "ENC"
+      }
+    ],
+    "Nantes - Nantes Atlantique Airport": [
+      {
+        "code": "NTE"
+      }
+    ],
+    "Nice - Cote D'Azur Airport": [
+      {
+        "code": "NCE"
+      }
+    ],
+    "Nimes": [
+      {
+        "code": "FNI"
+      }
+    ],
+    "Paris": [
+      {
+        "code": "PAR"
+      }
+    ],
+    "Paris - Charles de Gaulle": [
+      {
+        "code": "CDG"
+      }
+    ],
+    "Paris - Le Bourget": [
+      {
+        "code": "LBG"
+      }
+    ],
+    "Paris - Orly": [
+      {
+        "code": "ORY"
+      }
+    ],
+    "Pau": [
+      {
+        "code": "PUF"
+      }
+    ],
+    "Perpignan": [
+      {
+        "code": "PGF"
+      }
+    ],
+    "Poitiers - Biard": [
+      {
+        "code": "PIS"
+      }
+    ],
+    "Quimper": [
+      {
+        "code": "UIP"
+      }
+    ],
+    "Rennes": [
+      {
+        "code": "RNS"
+      }
+    ],
+    "Roanne": [
+      {
+        "code": "RNE"
+      }
+    ],
+    "Rodez": [
+      {
+        "code": "RDZ"
+      }
+    ],
+    "Saint Brieuc": [
+      {
+        "code": "SBK"
+      }
+    ],
+    "St. Etienne": [
+      {
+        "code": "EBU"
+      }
+    ],
+    "Strasbourg - Strasbourg Airport": [
+      {
+        "code": "SXB"
+      }
+    ],
+    "Toulouse - Blagnac Airport": [
+      {
+        "code": "TLS"
+      }
+    ]
+  },
+  "French Guiana": {
+    "Cayenne - Cayenne-Rochambeau Airport": [
+      {
+        "code": "CAY"
+      }
+    ]
+  },
+  "French Polynesia": {
+    "Bora Bora": [
+      {
+        "code": "BOB"
+      }
+    ],
+    "Huahine": [
+      {
+        "code": "HUH"
+      }
+    ],
+    "Manihi": [
+      {
+        "code": "XMH"
+      }
+    ],
+    "Maupiti": [
+      {
+        "code": "MAU"
+      }
+    ],
+    "Moorea": [
+      {
+        "code": "MOZ"
+      }
+    ],
+    "Raiatea": [
+      {
+        "code": "RFP"
+      }
+    ],
+    "Rangiroa": [
+      {
+        "code": "RGI"
+      }
+    ],
+    "Ua Huka": [
+      {
+        "code": "UAH"
+      }
+    ],
+    "Ua Pou": [
+      {
+        "code": "UAP"
+      }
+    ]
+  },
+  "French Polynesia (Tahiti)": {
+    "Papeete - Faaa": [
+      {
+        "code": "PPT"
+      }
+    ]
+  },
+  "Fujian, PR China": {
+    "Xiamen": [
+      {
+        "code": "XMN"
+      }
+    ]
+  },
+  "Gabon": {
+    "Lambarene": [
+      {
+        "code": "LBQ"
+      }
+    ],
+    "Libreville": [
+      {
+        "code": "LBV"
+      }
+    ],
+    "Moanda": [
+      {
+        "code": "MFF"
+      }
+    ],
+    "Mouila": [
+      {
+        "code": "MJL"
+      }
+    ],
+    "Mvengue": [
+      {
+        "code": "MVB"
+      }
+    ],
+    "Port Gentil": [
+      {
+        "code": "POG"
+      }
+    ]
+  },
+  "Gabon/Loyautte": {
+    "Oyem": [
+      {
+        "code": "UVE"
+      }
+    ]
+  },
+  "Gambia": {
+    "Banjul - Banjul International Airport (Yundum International)": [
+      {
+        "code": "BJL"
+      }
+    ]
+  },
+  "Georgia": {
+    "Tbilisi - Novo Alexeyevka": [
+      {
+        "code": "TBS"
+      }
+    ]
+  },
+  "Germany": {
+    "Augsburg - Augsbur gAirport": [
+      {
+        "code": "AGB"
+      }
+    ],
+    "Bayreuth - Bindlacher-Berg": [
+      {
+        "code": "BYU"
+      }
+    ],
+    "Berlin": [
+      {
+        "code": "BER"
+      }
+    ],
+    "Berlin, Schoenefeld": [
+      {
+        "code": "SXF"
+      }
+    ],
+    "Berlin, Tegel": [
+      {
+        "code": "TXL"
+      }
+    ],
+    "Berlin, Tempelhof (ceased operating in 2008)": [
+      {
+        "code": "THF"
+      }
+    ],
+    "Bremen - Bremen Airport (Flughafen Bremen)": [
+      {
+        "code": "BRE"
+      }
+    ],
+    "Cologne - Cologne Airport (Flughafen Kln/Bonn)": [
+      {
+        "code": "CGN"
+      }
+    ],
+    "Cottbus - Cottbus-Drewitz Airport": [
+      {
+        "code": "CBU"
+      }
+    ],
+    "Dortmund": [
+      {
+        "code": "DTM"
+      }
+    ],
+    "Dresden - Dresden Airport": [
+      {
+        "code": "DRS"
+      }
+    ],
+    "Duesseldorf - Dsseldorf International Airport": [
+      {
+        "code": "DUS"
+      }
+    ],
+    "Erfurt - Erfurt Airport (Flughafen Erfurt)": [
+      {
+        "code": "ERF"
+      }
+    ],
+    "Frankfurt/Hahn": [
+      {
+        "code": "HHN"
+      }
+    ],
+    "Frankfurt/Main - Frankfurt Airport (Rhein-Main-Flughafen)": [
+      {
+        "code": "FRA"
+      }
+    ],
+    "Friedrichshafen - Bodensee-Airport Friedrichshafen": [
+      {
+        "code": "FDH"
+      }
+    ],
+    "Guettin": [
+      {
+        "code": "GTI"
+      }
+    ],
+    "Hamburg - Fuhlsbuettel": [
+      {
+        "code": "HAM"
+      }
+    ],
+    "Hannover": [
+      {
+        "code": "HAJ"
+      }
+    ],
+    "Hof": [
+      {
+        "code": "HOQ"
+      }
+    ],
+    "Juist (island)": [
+      {
+        "code": "JUI"
+      }
+    ],
+    "Karlsruhe-Baden - Soellingen": [
+      {
+        "code": "FKB"
+      }
+    ],
+    "Kiel - Holtenau": [
+      {
+        "code": "KEL"
+      }
+    ],
+    "Kln, Kln/Bonn": [
+      {
+        "code": "CGN"
+      }
+    ],
+    "Leipzig": [
+      {
+        "code": "LEJ"
+      }
+    ],
+    "Muenchen (Munich) - Franz Josef Strauss": [
+      {
+        "code": "MUC"
+      }
+    ],
+    "Muenster/Osnabrueck": [
+      {
+        "code": "FMO"
+      }
+    ],
+    "Nrnberg (Nuremberg)": [
+      {
+        "code": "NUE"
+      }
+    ],
+    "Paderborn/Lippstadt": [
+      {
+        "code": "PAD"
+      }
+    ],
+    "Saarbruecken": [
+      {
+        "code": "SCN"
+      }
+    ],
+    "Stuttgart - Echterdingen": [
+      {
+        "code": "STR"
+      }
+    ],
+    "Westerland, Sylt Airport": [
+      {
+        "code": "GWT"
+      }
+    ],
+    "Wiesbaden, Air Base": [
+      {
+        "code": "WIE"
+      }
+    ]
+  },
+  "Ghana": {
+    "Accra - Kotoka International Airport": [
+      {
+        "code": "ACC"
+      }
+    ]
+  },
+  "Gibraltar": {
+    "Gibraltar": [
+      {
+        "code": "GIB"
+      }
+    ]
+  },
+  "Greece": {
+    "Araxos": [
+      {
+        "code": "GPA"
+      }
+    ],
+    "Athens - Elefthrios Venizlos International Airport": [
+      {
+        "code": "ATH"
+      }
+    ],
+    "Athens, Hellinikon Airport": [
+      {
+        "code": "HEW"
+      }
+    ],
+    "Chania": [
+      {
+        "code": "CHQ"
+      }
+    ],
+    "Chios": [
+      {
+        "code": "JKH"
+      }
+    ],
+    "Corfu": [
+      {
+        "code": "CFU"
+      }
+    ],
+    "Heraklion": [
+      {
+        "code": "HER"
+      }
+    ],
+    "Kalamata": [
+      {
+        "code": "KLX"
+      }
+    ],
+    "Karpathos": [
+      {
+        "code": "AOK"
+      }
+    ],
+    "Kavalla": [
+      {
+        "code": "KVA"
+      }
+    ],
+    "Kos": [
+      {
+        "code": "KGS"
+      }
+    ],
+    "Mykonos": [
+      {
+        "code": "JMK"
+      }
+    ],
+    "Mytilene (Lesbos)": [
+      {
+        "code": "MJT"
+      }
+    ],
+    "Naxos - Naxos Airport": [
+      {
+        "code": "JNX"
+      }
+    ],
+    "Preveza/Lefkas": [
+      {
+        "code": "PVK"
+      }
+    ],
+    "Rhodos": [
+      {
+        "code": "RHO"
+      }
+    ],
+    "Saloniki": [
+      {
+        "code": "SKG"
+      }
+    ],
+    "Samos": [
+      {
+        "code": "SMI"
+      }
+    ],
+    "Skiathos": [
+      {
+        "code": "JSI"
+      }
+    ],
+    "Thessaloniki - Makedonia Apt.": [
+      {
+        "code": "SKG"
+      }
+    ],
+    "Thira": [
+      {
+        "code": "JTR"
+      }
+    ],
+    "Zakynthos": [
+      {
+        "code": "ZTH"
+      }
+    ]
+  },
+  "Greenland": {
+    "Narsarsuaq": [
+      {
+        "code": "UAK"
+      }
+    ],
+    "Soendre Stroemfjord": [
+      {
+        "code": "SFJ"
+      }
+    ],
+    "Upernavik - Upernavik Heliport": [
+      {
+        "code": "JUV"
+      }
+    ],
+    "Uummannaq": [
+      {
+        "code": "UMD"
+      }
+    ]
+  },
+  "Grenada": {
+    "Grenada - Point Salines Airport also Maurice Bishop": [
+      {
+        "code": "GND"
+      }
+    ]
+  },
+  "Guadeloupe": {
+    "Basse-Terre - Pointe--Pitre International Airport": [
+      {
+        "code": "PTP"
+      }
+    ],
+    "Pointe a Pitre": [
+      {
+        "code": "PTP"
+      }
+    ]
+  },
+  "Guam": {
+    "Agana (Hagta)": [
+      {
+        "code": "SUM"
+      }
+    ],
+    "Guam": [
+      {
+        "code": "GUM"
+      }
+    ],
+    "Hagta - Guam International Airport": [
+      {
+        "code": "GUM"
+      }
+    ]
+  },
+  "Guangdong, PR China": {
+    "Guangzhou (Canton) - Baiyun International Airport": [
+      {
+        "code": "CAN"
+      }
+    ],
+    "Shenzhen - Shenzhen Bao'an International": [
+      {
+        "code": "SZX"
+      }
+    ]
+  },
+  "Guangxi, PR China": {
+    "Guilin - Liangjiang": [
+      {
+        "code": "KWL"
+      }
+    ],
+    "Nanning": [
+      {
+        "code": "NNG"
+      }
+    ]
+  },
+  "Guatemala": {
+    "Guatemala City - La Aurora International Airport": [
+      {
+        "code": "GUA"
+      }
+    ]
+  },
+  "Guinea": {
+    "Conakry - Conakry International Airport": [
+      {
+        "code": "CKY"
+      }
+    ],
+    "Labe": [
+      {
+        "code": "LEK"
+      }
+    ]
+  },
+  "Guinea-Bissau": {
+    "Bissau - Osvaldo Vieiro International Airport": [
+      {
+        "code": "BXO"
+      }
+    ]
+  },
+  "Guyana": {
+    "Georgetown - Cheddi Jagan International Airport": [
+      {
+        "code": "GEO"
+      }
+    ]
+  },
+  "Haiti": {
+    "Jacmel ": [
+      {
+        "code": "JAK"
+      }
+    ],
+    "Jeremie - Jeremie Airport": [
+      {
+        "code": "JEE"
+      }
+    ],
+    "Port au Prince": [
+      {
+        "code": "PAP"
+      }
+    ]
+  },
+  "Heilongjiang, PR China": {
+    "Harbin (Haerbin)": [
+      {
+        "code": "HRB"
+      }
+    ]
+  },
+  "Hokkaido, Japan": {
+    "Sapporo": [
+      {
+        "code": "SPK"
+      }
+    ],
+    "Sapporo - Okadama": [
+      {
+        "code": "OKD"
+      }
+    ]
+  },
+  "Honduras": {
+    "Juticalpa": [
+      {
+        "code": "JUT"
+      }
+    ],
+    "Roatan": [
+      {
+        "code": "RTB"
+      }
+    ],
+    "San Pedro Sula": [
+      {
+        "code": "SAP"
+      }
+    ],
+    "Santa Rosa, Copan": [
+      {
+        "code": "SDH"
+      }
+    ],
+    "Tegucigalpa": [
+      {
+        "code": "TGU"
+      }
+    ],
+    "Utila": [
+      {
+        "code": "UII"
+      }
+    ]
+  },
+  "Hong Kong": {
+    "Hong Kong - Chek Lap Kok": [
+      {
+        "code": "ZJK"
+      }
+    ],
+    "Hong Kong - International Airport (HKIA)": [
+      {
+        "code": "HKG"
+      }
+    ]
+  },
+  "Hubei, PR China": {
+    "Wuhan": [
+      {
+        "code": "WUH"
+      }
+    ],
+    "Yichang": [
+      {
+        "code": "YIH"
+      }
+    ]
+  },
+  "Hungary": {
+    "Budapest - Budapest Ferihegy International Airport": [
+      {
+        "code": "BUD"
+      }
+    ]
+  },
+  "Ibiza/Spain": {
+    "Ibiza": [
+      {
+        "code": "IBZ"
+      }
+    ]
+  },
+  "Iceland": {
+    "Egilsstadir": [
+      {
+        "code": "EGS"
+      }
+    ],
+    "Reykjavik - Keflavik International": [
+      {
+        "code": "KEF"
+      }
+    ],
+    "Reykjavik - Metropolitan Area": [
+      {
+        "code": "REK"
+      }
+    ]
+  },
+  "India": {
+    "Ahmedabad": [
+      {
+        "code": "AMD"
+      }
+    ],
+    "Amritsar": [
+      {
+        "code": "ATQ"
+      }
+    ],
+    "Anand": [
+      {
+        "code": "QNB"
+      }
+    ],
+    "Bagdogra": [
+      {
+        "code": "IXB"
+      }
+    ],
+    "Bangalore": [
+      {
+        "code": "BLR"
+      }
+    ],
+    "Baroda": [
+      {
+        "code": "BDQ"
+      }
+    ],
+    "Belgaum": [
+      {
+        "code": "IXG"
+      }
+    ],
+    "Bhopal": [
+      {
+        "code": "BHO"
+      }
+    ],
+    "Bhubaneswar": [
+      {
+        "code": "BBI"
+      }
+    ],
+    "Bombay (Mumbai) - Chhatrapati Shivaji International": [
+      {
+        "code": "BOM"
+      }
+    ],
+    "Calcutta (Kolkata) - Netaji Subhas Chandra": [
+      {
+        "code": "CCU"
+      }
+    ],
+    "Calicut": [
+      {
+        "code": "CCJ"
+      }
+    ],
+    "Chandigarh - Chandigarh International Airport": [
+      {
+        "code": "IXC"
+      }
+    ],
+    "Chennai (Madras)": [
+      {
+        "code": "MAA"
+      }
+    ],
+    "Cochin": [
+      {
+        "code": "COK"
+      }
+    ],
+    "Coimbatore": [
+      {
+        "code": "CJB"
+      }
+    ],
+    "Delhi - Indira Gandhi International Airport": [
+      {
+        "code": "DEL"
+      }
+    ],
+    "Goa": [
+      {
+        "code": "GOI"
+      }
+    ],
+    "Guwahati": [
+      {
+        "code": "GAU"
+      }
+    ],
+    "Hyderabad - Rajiv Gandhi International Airport": [
+      {
+        "code": "HYD"
+      }
+    ],
+    "Jagdalpur": [
+      {
+        "code": "JGB"
+      }
+    ],
+    "Jaipur - Sanganeer": [
+      {
+        "code": "JAI"
+      }
+    ],
+    "Jaisalmer ": [
+      {
+        "code": "JSA"
+      }
+    ],
+    "Jalandhar": [
+      {
+        "code": "JLR"
+      }
+    ],
+    "Jammu - Satwari": [
+      {
+        "code": "IXJ"
+      }
+    ],
+    "Jamnagar - Govardhanpur": [
+      {
+        "code": "JGA"
+      }
+    ],
+    "Jamshedpur - Sonari Airport": [
+      {
+        "code": "IXW"
+      }
+    ],
+    "Jeypore - Jeypore Airport": [
+      {
+        "code": "PYB"
+      }
+    ],
+    "Jodhpur": [
+      {
+        "code": "JDH"
+      }
+    ],
+    "Jorhat - Rowriah Airport": [
+      {
+        "code": "JRH"
+      }
+    ],
+    "Kanpur": [
+      {
+        "code": "KNU"
+      }
+    ],
+    "Kolkata (Calcutta) - Netaji Subhas Chandra": [
+      {
+        "code": "CCU"
+      }
+    ],
+    "Lucknow": [
+      {
+        "code": "LKO"
+      }
+    ],
+    "Madras (Chennai) - Chennai International Airport": [
+      {
+        "code": "MAA"
+      }
+    ],
+    "Mysore": [
+      {
+        "code": "MYQ"
+      }
+    ],
+    "Nagpur": [
+      {
+        "code": "NAG"
+      }
+    ],
+    "Patna": [
+      {
+        "code": "PAT"
+      }
+    ],
+    "Rajkot": [
+      {
+        "code": "RAJ"
+      }
+    ],
+    "Ranchi": [
+      {
+        "code": "IXR"
+      }
+    ],
+    "Srinagar": [
+      {
+        "code": "SXR"
+      }
+    ],
+    "Surat": [
+      {
+        "code": "STV"
+      }
+    ],
+    "Thiruvananthapuram": [
+      {
+        "code": "TRV"
+      }
+    ],
+    "Tiruchirapally": [
+      {
+        "code": "TRZ"
+      }
+    ],
+    "Udaipur - Dabok Airport": [
+      {
+        "code": "UDR"
+      }
+    ],
+    "Varanasi": [
+      {
+        "code": "VNS"
+      }
+    ]
+  },
+  "India, Maharashtra": {
+    "Pune": [
+      {
+        "code": "PNQ"
+      }
+    ]
+  },
+  "Indonesia": {
+    "Ayawasi": [
+      {
+        "code": "AYW"
+      }
+    ],
+    "Bandung - Husein Sastranegara International Airport": [
+      {
+        "code": "BDO"
+      }
+    ],
+    "Denpasar/Bali": [
+      {
+        "code": "DPS"
+      }
+    ],
+    "Jakarta - Halim Perdana Kusuma": [
+      {
+        "code": "HLP"
+      }
+    ],
+    "Jakarta - Metropolitan Area": [
+      {
+        "code": "JKT"
+      }
+    ],
+    "Jakarta - Soekarno-Hatta International": [
+      {
+        "code": "CGK"
+      }
+    ],
+    "Jayapura - Sentani": [
+      {
+        "code": "DJJ"
+      }
+    ],
+    "Manado": [
+      {
+        "code": "MDC"
+      }
+    ],
+    "Medan - Kualanamu International": [
+      {
+        "code": "KNO"
+      }
+    ],
+    "Medan - Polania Int'l (now Soewondo AFB)": [
+      {
+        "code": "MES"
+      }
+    ],
+    "Surabaya - Juanda": [
+      {
+        "code": "SUB"
+      }
+    ],
+    "Tioman": [
+      {
+        "code": "TOD"
+      }
+    ],
+    "Ujung Pandang - Hasanudin Airport": [
+      {
+        "code": "UPG"
+      }
+    ]
+  },
+  "Indonesia": {
+    "Jambi - Sultan Taha Syarifudn": [
+      {
+        "code": "DJB"
+      }
+    ]
+  },
+  "Iran": {
+    "Abadan": [
+      {
+        "code": "ABD"
+      }
+    ],
+    "Tehran (Teheran) - Mehrabad": [
+      {
+        "code": "THR"
+      }
+    ],
+    "Urmiehm (Orumieh)": [
+      {
+        "code": "OMH"
+      }
+    ]
+  },
+  "Iraq": {
+    "Bagdad - Baghdad International Airport": [
+      {
+        "code": "BGW"
+      }
+    ],
+    "Basra, Basrah": [
+      {
+        "code": "BSR"
+      }
+    ],
+    "Kirkuk": [
+      {
+        "code": "KIK"
+      }
+    ],
+    "Mosul": [
+      {
+        "code": "OSM"
+      }
+    ]
+  },
+  "Ireland": {
+    "Cork": [
+      {
+        "code": "ORK"
+      }
+    ],
+    "Donegal (Carrickfin)": [
+      {
+        "code": "CFN"
+      }
+    ],
+    "Dublin - Dublin International Airport": [
+      {
+        "code": "DUB"
+      }
+    ],
+    "Galway": [
+      {
+        "code": "GWY"
+      }
+    ],
+    "Kerry County": [
+      {
+        "code": "KIR"
+      }
+    ],
+    "Knock": [
+      {
+        "code": "NOC"
+      }
+    ],
+    "Shannon (Limerick)": [
+      {
+        "code": "SNN"
+      }
+    ],
+    "Sligo": [
+      {
+        "code": "SXL"
+      }
+    ]
+  },
+  "Israel": {
+    "Elat": [
+      {
+        "code": "ETH"
+      }
+    ],
+    "Elat, Ovula": [
+      {
+        "code": "VDA"
+      }
+    ],
+    "Haifa": [
+      {
+        "code": "HFA"
+      }
+    ],
+    "Jerusalem - Atarot Airport (closed)": [
+      {
+        "code": "JRS"
+      }
+    ],
+    "Tel Aviv - Ben Gurion International": [
+      {
+        "code": "TLV"
+      }
+    ]
+  },
+  "Italy": {
+    "Alghero Sassari": [
+      {
+        "code": "AHO"
+      }
+    ],
+    "Ancona - Ancona Falconara Airport": [
+      {
+        "code": "AOI"
+      }
+    ],
+    "Bari": [
+      {
+        "code": "BRI"
+      }
+    ],
+    "Bergamo/Milan - Orio Al Serio": [
+      {
+        "code": "BGY"
+      }
+    ],
+    "Bologna": [
+      {
+        "code": "BLQ"
+      }
+    ],
+    "Brescia, Montichiari": [
+      {
+        "code": "VBS"
+      }
+    ],
+    "Brindisi": [
+      {
+        "code": "BDS"
+      }
+    ],
+    "Cagliari": [
+      {
+        "code": "CAG"
+      }
+    ],
+    "Catania": [
+      {
+        "code": "CTA"
+      }
+    ],
+    "Elba Island, Marina Di Campo": [
+      {
+        "code": "EBA"
+      }
+    ],
+    "Florence (Firenze) - Peretola Airport": [
+      {
+        "code": "FLR"
+      }
+    ],
+    "Genoa": [
+      {
+        "code": "GOA"
+      }
+    ],
+    "Lamezia Terme": [
+      {
+        "code": "SUF"
+      }
+    ],
+    "Lampedusa": [
+      {
+        "code": "LMP"
+      }
+    ],
+    "Milan": [
+      {
+        "code": "MIL"
+      }
+    ],
+    "Milan - Linate": [
+      {
+        "code": "LIN"
+      }
+    ],
+    "Milan - Malpensa": [
+      {
+        "code": "MXP"
+      }
+    ],
+    "Milan - Orio Al Serio": [
+      {
+        "code": "BGY"
+      }
+    ],
+    "Naples - Naples Capodichino Airport": [
+      {
+        "code": "NAP"
+      }
+    ],
+    "Olbia": [
+      {
+        "code": "OLB"
+      }
+    ],
+    "Palermo - Punta Raisi": [
+      {
+        "code": "PMO"
+      }
+    ],
+    "Pantelleria": [
+      {
+        "code": "PNL"
+      }
+    ],
+    "Perugia": [
+      {
+        "code": "PEG"
+      }
+    ],
+    "Pescara": [
+      {
+        "code": "PSR"
+      }
+    ],
+    "Pisa - Galileo Galilei": [
+      {
+        "code": "PSA"
+      }
+    ],
+    "Reggio Calabria": [
+      {
+        "code": "REG"
+      }
+    ],
+    "Rimini": [
+      {
+        "code": "RMI"
+      }
+    ],
+    "Rome": [
+      {
+        "code": "ROM"
+      }
+    ],
+    "Rome - Ciampino": [
+      {
+        "code": "CIA"
+      }
+    ],
+    "Rome - Fuimicino": [
+      {
+        "code": "FCO"
+      }
+    ],
+    "Trapani": [
+      {
+        "code": "TPS"
+      }
+    ],
+    "Treviso": [
+      {
+        "code": "TSF"
+      }
+    ],
+    "Trieste": [
+      {
+        "code": "TRS"
+      }
+    ],
+    "Turin": [
+      {
+        "code": "TRN"
+      }
+    ],
+    "Venice - Marco Polo": [
+      {
+        "code": "VCE"
+      }
+    ],
+    "Verona": [
+      {
+        "code": "VRN"
+      }
+    ],
+    "Verona (Brescia) Montichiari": [
+      {
+        "code": "VBS"
+      }
+    ]
+  },
+  "Jamaica": {
+    "Kingston - Norman Manley": [
+      {
+        "code": "KIN"
+      }
+    ],
+    "Montego Bay - Sangster International": [
+      {
+        "code": "MBJ"
+      }
+    ]
+  },
+  "Japan": {
+    "Akita": [
+      {
+        "code": "AXT"
+      }
+    ],
+    "Amami": [
+      {
+        "code": "ASJ"
+      }
+    ],
+    "Aomori": [
+      {
+        "code": "AOJ"
+      }
+    ],
+    "Chiba City": [
+      {
+        "code": "QCB"
+      }
+    ],
+    "Fukuoka": [
+      {
+        "code": "FUK"
+      }
+    ],
+    "Fukushima - Fukushima Airport": [
+      {
+        "code": "FKS"
+      }
+    ],
+    "Hachijo Jima": [
+      {
+        "code": "HAC"
+      }
+    ],
+    "Hakodate": [
+      {
+        "code": "HKD"
+      }
+    ],
+    "Hiroshima International": [
+      {
+        "code": "HIJ"
+      }
+    ],
+    "Ishigaki - New Ishigaki Airport": [
+      {
+        "code": "ISG"
+      }
+    ],
+    "Kagoshima": [
+      {
+        "code": "KOJ"
+      }
+    ],
+    "Kobe": [
+      {
+        "code": "UKB"
+      }
+    ],
+    "Kochi": [
+      {
+        "code": "KCZ"
+      }
+    ],
+    "Komatsu": [
+      {
+        "code": "KMQ"
+      }
+    ],
+    "Kumamoto": [
+      {
+        "code": "KMJ"
+      }
+    ],
+    "Kushiro": [
+      {
+        "code": "KUH"
+      }
+    ],
+    "Kyoto": [
+      {
+        "code": "UKY"
+      }
+    ],
+    "Matsumoto, Nagano": [
+      {
+        "code": "MMJ"
+      }
+    ],
+    "Matsuyama": [
+      {
+        "code": "MYJ"
+      }
+    ],
+    "Miyako Jima (Ryuku Islands) - Hirara": [
+      {
+        "code": "MMY"
+      }
+    ],
+    "Miyazaki": [
+      {
+        "code": "KMI"
+      }
+    ],
+    "Morioka, Hanamaki": [
+      {
+        "code": "HNA"
+      }
+    ],
+    "Nagasaki": [
+      {
+        "code": "NGS"
+      }
+    ],
+    "Nagoya - Komaki AFB": [
+      {
+        "code": "NGO"
+      }
+    ],
+    "Niigata": [
+      {
+        "code": "KIJ"
+      }
+    ],
+    "Oita": [
+      {
+        "code": "OIT"
+      }
+    ],
+    "Okayama": [
+      {
+        "code": "OKJ"
+      }
+    ],
+    "Okinawa, Ryukyo Island - Naha": [
+      {
+        "code": "OKA"
+      }
+    ],
+    "Osaka - Itami": [
+      {
+        "code": "ITM"
+      }
+    ],
+    "Osaka - Kansai International Airport": [
+      {
+        "code": "KIX"
+      }
+    ],
+    "Osaka, Metropolitan Area": [
+      {
+        "code": "OSA"
+      }
+    ],
+    "Sado Shima": [
+      {
+        "code": "SDS"
+      }
+    ],
+    "Sapporo - New Chitose Airport": [
+      {
+        "code": "CTS"
+      }
+    ],
+    "Sendai": [
+      {
+        "code": "SDJ"
+      }
+    ],
+    "Takamatsu": [
+      {
+        "code": "TAK"
+      }
+    ],
+    "Tokushima": [
+      {
+        "code": "TKS"
+      }
+    ],
+    "Tokyo": [
+      {
+        "code": "TYO"
+      }
+    ],
+    "Tokyo - Haneda": [
+      {
+        "code": "HND"
+      }
+    ],
+    "Tokyo - Narita": [
+      {
+        "code": "NRT"
+      }
+    ],
+    "Toyama": [
+      {
+        "code": "TOY"
+      }
+    ],
+    "Ube": [
+      {
+        "code": "UBJ"
+      }
+    ],
+    "Yamagata, Junmachi": [
+      {
+        "code": "GAJ"
+      }
+    ],
+    "Yokohama": [
+      {
+        "code": "YOK"
+      }
+    ]
+  },
+  "Jiangxi, China": {
+    "Ji'an": [
+      {
+        "code": "JGS"
+      }
+    ]
+  },
+  "Jilin, PR China": {
+    "Changchun": [
+      {
+        "code": "CGQ"
+      }
+    ]
+  },
+  "Jordan": {
+    "Amman - Amman-Marka International Airport": [
+      {
+        "code": "ADJ"
+      }
+    ],
+    "Amman - Queen Alia International Airport": [
+      {
+        "code": "AMM"
+      }
+    ],
+    "Aqaba": [
+      {
+        "code": "AQJ"
+      }
+    ]
+  },
+  "Kazakhstan": {
+    "Almaty (Alma Ata) - Almaty International Airport": [
+      {
+        "code": "ALA"
+      }
+    ],
+    "Astana - Astana International Airport": [
+      {
+        "code": "TSE"
+      }
+    ]
+  },
+  "Kenya": {
+    "Malindi": [
+      {
+        "code": "MYD"
+      }
+    ],
+    "Mombasa - Moi International": [
+      {
+        "code": "MBA"
+      }
+    ],
+    "Nairobi": [
+      {
+        "code": "NBO"
+      }
+    ]
+  },
+  "King Island (Australia)": {
+    "King Island": [
+      {
+        "code": "KNS"
+      }
+    ]
+  },
+  "Kiribati": {
+    "Kiritimati (island) - Cassidy International Airport": [
+      {
+        "code": "CXI"
+      }
+    ]
+  },
+  "Korea South": {
+    "Incheon, Incheon International Airport": [
+      {
+        "code": "ICN"
+      }
+    ]
+  },
+  "Kuwait": {
+    "Kuwait - Kuwait International": [
+      {
+        "code": "KWI"
+      }
+    ]
+  },
+  "Kyrgyzstan": {
+    "Bishkek - Manas International Airport": [
+      {
+        "code": "FRU"
+      }
+    ]
+  },
+  "Lao PDR": {
+    "Vientiane - Wattay": [
+      {
+        "code": "VTE"
+      }
+    ]
+  },
+  "Latvia": {
+    "Riga": [
+      {
+        "code": "RIX"
+      }
+    ]
+  },
+  "Lebanon": {
+    "Beirut - Beirut Rafic Hariri International Airport": [
+      {
+        "code": "BEY"
+      }
+    ]
+  },
+  "Lesotho": {
+    "Maseru - Moshoeshoe International": [
+      {
+        "code": "MSU"
+      }
+    ]
+  },
+  "Liaoning, PR China": {
+    "Dalian - Zhoushuizi International Airport": [
+      {
+        "code": "DLC"
+      }
+    ],
+    "Shenyang": [
+      {
+        "code": "SHE"
+      }
+    ]
+  },
+  "Liberia": {
+    "Monrovia - Metropolitan Area": [
+      {
+        "code": "MLW"
+      }
+    ],
+    "Monrovia - Roberts International": [
+      {
+        "code": "ROB"
+      }
+    ]
+  },
+  "Libya": {
+    "Benghazi (Bengasi)": [
+      {
+        "code": "BEN"
+      }
+    ],
+    "Sehba": [
+      {
+        "code": "SEB"
+      }
+    ],
+    "Tripoli - Tripoli International": [
+      {
+        "code": "TIP"
+      }
+    ]
+  },
+  "Lithuania": {
+    "Vilnius": [
+      {
+        "code": "VNO"
+      }
+    ],
+    "Wilna (Vilnius)": [
+      {
+        "code": "VNO"
+      }
+    ]
+  },
+  "Loyaute, Pazifik": {
+    "Lifou": [
+      {
+        "code": "LIF"
+      }
+    ]
+  },
+  "Luxembourg": {
+    "Luxembourg": [
+      {
+        "code": "LUX"
+      }
+    ]
+  },
+  "Macau, China SAR": {
+    "Macau - Macau International Airport": [
+      {
+        "code": "MFM"
+      }
+    ]
+  },
+  "Macedonia": {
+    "Ohrid": [
+      {
+        "code": "OHD"
+      }
+    ],
+    "Skopje": [
+      {
+        "code": "SKP"
+      }
+    ]
+  },
+  "Madagascar": {
+    "Antananarivo (Tanannarive) - Ivato International Airport": [
+      {
+        "code": "TNR"
+      }
+    ],
+    "Majunga": [
+      {
+        "code": "MJN"
+      }
+    ]
+  },
+  "Malawi": {
+    "Blantyre (Mandala) - Chileka International Airport": [
+      {
+        "code": "BLZ"
+      }
+    ],
+    "Lilongwe - Lilongwe International": [
+      {
+        "code": "LLW"
+      }
+    ]
+  },
+  "Malaysia": {
+    "Bintulu": [
+      {
+        "code": "BTU"
+      }
+    ],
+    "Johor Bahru - Sultan Ismail International": [
+      {
+        "code": "JHB"
+      }
+    ],
+    "Kota Kinabalu": [
+      {
+        "code": "BKI"
+      }
+    ],
+    "Kuala Lumpur - International Airport": [
+      {
+        "code": "KUL"
+      }
+    ],
+    "Kuala Lumpur - Sultan Abdul Aziz Shah": [
+      {
+        "code": "SZB"
+      }
+    ],
+    "Kuantan": [
+      {
+        "code": "KUA"
+      }
+    ],
+    "Kuching": [
+      {
+        "code": "KCH"
+      }
+    ],
+    "Labuan": [
+      {
+        "code": "LBU"
+      }
+    ],
+    "Langkawi (islands)": [
+      {
+        "code": "LGK"
+      }
+    ],
+    "Miri": [
+      {
+        "code": "MYY"
+      }
+    ],
+    "Penang International": [
+      {
+        "code": "PEN"
+      }
+    ],
+    "Sibu": [
+      {
+        "code": "SBW"
+      }
+    ],
+    "Tawau": [
+      {
+        "code": "TWU"
+      }
+    ]
+  },
+  "Maledives": {
+    "Male - Velana International Airport": [
+      {
+        "code": "MLE"
+      }
+    ]
+  },
+  "Mali": {
+    "Bamako - Bamako-Snou International Airport": [
+      {
+        "code": "BKO"
+      }
+    ]
+  },
+  "Malta": {
+    "Luga": [
+      {
+        "code": "MLA"
+      }
+    ]
+  },
+  "Marshall Islands": {
+    "Jaluit Island ": [
+      {
+        "code": "UIT"
+      }
+    ]
+  },
+  "Martinique": {
+    "Fort de France - Martinique Aim Csaire International": [
+      {
+        "code": "FDF"
+      }
+    ]
+  },
+  "Mauritania": {
+    "Nouadhibou": [
+      {
+        "code": "NDB"
+      }
+    ],
+    "Nouakchott": [
+      {
+        "code": "NKC"
+      }
+    ],
+    "Zouerate": [
+      {
+        "code": "OUZ"
+      }
+    ]
+  },
+  "Mauritius": {
+    "Mauritius - S.Seewoosagur Ram International": [
+      {
+        "code": "MRU"
+      }
+    ],
+    "Rodrigues Island": [
+      {
+        "code": "RRG"
+      }
+    ]
+  },
+  "Mayotte": {
+    "Dzaoudzi": [
+      {
+        "code": "DZA"
+      }
+    ]
+  },
+  "Mexico": {
+    "Acapulco": [
+      {
+        "code": "ACA"
+      }
+    ],
+    "Aguascaliente": [
+      {
+        "code": "AGU"
+      }
+    ],
+    "Cancun": [
+      {
+        "code": "CUN"
+      }
+    ],
+    "Chichen Itza": [
+      {
+        "code": "CZA"
+      }
+    ],
+    "Chihuahua - Gen Fierro Villalobos": [
+      {
+        "code": "CUU"
+      }
+    ],
+    "Ciudad Del Carmen": [
+      {
+        "code": "CME"
+      }
+    ],
+    "Ciudad Juarez": [
+      {
+        "code": "CJS"
+      }
+    ],
+    "Ciudad Obregon": [
+      {
+        "code": "CEN"
+      }
+    ],
+    "Ciudad Victoria": [
+      {
+        "code": "CVM"
+      }
+    ],
+    "Colima": [
+      {
+        "code": "CLQ"
+      }
+    ],
+    "Cozmel": [
+      {
+        "code": "CZM"
+      }
+    ],
+    "Culiacan": [
+      {
+        "code": "CUL"
+      }
+    ],
+    "Guadalajara": [
+      {
+        "code": "GDL"
+      }
+    ],
+    "Hermosillo - Gen. Pesqueira Garcia": [
+      {
+        "code": "HMO"
+      }
+    ],
+    "Huatulco": [
+      {
+        "code": "HUX"
+      }
+    ],
+    "Ixtapa/Zihuatenejo": [
+      {
+        "code": "ZIH"
+      }
+    ],
+    "Jalapa": [
+      {
+        "code": "JAL"
+      }
+    ],
+    "La Paz - Leon": [
+      {
+        "code": "LAP"
+      }
+    ],
+    "Lazaro Cardenas": [
+      {
+        "code": "LZC"
+      }
+    ],
+    "Leon": [
+      {
+        "code": "BJX"
+      }
+    ],
+    "Loreto": [
+      {
+        "code": "LTO"
+      }
+    ],
+    "Los Cabos": [
+      {
+        "code": "SJD"
+      }
+    ],
+    "Los Mochis": [
+      {
+        "code": "LMM"
+      }
+    ],
+    "Manzanillo": [
+      {
+        "code": "ZLO"
+      }
+    ],
+    "Mazatlan": [
+      {
+        "code": "MZT"
+      }
+    ],
+    "Merida": [
+      {
+        "code": "MID"
+      }
+    ],
+    "Mexicali": [
+      {
+        "code": "MXL"
+      }
+    ],
+    "Mexico City - Atizapan": [
+      {
+        "code": "AZP"
+      }
+    ],
+    "Mexico City - Juarez International": [
+      {
+        "code": "MEX"
+      }
+    ],
+    "Mexico City - Mexico City International Airport": [
+      {
+        "code": "MEX"
+      }
+    ],
+    "Mexico City - Santa Lucia": [
+      {
+        "code": "NLU"
+      }
+    ],
+    "Minatitlan": [
+      {
+        "code": "MTT"
+      }
+    ],
+    "Monterrey - Aeropuerto Del Norte": [
+      {
+        "code": "NTR"
+      }
+    ],
+    "Monterrey - Gen. Mariano Escobedo": [
+      {
+        "code": "MTY"
+      }
+    ],
+    "Morelia": [
+      {
+        "code": "MLM"
+      }
+    ],
+    "Nuevo Laredo": [
+      {
+        "code": "NLD"
+      }
+    ],
+    "Oaxaca - Xoxocotlan": [
+      {
+        "code": "OAX"
+      }
+    ],
+    "Puebla": [
+      {
+        "code": "PBC"
+      }
+    ],
+    "Puerto Escondido": [
+      {
+        "code": "PXM"
+      }
+    ],
+    "Puerto Vallarta": [
+      {
+        "code": "PVR"
+      }
+    ],
+    "San Jose Cabo": [
+      {
+        "code": "SJD"
+      }
+    ],
+    "San Luis Potosi": [
+      {
+        "code": "SLP"
+      }
+    ],
+    "Santa Rosalia": [
+      {
+        "code": "SRL"
+      }
+    ],
+    "Tampico - Gen. F. Javier Mina": [
+      {
+        "code": "TAM"
+      }
+    ],
+    "Tijuana - Rodriguez": [
+      {
+        "code": "TIJ"
+      }
+    ],
+    "Tuxtla Gutierrez": [
+      {
+        "code": "TGZ"
+      }
+    ],
+    "Uruapan": [
+      {
+        "code": "UPN"
+      }
+    ],
+    "Veracruz": [
+      {
+        "code": "VER"
+      }
+    ],
+    "Villahermosa": [
+      {
+        "code": "VSA"
+      }
+    ],
+    "Zacatecas": [
+      {
+        "code": "ZCL"
+      }
+    ]
+  },
+  "Micronesia": {
+    "Pohnpei": [
+      {
+        "code": "PNI"
+      }
+    ]
+  },
+  "Moldova": {
+    "Chisinau - Chi\u015fin\u0103u International Airport": [
+      {
+        "code": "KIV"
+      }
+    ]
+  },
+  "Mongolia": {
+    "Ulaanbaatar - Buyant Uhaa Airport": [
+      {
+        "code": "ULN"
+      }
+    ]
+  },
+  "Montenegro": {
+    "Podgorica": [
+      {
+        "code": "TGD"
+      }
+    ],
+    "Tivat": [
+      {
+        "code": "TIV"
+      }
+    ]
+  },
+  "Morocco": {
+    "Agadir": [
+      {
+        "code": "AGA"
+      }
+    ],
+    "Al Hoceima": [
+      {
+        "code": "AHU"
+      }
+    ],
+    "Casablanca": [
+      {
+        "code": "CAS"
+      }
+    ],
+    "Casablanca, Mohamed V": [
+      {
+        "code": "CMN"
+      }
+    ],
+    "Fes": [
+      {
+        "code": "FEZ"
+      }
+    ],
+    "Marrakesh - Menara Airport": [
+      {
+        "code": "RAK"
+      }
+    ],
+    "Ouarzazate": [
+      {
+        "code": "OZZ"
+      }
+    ],
+    "Oujda": [
+      {
+        "code": "OUD"
+      }
+    ],
+    "Rabat - Rabat-Sal Airport": [
+      {
+        "code": "RBA"
+      }
+    ],
+    "Tangier - Boukhalef": [
+      {
+        "code": "TNG"
+      }
+    ]
+  },
+  "Mozambique": {
+    "Beira": [
+      {
+        "code": "BEW"
+      }
+    ],
+    "Maputo - Maputo International": [
+      {
+        "code": "MPM"
+      }
+    ]
+  },
+  "Myanmar": {
+    "Mandalay - Mandalay-Annisaton Airport": [
+      {
+        "code": "MDL"
+      }
+    ],
+    "Rangoon (Yangon) - Mingaladon": [
+      {
+        "code": "RGN"
+      }
+    ],
+    "Yangon (Rangoon) - Mingaladon": [
+      {
+        "code": "RGN"
+      }
+    ]
+  },
+  "Namibia": {
+    "Katima Mulilo/Mpacha": [
+      {
+        "code": "MPA"
+      }
+    ],
+    "Keetmanshoop": [
+      {
+        "code": "KMP"
+      }
+    ],
+    "Luederitz": [
+      {
+        "code": "LUD"
+      }
+    ],
+    "Mokuti": [
+      {
+        "code": "OKU"
+      }
+    ],
+    "Ondangwa": [
+      {
+        "code": "OND"
+      }
+    ],
+    "Oranjemund": [
+      {
+        "code": "OMD"
+      }
+    ],
+    "Rundu": [
+      {
+        "code": "NDU"
+      }
+    ],
+    "Swakopmund": [
+      {
+        "code": "SWP"
+      }
+    ],
+    "Tsumeb": [
+      {
+        "code": "TSB"
+      }
+    ],
+    "Windhoek - Eros": [
+      {
+        "code": "ERS"
+      }
+    ],
+    "Windhoek - Hosea Kutako International": [
+      {
+        "code": "WDH"
+      }
+    ]
+  },
+  "Nepal": {
+    "Janakpur": [
+      {
+        "code": "JKR"
+      }
+    ],
+    "Jiri": [
+      {
+        "code": "JIR"
+      }
+    ],
+    "Jomsom": [
+      {
+        "code": "JMO"
+      }
+    ],
+    "Jumla": [
+      {
+        "code": "JUM"
+      }
+    ],
+    "Kathmandu - Tribhuvan International Airport": [
+      {
+        "code": "KTM"
+      }
+    ]
+  },
+  "Netherlands": {
+    "Amsterdam - Amsterdam Airport Schiphol": [
+      {
+        "code": "AMS"
+      }
+    ],
+    "Den Haag (The Hague)": [
+      {
+        "code": "HAG"
+      }
+    ],
+    "Eindhoven": [
+      {
+        "code": "EIN"
+      }
+    ],
+    "Groningen - Eelde": [
+      {
+        "code": "GRQ"
+      }
+    ],
+    "Lelystad": [
+      {
+        "code": "LEY"
+      }
+    ],
+    "Maastricht/Aachen": [
+      {
+        "code": "MST"
+      }
+    ],
+    "Rotterdam": [
+      {
+        "code": "RTM"
+      }
+    ],
+    "Uden - Volkel Airport": [
+      {
+        "code": "UDE"
+      }
+    ]
+  },
+  "Netherlands Antilles": {
+    "Bonaire": [
+      {
+        "code": "BON"
+      }
+    ],
+    "Curacao - Curaao International Airport": [
+      {
+        "code": "CUR"
+      }
+    ],
+    "St. Marteen": [
+      {
+        "code": "SXM"
+      }
+    ]
+  },
+  "New Caledonia": {
+    "Ile Ouen": [
+      {
+        "code": "IOU"
+      }
+    ],
+    "Ile des Pins": [
+      {
+        "code": "ILP"
+      }
+    ],
+    "Mare": [
+      {
+        "code": "MEE"
+      }
+    ],
+    "Noumea": [
+      {
+        "code": "NOU"
+      }
+    ],
+    "Touho": [
+      {
+        "code": "TOU"
+      }
+    ]
+  },
+  "New Zealand": {
+    "Auckland - Auckland International Airport": [
+      {
+        "code": "AKL"
+      }
+    ],
+    "Blenheim": [
+      {
+        "code": "BHE"
+      }
+    ],
+    "Christchurch": [
+      {
+        "code": "CHC"
+      }
+    ],
+    "Dunedin": [
+      {
+        "code": "DUD"
+      }
+    ],
+    "Hamilton": [
+      {
+        "code": "HLZ"
+      }
+    ],
+    "Incercargill": [
+      {
+        "code": "IVC"
+      }
+    ],
+    "Invercargill": [
+      {
+        "code": "IVC"
+      }
+    ],
+    "Milford Sound": [
+      {
+        "code": "MFN"
+      }
+    ],
+    "Mount Cook": [
+      {
+        "code": "GTN"
+      }
+    ],
+    "Nelson": [
+      {
+        "code": "NSN"
+      }
+    ],
+    "Palmerston North": [
+      {
+        "code": "PMR"
+      }
+    ],
+    "Queenstown": [
+      {
+        "code": "ZQN"
+      }
+    ],
+    "Rotorua": [
+      {
+        "code": "ROT"
+      }
+    ],
+    "Te Anau": [
+      {
+        "code": "TEU"
+      }
+    ],
+    "Wellington": [
+      {
+        "code": "WLG"
+      }
+    ],
+    "Whakatane": [
+      {
+        "code": "WHK"
+      }
+    ],
+    "Whangarei": [
+      {
+        "code": "WRE"
+      }
+    ]
+  },
+  "Nicaragua": {
+    "Managua - Augusto C Sandino": [
+      {
+        "code": "MGA"
+      }
+    ]
+  },
+  "Niger": {
+    "Agades": [
+      {
+        "code": "AJY"
+      }
+    ],
+    "Arlit": [
+      {
+        "code": "RLT"
+      }
+    ],
+    "Maradi": [
+      {
+        "code": "MFQ"
+      }
+    ],
+    "Niamey": [
+      {
+        "code": "NIM"
+      }
+    ],
+    "Zinder": [
+      {
+        "code": "ZND"
+      }
+    ]
+  },
+  "Nigeria": {
+    "Abuja - Nnamdi Azikiwe International Airport": [
+      {
+        "code": "ABV"
+      }
+    ],
+    "Jos": [
+      {
+        "code": "JOS"
+      }
+    ],
+    "Kano": [
+      {
+        "code": "KAN"
+      }
+    ],
+    "Lagos - Murtala Muhammed Airport": [
+      {
+        "code": "LOS"
+      }
+    ],
+    "Port Harcourt": [
+      {
+        "code": "PHC"
+      }
+    ]
+  },
+  "North Korea": {
+    "Pyongyang - Sunan International Airport": [
+      {
+        "code": "FNJ"
+      }
+    ]
+  },
+  "Northern Mariana Islands": {
+    "Saipan": [
+      {
+        "code": "SPN"
+      }
+    ]
+  },
+  "Norway": {
+    "Alesund": [
+      {
+        "code": "AES"
+      }
+    ],
+    "Alta": [
+      {
+        "code": "ALF"
+      }
+    ],
+    "Bardufoss": [
+      {
+        "code": "BDU"
+      }
+    ],
+    "Bergen": [
+      {
+        "code": "BGO"
+      }
+    ],
+    "Bodo": [
+      {
+        "code": "BOO"
+      }
+    ],
+    "Broennoeysund": [
+      {
+        "code": "BNN"
+      }
+    ],
+    "Evenes": [
+      {
+        "code": "EVE"
+      }
+    ],
+    "Floro": [
+      {
+        "code": "FRO"
+      }
+    ],
+    "Hammerfest": [
+      {
+        "code": "HFT"
+      }
+    ],
+    "Haugesund": [
+      {
+        "code": "HAU"
+      }
+    ],
+    "Kirkenes": [
+      {
+        "code": "KKN"
+      }
+    ],
+    "Kristiansand": [
+      {
+        "code": "KRS"
+      }
+    ],
+    "Kristiansund": [
+      {
+        "code": "KSU"
+      }
+    ],
+    "Lakselv": [
+      {
+        "code": "LKL"
+      }
+    ],
+    "Oslo - Fornebu": [
+      {
+        "code": "FBU"
+      }
+    ],
+    "Oslo - Oslo Airport, Gardermoen": [
+      {
+        "code": "OSL"
+      }
+    ],
+    "Oslo - Sandefjord": [
+      {
+        "code": "TRF"
+      }
+    ],
+    "Sogndal": [
+      {
+        "code": "SOG"
+      }
+    ],
+    "Stavanger": [
+      {
+        "code": "SVG"
+      }
+    ],
+    "Tromsoe": [
+      {
+        "code": "TOS"
+      }
+    ],
+    "Trondheim": [
+      {
+        "code": "TRD"
+      }
+    ]
+  },
+  "Oman": {
+    "Muscat - Seeb": [
+      {
+        "code": "MCT"
+      }
+    ],
+    "Salalah": [
+      {
+        "code": "SLL"
+      }
+    ]
+  },
+  "PR China": {
+    "Altay": [
+      {
+        "code": "AAT"
+      }
+    ],
+    "Chaoyang, Beijing - Chaoyang Airport": [
+      {
+        "code": "CHG"
+      }
+    ],
+    "Jiamusi - Jiamusi Airport": [
+      {
+        "code": "JMU"
+      }
+    ],
+    "Jiayuguan - Jiayuguan Airport": [
+      {
+        "code": "JGN"
+      }
+    ],
+    "Jilin": [
+      {
+        "code": "JIL"
+      }
+    ],
+    "Jingdezhen": [
+      {
+        "code": "JDZ"
+      }
+    ],
+    "Jinghong - Gasa Airport": [
+      {
+        "code": "JHG"
+      }
+    ],
+    "Jining": [
+      {
+        "code": "JNG"
+      }
+    ],
+    "Jinjiang": [
+      {
+        "code": "JJN"
+      }
+    ],
+    "Jinzhou - Jinzhou Airport": [
+      {
+        "code": "JNZ"
+      }
+    ],
+    "Jiujiang - Jiujiang Lushan Airport": [
+      {
+        "code": "JIU"
+      }
+    ],
+    "Ulanhot": [
+      {
+        "code": "HLH"
+      }
+    ]
+  },
+  "Pakistan": {
+    "Bahawalpur": [
+      {
+        "code": "BHV"
+      }
+    ],
+    "Bannu": [
+      {
+        "code": "BNP"
+      }
+    ],
+    "Chitral": [
+      {
+        "code": "CJL"
+      }
+    ],
+    "Dera Ismail Khan - Dera Ismail Khan Airport": [
+      {
+        "code": "DSK"
+      }
+    ],
+    "Faisalabad": [
+      {
+        "code": "LYP"
+      }
+    ],
+    "Gilgit": [
+      {
+        "code": "GIL"
+      }
+    ],
+    "Gwadar": [
+      {
+        "code": "GWD"
+      }
+    ],
+    "Hyderabad": [
+      {
+        "code": "HDD"
+      }
+    ],
+    "Islamabad - Benazir Bhutto International Airport": [
+      {
+        "code": "ISB"
+      }
+    ],
+    "Jacobabad": [
+      {
+        "code": "JAG"
+      }
+    ],
+    "Jiwani": [
+      {
+        "code": "JIW"
+      }
+    ],
+    "Karachi - Jinnah International Airport": [
+      {
+        "code": "KHI"
+      }
+    ],
+    "Khuzdar": [
+      {
+        "code": "KDD"
+      }
+    ],
+    "Kohat": [
+      {
+        "code": "OHT"
+      }
+    ],
+    "Lahore": [
+      {
+        "code": "LHE"
+      }
+    ],
+    "Mianwali": [
+      {
+        "code": "MWD"
+      }
+    ],
+    "Mirpur": [
+      {
+        "code": "QML"
+      }
+    ],
+    "Moenjodaro": [
+      {
+        "code": "MJD"
+      }
+    ],
+    "Multan": [
+      {
+        "code": "MUX"
+      }
+    ],
+    "Muzaffarabad": [
+      {
+        "code": "MFG"
+      }
+    ],
+    "Nawab Shah": [
+      {
+        "code": "WNS"
+      }
+    ],
+    "Panjgur": [
+      {
+        "code": "PJG"
+      }
+    ],
+    "Pasni": [
+      {
+        "code": "PSI"
+      }
+    ],
+    "Peshawar": [
+      {
+        "code": "PEW"
+      }
+    ],
+    "Quetta": [
+      {
+        "code": "UET"
+      }
+    ],
+    "Rahim Yar Khan - Shaikh Zayed International Airport": [
+      {
+        "code": "RYK"
+      }
+    ],
+    "Rawala Kot": [
+      {
+        "code": "RAZ"
+      }
+    ],
+    "Rawalpindi": [
+      {
+        "code": "RWP"
+      }
+    ],
+    "Saidu Sharif": [
+      {
+        "code": "SDT"
+      }
+    ],
+    "Sindhri": [
+      {
+        "code": "MPD"
+      }
+    ],
+    "Skardu": [
+      {
+        "code": "KDU"
+      }
+    ],
+    "Sui": [
+      {
+        "code": "SUL"
+      }
+    ],
+    "Sukkur": [
+      {
+        "code": "SKZ"
+      }
+    ],
+    "Turbat": [
+      {
+        "code": "TUK"
+      }
+    ],
+    "Zhob": [
+      {
+        "code": "PZH"
+      }
+    ]
+  },
+  "Palestinian Territory": {
+    "Gaza City - Gaza International Airport": [
+      {
+        "code": "GZA"
+      }
+    ]
+  },
+  "Panama": {
+    "Jaque ": [
+      {
+        "code": "JQE"
+      }
+    ],
+    "Panama City - Tocumen International": [
+      {
+        "code": "PTY"
+      }
+    ]
+  },
+  "Papua New Guinea": {
+    "Aiyura": [
+      {
+        "code": "AYU"
+      }
+    ],
+    "Amazon Bay": [
+      {
+        "code": "AZB"
+      }
+    ],
+    "Jacquinot Bay": [
+      {
+        "code": "JAQ"
+      }
+    ],
+    "Lae - Lae Nadzab Airport": [
+      {
+        "code": "LAE"
+      }
+    ],
+    "Manguna": [
+      {
+        "code": "MFO"
+      }
+    ],
+    "Port Moresby - Jackson Field": [
+      {
+        "code": "POM"
+      }
+    ]
+  },
+  "Paraguay": {
+    "Asuncion - Asuncin International Airport": [
+      {
+        "code": "ASU"
+      }
+    ]
+  },
+  "Peru": {
+    "Iquitos": [
+      {
+        "code": "IQT"
+      }
+    ],
+    "Jauja": [
+      {
+        "code": "JAU"
+      }
+    ],
+    "Juanjui": [
+      {
+        "code": "JJI"
+      }
+    ],
+    "Juliaca": [
+      {
+        "code": "JUL"
+      }
+    ],
+    "Lima - J Chavez International": [
+      {
+        "code": "LIM"
+      }
+    ]
+  },
+  "Philippines": {
+    "Cebu City - Mactan-Cebu International": [
+      {
+        "code": "CEB"
+      }
+    ],
+    "Cuyo": [
+      {
+        "code": "CYU"
+      }
+    ],
+    "Jolo": [
+      {
+        "code": "JOL"
+      }
+    ],
+    "Mactan Island - Nab": [
+      {
+        "code": "NOP"
+      }
+    ],
+    "Manila - Ninoy Aquino International": [
+      {
+        "code": "MNL"
+      }
+    ]
+  },
+  "Poland": {
+    "Gdansk": [
+      {
+        "code": "GDN"
+      }
+    ],
+    "Krakow (Cracow) - John Paul II International Airport": [
+      {
+        "code": "KRK"
+      }
+    ],
+    "Poznan, Lawica": [
+      {
+        "code": "POZ"
+      }
+    ],
+    "Stettin": [
+      {
+        "code": "SZZ"
+      }
+    ],
+    "Warsaw - Frdric Chopin": [
+      {
+        "code": "WAW"
+      }
+    ]
+  },
+  "Portugal": {
+    "Faro": [
+      {
+        "code": "FAO"
+      }
+    ],
+    "Funchal": [
+      {
+        "code": "FNC"
+      }
+    ],
+    "Horta": [
+      {
+        "code": "HOR"
+      }
+    ],
+    "Lisbon - Lisboa": [
+      {
+        "code": "LIS"
+      }
+    ],
+    "Ponta Delgada": [
+      {
+        "code": "PDL"
+      }
+    ],
+    "Porto": [
+      {
+        "code": "OPO"
+      }
+    ],
+    "Porto Santo": [
+      {
+        "code": "PXO"
+      }
+    ],
+    "Santa Maria": [
+      {
+        "code": "SMA"
+      }
+    ],
+    "Terceira": [
+      {
+        "code": "TER"
+      }
+    ]
+  },
+  "Puerto Rico": {
+    "Aguadilla": [
+      {
+        "code": "BQN"
+      }
+    ],
+    "Mayaguez": [
+      {
+        "code": "MAZ"
+      }
+    ],
+    "Ponce": [
+      {
+        "code": "PSE"
+      }
+    ],
+    "San Juan - Luis Munoz Marin International Airport": [
+      {
+        "code": "SJU"
+      }
+    ]
+  },
+  "Qatar": {
+    "Doha - Doha International Airport": [
+      {
+        "code": "DOH"
+      }
+    ]
+  },
+  "Reunion": {
+    "Saint Denis - Roland Garros Airport": [
+      {
+        "code": "RUN"
+      }
+    ]
+  },
+  "Romania": {
+    "Bucharest": [
+      {
+        "code": "BUH"
+      }
+    ],
+    "Bucharest - Henri Coand\u0103 International Airport": [
+      {
+        "code": "OTP"
+      }
+    ],
+    "Constanta (Constan\u021ba) - Constanta Int'l Airport": [
+      {
+        "code": "CND"
+      }
+    ]
+  },
+  "Russia": {
+    "Adler/Sochi": [
+      {
+        "code": "AER"
+      }
+    ],
+    "Arkhangelsk": [
+      {
+        "code": "ARH"
+      }
+    ],
+    "Chabarovsk (Khabarovsk)": [
+      {
+        "code": "KHV"
+      }
+    ],
+    "Chita (Tschita)": [
+      {
+        "code": "HTA"
+      }
+    ],
+    "Irkutsk": [
+      {
+        "code": "IKT"
+      }
+    ],
+    "Kaliningrad": [
+      {
+        "code": "KGD"
+      }
+    ],
+    "Kazan - Kazan International Airport": [
+      {
+        "code": "KZN"
+      }
+    ],
+    "Mineralnye Vody": [
+      {
+        "code": "MRV"
+      }
+    ],
+    "Moscow - Domodedovo": [
+      {
+        "code": "DME"
+      }
+    ],
+    "Moscow - Metropolitan Area": [
+      {
+        "code": "MOW"
+      }
+    ],
+    "Moscow - Sheremetyevo": [
+      {
+        "code": "SVO"
+      }
+    ],
+    "Moscow - Vnukovo": [
+      {
+        "code": "VKO"
+      }
+    ],
+    "Murmansk": [
+      {
+        "code": "MMK"
+      }
+    ],
+    "Nizhny Novgorod - Strigino International Airport": [
+      {
+        "code": "GOJ"
+      }
+    ],
+    "Novosibirsk - Tolmachevo Airport": [
+      {
+        "code": "OVB"
+      }
+    ],
+    "Rostov-on-Don - Platov International Airport": [
+      {
+        "code": "ROV"
+      }
+    ],
+    "Rostov-on-Don - Rostov-on-Don Airport": [
+      {
+        "code": "RVI"
+      }
+    ],
+    "Samara - Kurumoch International Airport": [
+      {
+        "code": "KUF"
+      }
+    ],
+    "Saransk - Saransk Airport": [
+      {
+        "code": "SKX"
+      }
+    ],
+    "St. Petersburg (Leningrad) - Pulkovo": [
+      {
+        "code": "LED"
+      }
+    ],
+    "Ufa": [
+      {
+        "code": "UFA"
+      }
+    ],
+    "Ukhta": [
+      {
+        "code": "UCT"
+      }
+    ],
+    "Ulan-Ude": [
+      {
+        "code": "UUD"
+      }
+    ],
+    "Velikiye Luki (Welikije Luki)": [
+      {
+        "code": "VLU"
+      }
+    ],
+    "Yakutsk": [
+      {
+        "code": "YKS"
+      }
+    ],
+    "Yekaterinburg - Koltsovo Airport": [
+      {
+        "code": "SVX"
+      }
+    ]
+  },
+  "Rwanda": {
+    "Kigali - Gregoire Kayibanda": [
+      {
+        "code": "KGL"
+      }
+    ]
+  },
+  "Saint Kitts and Nevis": {
+    "Basseterre - Robert L. Bradshaw International Airport": [
+      {
+        "code": "SKB"
+      }
+    ]
+  },
+  "Saint Lucia": {
+    "Castries - George F. L. Charles Airport": [
+      {
+        "code": "SLU"
+      }
+    ],
+    "St. Lucia Hewanorra": [
+      {
+        "code": "UVF"
+      }
+    ],
+    "St. Lucia Vigle": [
+      {
+        "code": "SLU"
+      }
+    ]
+  },
+  "Saint Vincent & the Grenadines": {
+    "Canouan (island) - Canouan Airport": [
+      {
+        "code": "CIW"
+      }
+    ]
+  },
+  "Saint Vincent and the Grenadines": {
+    "Kingstown - E. T. Joshua Airport": [
+      {
+        "code": "SVD"
+      }
+    ],
+    "St. Vincent": [
+      {
+        "code": "SVD"
+      }
+    ],
+    "Union Island": [
+      {
+        "code": "UNI"
+      }
+    ]
+  },
+  "Samoa": {
+    "Apia - Faleolo International Airport": [
+      {
+        "code": "APW"
+      }
+    ]
+  },
+  "Sao Tome & Principe": {
+    "Sao Tome": [
+      {
+        "code": "TMS"
+      }
+    ]
+  },
+  "Saudi Arabia": {
+    "Dhahran": [
+      {
+        "code": "DHA"
+      }
+    ],
+    "Jeddah - King Abdulaziz International": [
+      {
+        "code": "JED"
+      }
+    ],
+    "Jouf": [
+      {
+        "code": "AJF"
+      }
+    ],
+    "Khamis Mushayat": [
+      {
+        "code": "AHB"
+      }
+    ],
+    "Madinah (Medina) - Mohammad Bin Abdulaziz": [
+      {
+        "code": "MED"
+      }
+    ],
+    "Medina": [
+      {
+        "code": "MED"
+      }
+    ],
+    "Riyadh - King Khaled International": [
+      {
+        "code": "RUH"
+      }
+    ],
+    "Tabuk": [
+      {
+        "code": "TUU"
+      }
+    ],
+    "Taif": [
+      {
+        "code": "TIF"
+      }
+    ],
+    "Yanbu": [
+      {
+        "code": "YNB"
+      }
+    ]
+  },
+  "Saudi Arabien": {
+    "Dammam, King Fahad International": [
+      {
+        "code": "DMM"
+      }
+    ]
+  },
+  "Scotland, UK": {
+    "Edinburgh - Edinburgh Airport": [
+      {
+        "code": "EDI"
+      }
+    ]
+  },
+  "Senegal": {
+    "Dakar - Lopold Sdar Senghor International Airport": [
+      {
+        "code": "DKR"
+      }
+    ]
+  },
+  "Serbia": {
+    "Belgrad (Beograd) - Belgrade Nikola Tesla International": [
+      {
+        "code": "BEG"
+      }
+    ],
+    "Nis": [
+      {
+        "code": "INI"
+      }
+    ],
+    "Novi Sad": [
+      {
+        "code": "QND"
+      }
+    ],
+    "Pristina": [
+      {
+        "code": "PRN"
+      }
+    ]
+  },
+  "Seychelles": {
+    "Mahe - Seychelles International": [
+      {
+        "code": "SEZ"
+      }
+    ]
+  },
+  "Shaanxi, PR China": {
+    "Xi'an - Xianyang": [
+      {
+        "code": "XIY"
+      }
+    ]
+  },
+  "Shandong, PR China": {
+    "Jinan": [
+      {
+        "code": "TNA"
+      }
+    ],
+    "Qingdao": [
+      {
+        "code": "TAO"
+      }
+    ]
+  },
+  "Shanxi, PR China": {
+    "Taiyuan": [
+      {
+        "code": "TYN"
+      }
+    ]
+  },
+  "Sichuan, PR China": {
+    "Chengdu - Shuangliu": [
+      {
+        "code": "CTU"
+      }
+    ],
+    "Chongqing - Jiangbei International Airport": [
+      {
+        "code": "CKG"
+      }
+    ]
+  },
+  "Sierra Leone": {
+    "Freetown - Freetown-Lungi International Airport": [
+      {
+        "code": "FNA"
+      }
+    ]
+  },
+  "Singapore": {
+    "Singapore - Changi": [
+      {
+        "code": "SIN"
+      }
+    ],
+    "Singapore - Paya Lebar": [
+      {
+        "code": "QPG"
+      }
+    ],
+    "Singapore - Seletar": [
+      {
+        "code": "XSP"
+      }
+    ]
+  },
+  "Slovakia": {
+    "Bratislava - M. R. tefnik Airport": [
+      {
+        "code": "BTS"
+      }
+    ]
+  },
+  "Slovenia": {
+    "Ljubljana - Brnik": [
+      {
+        "code": "LJU"
+      }
+    ],
+    "Maribor": [
+      {
+        "code": "MBX"
+      }
+    ]
+  },
+  "Solomon Islands": {
+    "Guadalcanal": [
+      {
+        "code": "GSI"
+      }
+    ],
+    "Honiara Henderson International": [
+      {
+        "code": "HIR"
+      }
+    ]
+  },
+  "Somalia": {
+    "Mogadishu": [
+      {
+        "code": "MGQ"
+      }
+    ]
+  },
+  "South Africa": {
+    "Aggeneys": [
+      {
+        "code": "AGZ"
+      }
+    ],
+    "Alexander Bay - Kortdoorn": [
+      {
+        "code": "ALJ"
+      }
+    ],
+    "Alldays": [
+      {
+        "code": "ADY"
+      }
+    ],
+    "Bloemfontein - Bloemfontein Airport": [
+      {
+        "code": "BFN"
+      }
+    ],
+    "Cape Town - Cape Town International Airport": [
+      {
+        "code": "CPT"
+      }
+    ],
+    "Durban": [
+      {
+        "code": "DUR"
+      }
+    ],
+    "East London": [
+      {
+        "code": "ELS"
+      }
+    ],
+    "Ellisras": [
+      {
+        "code": "ELL"
+      }
+    ],
+    "George": [
+      {
+        "code": "GRJ"
+      }
+    ],
+    "Johannesburg - OR Tambo International Airport": [
+      {
+        "code": "JNB"
+      }
+    ],
+    "Kimberley": [
+      {
+        "code": "KIM"
+      }
+    ],
+    "Kleinsee": [
+      {
+        "code": "KLZ"
+      }
+    ],
+    "Lanseria": [
+      {
+        "code": "HLA"
+      }
+    ],
+    "Lusisiki": [
+      {
+        "code": "LUJ"
+      }
+    ],
+    "Margate": [
+      {
+        "code": "MGH"
+      }
+    ],
+    "Messina": [
+      {
+        "code": "MEZ"
+      }
+    ],
+    "Mkambati": [
+      {
+        "code": "MBM"
+      }
+    ],
+    "Mossel Bay": [
+      {
+        "code": "MZY"
+      }
+    ],
+    "Mzamba": [
+      {
+        "code": "MZF"
+      }
+    ],
+    "Nelspruit": [
+      {
+        "code": "NLP"
+      }
+    ],
+    "Nelspruit - Kruger Mpumalanga International Airport": [
+      {
+        "code": "MQP"
+      }
+    ],
+    "Newcastle": [
+      {
+        "code": "NCS"
+      }
+    ],
+    "Oudtshoorn": [
+      {
+        "code": "OUH"
+      }
+    ],
+    "Phalaborwa": [
+      {
+        "code": "PHW"
+      }
+    ],
+    "Pietermaritzburg": [
+      {
+        "code": "PZB"
+      }
+    ],
+    "Pietersburg": [
+      {
+        "code": "PTG"
+      }
+    ],
+    "Pilanesberg/Sun City": [
+      {
+        "code": "NTY"
+      }
+    ],
+    "Plettenberg Bay": [
+      {
+        "code": "PBZ"
+      }
+    ],
+    "Port Elizabeth": [
+      {
+        "code": "PLZ"
+      }
+    ],
+    "Pretoria - Wonderboom Apt.": [
+      {
+        "code": "PRY"
+      }
+    ],
+    "Richards Bay": [
+      {
+        "code": "RCB"
+      }
+    ],
+    "Sishen": [
+      {
+        "code": "SIS"
+      }
+    ],
+    "Skukuza": [
+      {
+        "code": "SZK"
+      }
+    ],
+    "Springbok": [
+      {
+        "code": "SBU"
+      }
+    ],
+    "Thaba'Nchu": [
+      {
+        "code": "TCU"
+      }
+    ],
+    "Ulundi": [
+      {
+        "code": "ULD"
+      }
+    ],
+    "Umtata": [
+      {
+        "code": "UTT"
+      }
+    ],
+    "Upington": [
+      {
+        "code": "UTN"
+      }
+    ],
+    "Vryheid": [
+      {
+        "code": "VYD"
+      }
+    ],
+    "Walvis Bay": [
+      {
+        "code": "WVB"
+      }
+    ],
+    "Welkom": [
+      {
+        "code": "WEL"
+      }
+    ]
+  },
+  "South Korea": {
+    "Pu San (Busan) - Gimhae International Airport": [
+      {
+        "code": "PUS"
+      }
+    ],
+    "Seoul - Incheon International Airport": [
+      {
+        "code": "ICN"
+      }
+    ],
+    "Seoul - Kimpo": [
+      {
+        "code": "SEL"
+      }
+    ],
+    "Ulsan": [
+      {
+        "code": "USN"
+      }
+    ]
+  },
+  "South Sudan": {
+    "Juba": [
+      {
+        "code": "JUB"
+      }
+    ]
+  },
+  "Spain": {
+    "Alicante": [
+      {
+        "code": "ALC"
+      }
+    ],
+    "Almeria": [
+      {
+        "code": "LEI"
+      }
+    ],
+    "Arrecife/Lanzarote": [
+      {
+        "code": "ACE"
+      }
+    ],
+    "Badajoz": [
+      {
+        "code": "BJZ"
+      }
+    ],
+    "Barcelona": [
+      {
+        "code": "BCN"
+      }
+    ],
+    "Bilbao": [
+      {
+        "code": "BIO"
+      }
+    ],
+    "Cordoba": [
+      {
+        "code": "ODB"
+      }
+    ],
+    "Fuerteventura": [
+      {
+        "code": "FUE"
+      }
+    ],
+    "Gerona": [
+      {
+        "code": "GRO"
+      }
+    ],
+    "Granada": [
+      {
+        "code": "GRX"
+      }
+    ],
+    "Jerez de la Frontera/Cadiz - La Parra": [
+      {
+        "code": "XRY"
+      }
+    ],
+    "La Coruna": [
+      {
+        "code": "LCG"
+      }
+    ],
+    "Las Palmas": [
+      {
+        "code": "LPA"
+      }
+    ],
+    "Madrid - Barajas Airport": [
+      {
+        "code": "MAD"
+      }
+    ],
+    "Mahon": [
+      {
+        "code": "MAH"
+      }
+    ],
+    "Malaga": [
+      {
+        "code": "AGP"
+      }
+    ],
+    "Murcia": [
+      {
+        "code": "MJV"
+      }
+    ],
+    "Oviedo": [
+      {
+        "code": "OVD"
+      }
+    ],
+    "Palma de Mallorca": [
+      {
+        "code": "PMI"
+      }
+    ],
+    "Reus": [
+      {
+        "code": "REU"
+      }
+    ],
+    "San Sebastian": [
+      {
+        "code": "EAS"
+      }
+    ],
+    "Santa Cruz de la Palma": [
+      {
+        "code": "SPC"
+      }
+    ],
+    "Santander": [
+      {
+        "code": "SDR"
+      }
+    ],
+    "Santiago de Compostela": [
+      {
+        "code": "SCQ"
+      }
+    ],
+    "Sevilla": [
+      {
+        "code": "SVQ"
+      }
+    ],
+    "Tenerife": [
+      {
+        "code": "TCI"
+      }
+    ],
+    "Tenerife - Norte Los Rodeos": [
+      {
+        "code": "TFN"
+      }
+    ],
+    "Tenerife - Sur Reina Sofia": [
+      {
+        "code": "TFS"
+      }
+    ],
+    "Valencia": [
+      {
+        "code": "VLC"
+      }
+    ],
+    "Valladolid": [
+      {
+        "code": "VLL"
+      }
+    ],
+    "Valverde": [
+      {
+        "code": "VDE"
+      }
+    ],
+    "Vigo": [
+      {
+        "code": "VGO"
+      }
+    ],
+    "Vitoria": [
+      {
+        "code": "VIT"
+      }
+    ],
+    "Zaragoza": [
+      {
+        "code": "ZAZ"
+      }
+    ]
+  },
+  "Sri Lanka": {
+    "Colombo - Bandaranaike International Airport": [
+      {
+        "code": "CMB"
+      }
+    ],
+    "Jaffna - Kankesanturai": [
+      {
+        "code": "JAF"
+      }
+    ]
+  },
+  "St. Kitts and Nevis": {
+    "Nevis": [
+      {
+        "code": "NEV"
+      }
+    ],
+    "St. Kitts": [
+      {
+        "code": "SKB"
+      }
+    ]
+  },
+  "St. Martin (Guadeloupe)": {
+    "St. Martin": [
+      {
+        "code": "SFG"
+      }
+    ]
+  },
+  "Sudan": {
+    "Kassala": [
+      {
+        "code": "KSL"
+      }
+    ],
+    "Khartoum - Khartoum International Airport": [
+      {
+        "code": "KRT"
+      }
+    ]
+  },
+  "Suriname": {
+    "Paramaribo - Zanderij International": [
+      {
+        "code": "PBM"
+      }
+    ]
+  },
+  "Svalbard/Norway": {
+    "Longyearbyen - Svalbard": [
+      {
+        "code": "LYR"
+      }
+    ]
+  },
+  "Swaziland": {
+    "Manzini - Matsapha International": [
+      {
+        "code": "MTS"
+      }
+    ]
+  },
+  "Sweden": {
+    "Gothenburg (Gteborg) - Landvetter": [
+      {
+        "code": "GOT"
+      }
+    ],
+    "Helsingborg": [
+      {
+        "code": "JHE"
+      }
+    ],
+    "Jnkping (Jonkoping) - Axamo Airport": [
+      {
+        "code": "JKG"
+      }
+    ],
+    "Kalmar": [
+      {
+        "code": "KLR"
+      }
+    ],
+    "Karlstad": [
+      {
+        "code": "KSD"
+      }
+    ],
+    "Kiruna": [
+      {
+        "code": "KRN"
+      }
+    ],
+    "Kristianstad": [
+      {
+        "code": "KID"
+      }
+    ],
+    "Lidkoeping": [
+      {
+        "code": "LDK"
+      }
+    ],
+    "Lulea": [
+      {
+        "code": "LLA"
+      }
+    ],
+    "Malmo (Malmoe)": [
+      {
+        "code": "MMA"
+      }
+    ],
+    "Malmo (Malm) - Malm Airport": [
+      {
+        "code": "MMX"
+      }
+    ],
+    "Norrkoeping": [
+      {
+        "code": "NRK"
+      }
+    ],
+    "Oerebro": [
+      {
+        "code": "ORB"
+      }
+    ],
+    "Ronneby": [
+      {
+        "code": "RNB"
+      }
+    ],
+    "Stockholm - Arlanda": [
+      {
+        "code": "ARN"
+      }
+    ],
+    "Stockholm - Bromma": [
+      {
+        "code": "BMA"
+      }
+    ],
+    "Stockholm Metropolitan Area": [
+      {
+        "code": "STO"
+      }
+    ],
+    "Sundsvall": [
+      {
+        "code": "SDL"
+      }
+    ],
+    "Umea": [
+      {
+        "code": "UME"
+      }
+    ],
+    "Vaexjoe": [
+      {
+        "code": "VXO"
+      }
+    ],
+    "Vasteras": [
+      {
+        "code": "VST"
+      }
+    ],
+    "Visby": [
+      {
+        "code": "VBY"
+      }
+    ]
+  },
+  "Switzerland": {
+    "Altenrhein": [
+      {
+        "code": "ACH"
+      }
+    ],
+    "Basel": [
+      {
+        "code": "BSL"
+      }
+    ],
+    "Berne, Bern-Belp": [
+      {
+        "code": "BRN"
+      }
+    ],
+    "Berne, Railway Service": [
+      {
+        "code": "ZDJ"
+      }
+    ],
+    "Geneva - Geneva-Cointrin International Airport": [
+      {
+        "code": "GVA"
+      }
+    ],
+    "Lugano": [
+      {
+        "code": "LUG"
+      }
+    ],
+    "Zurich (Zrich) - Kloten": [
+      {
+        "code": "ZRH"
+      }
+    ]
+  },
+  "Switzerland/France": {
+    "Basel/Mulhouse": [
+      {
+        "code": "EAP"
+      }
+    ]
+  },
+  "Syria": {
+    "Aleppo": [
+      {
+        "code": "ALP"
+      }
+    ],
+    "Damascus, International": [
+      {
+        "code": "DAM"
+      }
+    ]
+  },
+  "Taiwan": {
+    "Kaohsiung International": [
+      {
+        "code": "KHH"
+      }
+    ],
+    "Makung": [
+      {
+        "code": "MZG"
+      }
+    ],
+    "Taipei - Chiang Kai Shek": [
+      {
+        "code": "TPE"
+      }
+    ],
+    "Taipei - Sung Shan": [
+      {
+        "code": "TAY"
+      }
+    ]
+  },
+  "Tajikistan": {
+    "Dushanbe (Duschanbe) - Dushanbe Airport": [
+      {
+        "code": "DYU"
+      }
+    ]
+  },
+  "Tanzania": {
+    "Arusha": [
+      {
+        "code": "ARK"
+      }
+    ],
+    "Dar es Salam (Daressalam) - Julius Nyerere Int'l": [
+      {
+        "code": "DAR"
+      }
+    ],
+    "Dodoma - Dodoma Airport": [
+      {
+        "code": "DOD"
+      }
+    ],
+    "Kilimadjaro": [
+      {
+        "code": "JRO"
+      }
+    ]
+  },
+  "Teneriffa/Spain": {
+    "Los Rodeos": [
+      {
+        "code": "TFN"
+      }
+    ],
+    "Reina Sofia": [
+      {
+        "code": "TFS"
+      }
+    ]
+  },
+  "Thailand": {
+    "Bangkok, Don Muang": [
+      {
+        "code": "DMK"
+      }
+    ],
+    "Bangkok, Suvarnabhumi International": [
+      {
+        "code": "BKK"
+      }
+    ],
+    "Chiang Mai - Chiang Mai International Airport": [
+      {
+        "code": "CNX"
+      }
+    ],
+    "Hatyai (Hat Yai)": [
+      {
+        "code": "HDY"
+      }
+    ],
+    "Nakhon Si Thammarat": [
+      {
+        "code": "NST"
+      }
+    ],
+    "Pattaya": [
+      {
+        "code": "PYX"
+      }
+    ],
+    "Phuket": [
+      {
+        "code": "HKT"
+      }
+    ],
+    "Ubon Ratchathani - Muang Ubon Airport": [
+      {
+        "code": "UBP"
+      }
+    ],
+    "Udon Thani": [
+      {
+        "code": "UTH"
+      }
+    ],
+    "Utapao (Pattaya)": [
+      {
+        "code": "UTP"
+      }
+    ]
+  },
+  "The Bahamas": {
+    "Bahamas - Lynden Pindling International Airport": [
+      {
+        "code": "NAS"
+      }
+    ]
+  },
+  "Timor Leste (East Timor)": {
+    "Dili - Nicolau Lobato International Airport": [
+      {
+        "code": "DIL"
+      }
+    ]
+  },
+  "Togo": {
+    "Lome": [
+      {
+        "code": "LFW"
+      }
+    ]
+  },
+  "Tonga": {
+    "Nuku'alofa - Fua'Amotu International": [
+      {
+        "code": "TBU"
+      }
+    ]
+  },
+  "Trinidad and Tobago": {
+    "Port of Spain - Piarco International": [
+      {
+        "code": "POS"
+      }
+    ],
+    "Scarborough - Crown Point International": [
+      {
+        "code": "TAB"
+      }
+    ],
+    "Tobago": [
+      {
+        "code": "TAB"
+      }
+    ]
+  },
+  "Tunisia": {
+    "Djerba": [
+      {
+        "code": "DJE"
+      }
+    ],
+    "Monastir": [
+      {
+        "code": "MIR"
+      }
+    ],
+    "Sfax": [
+      {
+        "code": "SFA"
+      }
+    ],
+    "Tunis - Carthage": [
+      {
+        "code": "TUN"
+      }
+    ]
+  },
+  "Turkey": {
+    "Adana": [
+      {
+        "code": "ADA"
+      }
+    ],
+    "Adiyaman": [
+      {
+        "code": "ADF"
+      }
+    ],
+    "Ankara": [
+      {
+        "code": "ANK"
+      }
+    ],
+    "Ankara - Esenbo\u011fa International Airport": [
+      {
+        "code": "ESB"
+      }
+    ],
+    "Antalya": [
+      {
+        "code": "AYT"
+      }
+    ],
+    "Bodrum - Milas Airport": [
+      {
+        "code": "BJV"
+      }
+    ],
+    "Dalaman": [
+      {
+        "code": "DLM"
+      }
+    ],
+    "Denizli": [
+      {
+        "code": "DNZ"
+      }
+    ],
+    "Erzincan": [
+      {
+        "code": "ERC"
+      }
+    ],
+    "Erzurum": [
+      {
+        "code": "ERZ"
+      }
+    ],
+    "Gaziantep": [
+      {
+        "code": "GZT"
+      }
+    ],
+    "Istanbul - Istanbul Atatrk Airport": [
+      {
+        "code": "IST"
+      }
+    ],
+    "Istanbul - Sabiha Gokcen": [
+      {
+        "code": "SAW"
+      }
+    ],
+    "Izmir": [
+      {
+        "code": "IZM"
+      }
+    ],
+    "Izmir - Adnan Menderes Airport": [
+      {
+        "code": "ADB"
+      }
+    ],
+    "Kahramanmaras": [
+      {
+        "code": "KCM"
+      }
+    ],
+    "Kars": [
+      {
+        "code": "KYS"
+      }
+    ],
+    "Kayseri": [
+      {
+        "code": "ASR"
+      }
+    ],
+    "Konya": [
+      {
+        "code": "KYA"
+      }
+    ],
+    "Malatya": [
+      {
+        "code": "MLX"
+      }
+    ],
+    "Maras": [
+      {
+        "code": "KCM"
+      }
+    ],
+    "Mardin": [
+      {
+        "code": "MQM"
+      }
+    ],
+    "Mus": [
+      {
+        "code": "MSR"
+      }
+    ],
+    "Samsun": [
+      {
+        "code": "SZF"
+      }
+    ],
+    "Sivas": [
+      {
+        "code": "VAS"
+      }
+    ],
+    "Tekirdag - Corlu": [
+      {
+        "code": "TEQ"
+      }
+    ],
+    "Trabzon": [
+      {
+        "code": "TZX"
+      }
+    ],
+    "Van - Ferit Melen": [
+      {
+        "code": "VAN"
+      }
+    ]
+  },
+  "Turkmenistan": {
+    "Ashgabat - Saparmurat Turkmenbashy Int. Airport": [
+      {
+        "code": "ASB"
+      }
+    ]
+  },
+  "US Minor Outlying Islands": {
+    "Midway Island - Sand Island Field": [
+      {
+        "code": "MDY"
+      }
+    ]
+  },
+  "USA": {
+    "Aberdeen (SD)": [
+      {
+        "code": "ABR"
+      }
+    ],
+    "Abilene (TX)": [
+      {
+        "code": "ABI"
+      }
+    ],
+    "Akron (OH)": [
+      {
+        "code": "CAK"
+      }
+    ],
+    "Albany (GA)": [
+      {
+        "code": "ABY"
+      }
+    ],
+    "Albany (NY) - Albany International Airport": [
+      {
+        "code": "ALB"
+      }
+    ],
+    "Albuquerque (NM)": [
+      {
+        "code": "ABQ"
+      }
+    ],
+    "Allentown (PA)": [
+      {
+        "code": "ABE"
+      }
+    ],
+    "Altoona (PA)": [
+      {
+        "code": "AOO"
+      }
+    ],
+    "Altus": [
+      {
+        "code": "AXS"
+      }
+    ],
+    "Amarillo (TX)": [
+      {
+        "code": "AMA"
+      }
+    ],
+    "Anchorage (AK) - Ted Stevens Anchorage International": [
+      {
+        "code": "ANC"
+      }
+    ],
+    "Ann Arbor (MI)": [
+      {
+        "code": "ARB"
+      }
+    ],
+    "Anniston (AL)": [
+      {
+        "code": "ANB"
+      }
+    ],
+    "Appelton/Neenah/Menasha (WI)": [
+      {
+        "code": "ATW"
+      }
+    ],
+    "Asheville (NC)": [
+      {
+        "code": "AVL"
+      }
+    ],
+    "Aspen, (CO) - Aspen-Pitkin County Airport": [
+      {
+        "code": "ASE"
+      }
+    ],
+    "Athens (GA)": [
+      {
+        "code": "AHN"
+      }
+    ],
+    "Athens (OH)": [
+      {
+        "code": "ATO"
+      }
+    ],
+    "Atlanta (GA) - Hartsfield Atlanta International Airport": [
+      {
+        "code": "ATL"
+      }
+    ],
+    "Atlantic City (NJ) - Atlantic City International": [
+      {
+        "code": "ACY"
+      }
+    ],
+    "Augusta (GA)": [
+      {
+        "code": "AGS"
+      }
+    ],
+    "Augusta (ME) - Augusta State Airport": [
+      {
+        "code": "AUG"
+      }
+    ],
+    "Austin (TX) - Austin-Bergstrom Airport": [
+      {
+        "code": "AUS"
+      }
+    ],
+    "Bakersfield (CA)": [
+      {
+        "code": "BFL"
+      }
+    ],
+    "Baltimore (MD) - Washington International Airport": [
+      {
+        "code": "BWI"
+      }
+    ],
+    "Bangor (ME)": [
+      {
+        "code": "BGR"
+      }
+    ],
+    "Baton Rouge (LA) - Baton Rouge Metropolitan Airport": [
+      {
+        "code": "BTR"
+      }
+    ],
+    "Beaumont/Pt. Arthur (TX)": [
+      {
+        "code": "BPT"
+      }
+    ],
+    "Beckley (WV)": [
+      {
+        "code": "BKW"
+      }
+    ],
+    "Bellingham (WA)": [
+      {
+        "code": "BLI"
+      }
+    ],
+    "Bemidji (MN)": [
+      {
+        "code": "BJI"
+      }
+    ],
+    "Benton Harbour (MI)": [
+      {
+        "code": "BEH"
+      }
+    ],
+    "Bethel (AK)": [
+      {
+        "code": "BET"
+      }
+    ],
+    "Billings (MT)": [
+      {
+        "code": "BIL"
+      }
+    ],
+    "Birmingham (AL)": [
+      {
+        "code": "BHM"
+      }
+    ],
+    "Bismarck (ND) - Bismarck Municipal Airport": [
+      {
+        "code": "BIS"
+      }
+    ],
+    "Bloomington (IL)": [
+      {
+        "code": "BMI"
+      }
+    ],
+    "Bloomington (IN)": [
+      {
+        "code": "BMG"
+      }
+    ],
+    "Bluefield (WV)": [
+      {
+        "code": "BLF"
+      }
+    ],
+    "Boise (ID) - Boise Air Terminal": [
+      {
+        "code": "BOI"
+      }
+    ],
+    "Borrego Springs (CA)": [
+      {
+        "code": "BXS"
+      }
+    ],
+    "Boston (MA) - General Edward Lawrence Logan": [
+      {
+        "code": "BOS"
+      }
+    ],
+    "Bozeman (MT)": [
+      {
+        "code": "BZN"
+      }
+    ],
+    "Bradford/Warren (PA) /Olean (NY)": [
+      {
+        "code": "BFD"
+      }
+    ],
+    "Brainerd (MN)": [
+      {
+        "code": "BRD"
+      }
+    ],
+    "Bridgeport (CT)": [
+      {
+        "code": "BDR"
+      }
+    ],
+    "Brookings (SD)": [
+      {
+        "code": "BKX"
+      }
+    ],
+    "Brunswick (GA)": [
+      {
+        "code": "BQK"
+      }
+    ],
+    "Buffalo/Niagara Falls (NY)": [
+      {
+        "code": "BUF"
+      }
+    ],
+    "Bullhead City (NV)": [
+      {
+        "code": "BHC"
+      }
+    ],
+    "Burbank (CA)": [
+      {
+        "code": "BUR"
+      }
+    ],
+    "Burlington (VT)": [
+      {
+        "code": "BTV"
+      }
+    ],
+    "Burlington IA": [
+      {
+        "code": "BRL"
+      }
+    ],
+    "Butte (MT)": [
+      {
+        "code": "BTM"
+      }
+    ],
+    "Carlsbad (CA)": [
+      {
+        "code": "CLD"
+      }
+    ],
+    "Carson City (NV)": [
+      {
+        "code": "CSN"
+      }
+    ],
+    "Casper (WY)": [
+      {
+        "code": "CPR"
+      }
+    ],
+    "Cedar City (UT)": [
+      {
+        "code": "CDC"
+      }
+    ],
+    "Cedar Rapids IA": [
+      {
+        "code": "CID"
+      }
+    ],
+    "Champaign (IL)": [
+      {
+        "code": "CMI"
+      }
+    ],
+    "Charleston (SC)": [
+      {
+        "code": "CHS"
+      }
+    ],
+    "Charleston (WV) - Yeager Airport": [
+      {
+        "code": "CRW"
+      }
+    ],
+    "Charlotte (NC)": [
+      {
+        "code": "CLT"
+      }
+    ],
+    "Charlottesville (VA)": [
+      {
+        "code": "CHO"
+      }
+    ],
+    "Chattanooga (TN)": [
+      {
+        "code": "CHA"
+      }
+    ],
+    "Cheyenne (WY) - Cheyenne Regional Airport": [
+      {
+        "code": "CYS"
+      }
+    ],
+    "Chicago (IL)": [
+      {
+        "code": "CHI"
+      }
+    ],
+    "Chicago (IL), Midway": [
+      {
+        "code": "MDW"
+      }
+    ],
+    "Chicago (IL), O'Hare International Airport": [
+      {
+        "code": "ORD"
+      }
+    ],
+    "Chico (CA)": [
+      {
+        "code": "CIC"
+      }
+    ],
+    "Cincinnati (OH) - Cincinnati/Northern Kentucky Int'l": [
+      {
+        "code": "CVG"
+      }
+    ],
+    "Clarksburg (WV)": [
+      {
+        "code": "CKB"
+      }
+    ],
+    "Cleveland (OH) , Burke Lakefront": [
+      {
+        "code": "BKL"
+      }
+    ],
+    "Cleveland (OH) - Cleveland Hopkins International": [
+      {
+        "code": "CLE"
+      }
+    ],
+    "Cody/Powell/Yellowstone (WY)": [
+      {
+        "code": "COD"
+      }
+    ],
+    "Coffmann Cove (AK)": [
+      {
+        "code": "KCC"
+      }
+    ],
+    "College Station/Bryan (TX)": [
+      {
+        "code": "CLL"
+      }
+    ],
+    "Colorado Springs (CO)": [
+      {
+        "code": "COS"
+      }
+    ],
+    "Columbia (SC) - Columbia Metropolitan Airport": [
+      {
+        "code": "CAE"
+      }
+    ],
+    "Columbus (GA)": [
+      {
+        "code": "CSG"
+      }
+    ],
+    "Columbus (OH) - Port Columbus International": [
+      {
+        "code": "CMH"
+      }
+    ],
+    "Concord (CA) - Buchanan Field": [
+      {
+        "code": "CCR"
+      }
+    ],
+    "Concord (NH) - Concord Municipal Airport": [
+      {
+        "code": "CON"
+      }
+    ],
+    "Cordova (AK)": [
+      {
+        "code": "CDV"
+      }
+    ],
+    "Corpus Christi (TX)": [
+      {
+        "code": "CRP"
+      }
+    ],
+    "Craig (AK)": [
+      {
+        "code": "CGA"
+      }
+    ],
+    "Crescent City (CA)": [
+      {
+        "code": "CEC"
+      }
+    ],
+    "Dallas (TX) , Love Field": [
+      {
+        "code": "DAL"
+      }
+    ],
+    "Dallas/Ft. Worth (TX) - Dallas/Fort Worth International": [
+      {
+        "code": "DFW"
+      }
+    ],
+    "Danville (VA)": [
+      {
+        "code": "DAN"
+      }
+    ],
+    "Dayton (OH)": [
+      {
+        "code": "DAY"
+      }
+    ],
+    "Daytona Beach (FL)": [
+      {
+        "code": "DAB"
+      }
+    ],
+    "Decatur (IL)": [
+      {
+        "code": "DEC"
+      }
+    ],
+    "Denver (CO) - Denver International Airport": [
+      {
+        "code": "DEN"
+      }
+    ],
+    "Des Moines (IA) - Des Moines International Airport": [
+      {
+        "code": "DSM"
+      }
+    ],
+    "Detroit (MI) , Coleman A. Young Municipal": [
+      {
+        "code": "DET"
+      }
+    ],
+    "Detroit (MI) , Metropolitan Area": [
+      {
+        "code": "DTT"
+      }
+    ],
+    "Detroit (MI) , Wayne County Airport": [
+      {
+        "code": "DTW"
+      }
+    ],
+    "Devils Lake (ND)": [
+      {
+        "code": "DVL"
+      }
+    ],
+    "Dillingham (AK)": [
+      {
+        "code": "DLG"
+      }
+    ],
+    "Dothan (AL)": [
+      {
+        "code": "DHN"
+      }
+    ],
+    "Dubois (PA)": [
+      {
+        "code": "DUJ"
+      }
+    ],
+    "Dubuque IA": [
+      {
+        "code": "DBQ"
+      }
+    ],
+    "Duluth (MN) /Superior (WI)": [
+      {
+        "code": "DLH"
+      }
+    ],
+    "Durango (CO)": [
+      {
+        "code": "DRO"
+      }
+    ],
+    "Dutch Harbor (AK)": [
+      {
+        "code": "DUT"
+      }
+    ],
+    "Eau Clarie (WI)": [
+      {
+        "code": "EAU"
+      }
+    ],
+    "El Paso (TX) - El Paso International Airport": [
+      {
+        "code": "ELP"
+      }
+    ],
+    "Elkhart (IN)": [
+      {
+        "code": "EKI"
+      }
+    ],
+    "Elko (NV)": [
+      {
+        "code": "EKO"
+      }
+    ],
+    "Elmira (NY)": [
+      {
+        "code": "ELM"
+      }
+    ],
+    "Ely (NV)": [
+      {
+        "code": "ELY"
+      }
+    ],
+    "Erie (PA)": [
+      {
+        "code": "ERI"
+      }
+    ],
+    "Escanaba (MI)": [
+      {
+        "code": "ESC"
+      }
+    ],
+    "Eugene (OR)": [
+      {
+        "code": "EUG"
+      }
+    ],
+    "Eureka (CA)": [
+      {
+        "code": "ACV"
+      }
+    ],
+    "Evansville (IN)": [
+      {
+        "code": "EVV"
+      }
+    ],
+    "Fairbanks (AK)": [
+      {
+        "code": "FAI"
+      }
+    ],
+    "Fargo (ND) (MN)": [
+      {
+        "code": "FAR"
+      }
+    ],
+    "Farmington (NM)": [
+      {
+        "code": "FMN"
+      }
+    ],
+    "Fayetteville (AR)": [
+      {
+        "code": "FYV"
+      }
+    ],
+    "Fayetteville/Ft. Bragg (NC)": [
+      {
+        "code": "FAY"
+      }
+    ],
+    "Flagstaff (AZ)": [
+      {
+        "code": "FLG"
+      }
+    ],
+    "Flint (MI)": [
+      {
+        "code": "FNT"
+      }
+    ],
+    "Florence (SC)": [
+      {
+        "code": "FLO"
+      }
+    ],
+    "Fort Dodge IA": [
+      {
+        "code": "FOD"
+      }
+    ],
+    "Fort Huachuca/Sierra Vista (AZ)": [
+      {
+        "code": "FHU"
+      }
+    ],
+    "Fort Lauderdale/Hollywood (FL)": [
+      {
+        "code": "FLL"
+      }
+    ],
+    "Fort Myers, Metropolitan Area (FL)": [
+      {
+        "code": "FMY"
+      }
+    ],
+    "Fort Myers, Southwest Florida Reg (FL)": [
+      {
+        "code": "RSW"
+      }
+    ],
+    "Fort Riley (KS) - Marshall AAF": [
+      {
+        "code": "FRI"
+      }
+    ],
+    "Fort Smith (AR)": [
+      {
+        "code": "FSM"
+      }
+    ],
+    "Fort Walton Beach (FL)": [
+      {
+        "code": "VPS"
+      }
+    ],
+    "Fort Wayne (IN)": [
+      {
+        "code": "FWA"
+      }
+    ],
+    "Fort Worth (TX) - Dallas/Fort Worth International Airport": [
+      {
+        "code": "DFW"
+      }
+    ],
+    "Franklin/Oil City (PA)": [
+      {
+        "code": "FKL"
+      }
+    ],
+    "Fresno (CA)": [
+      {
+        "code": "FAT"
+      }
+    ],
+    "Gadsden (AL)": [
+      {
+        "code": "GAD"
+      }
+    ],
+    "Gainesville (FL)": [
+      {
+        "code": "GNV"
+      }
+    ],
+    "Gilette (WY)": [
+      {
+        "code": "GCC"
+      }
+    ],
+    "Glasgow (MT)": [
+      {
+        "code": "GGW"
+      }
+    ],
+    "Glendive (MT)": [
+      {
+        "code": "GDV"
+      }
+    ],
+    "Grand Canyon (AZ)": [
+      {
+        "code": "GCN"
+      }
+    ],
+    "Grand Forks (ND)": [
+      {
+        "code": "GFK"
+      }
+    ],
+    "Grand Junction (CO)": [
+      {
+        "code": "GJT"
+      }
+    ],
+    "Grand Rapids (MI)": [
+      {
+        "code": "GRR"
+      }
+    ],
+    "Grand Rapids (MN)": [
+      {
+        "code": "GPZ"
+      }
+    ],
+    "Great Falls (MT)": [
+      {
+        "code": "GTF"
+      }
+    ],
+    "Green Bay (WI)": [
+      {
+        "code": "GRB"
+      }
+    ],
+    "Greenbrier/Lewisburg (WV)": [
+      {
+        "code": "LWB"
+      }
+    ],
+    "Greensboro/Winston Salem (NC)": [
+      {
+        "code": "GSO"
+      }
+    ],
+    "Greenville (MS)": [
+      {
+        "code": "GLH"
+      }
+    ],
+    "Greenville (NC)": [
+      {
+        "code": "PGV"
+      }
+    ],
+    "Greenville/Spartanburg (SC)": [
+      {
+        "code": "GSP"
+      }
+    ],
+    "Groton/New London (CT)": [
+      {
+        "code": "GON"
+      }
+    ],
+    "Gulfport/Biloxi (MS)": [
+      {
+        "code": "GPT"
+      }
+    ],
+    "Gunnison/Crested Butte (CO)": [
+      {
+        "code": "GUC"
+      }
+    ],
+    "Haines (AK)": [
+      {
+        "code": "HNS"
+      }
+    ],
+    "Hancock (MI)": [
+      {
+        "code": "CMX"
+      }
+    ],
+    "Harlingen/South Padre Island (TX)": [
+      {
+        "code": "HRL"
+      }
+    ],
+    "Harrisburg (PA) - Harrisburg International": [
+      {
+        "code": "MDT"
+      }
+    ],
+    "Harrisburg (PA) - Harrisburg Skyport": [
+      {
+        "code": "HAR"
+      }
+    ],
+    "Hartford (CT) /Springfield (MA)": [
+      {
+        "code": "BDL"
+      }
+    ],
+    "Havre (MT)": [
+      {
+        "code": "HVR"
+      }
+    ],
+    "Helena (MT)": [
+      {
+        "code": "HLN"
+      }
+    ],
+    "Hibbing (MN)": [
+      {
+        "code": "HIB"
+      }
+    ],
+    "Hickory (NC)": [
+      {
+        "code": "HKY"
+      }
+    ],
+    "Hilo (HI)": [
+      {
+        "code": "ITO"
+      }
+    ],
+    "Hilton Head Island (SC)": [
+      {
+        "code": "HHH"
+      }
+    ],
+    "Homer (AK)": [
+      {
+        "code": "HOM"
+      }
+    ],
+    "Honolulu (HI) - Honolulu International Airport": [
+      {
+        "code": "HNL"
+      }
+    ],
+    "Hoonah (AK)": [
+      {
+        "code": "HNH"
+      }
+    ],
+    "Houston (TX) , Hobby": [
+      {
+        "code": "HOU"
+      }
+    ],
+    "Houston, TX - George Bush Intercontinental Airport": [
+      {
+        "code": "IAH"
+      }
+    ],
+    "Huntington (WV)": [
+      {
+        "code": "HTS"
+      }
+    ],
+    "Huntsville (AL)": [
+      {
+        "code": "HSV"
+      }
+    ],
+    "Huron (SD)": [
+      {
+        "code": "HON"
+      }
+    ],
+    "Hyannis (MA)": [
+      {
+        "code": "HYA"
+      }
+    ],
+    "Hydaburg (AK)": [
+      {
+        "code": "HYG"
+      }
+    ],
+    "Idaho Falls (ID)": [
+      {
+        "code": "IDA"
+      }
+    ],
+    "Iliamna (AK)": [
+      {
+        "code": "ILI"
+      }
+    ],
+    "Imperial (CA)": [
+      {
+        "code": "IPL"
+      }
+    ],
+    "Indianapolis (IN) International": [
+      {
+        "code": "IND"
+      }
+    ],
+    "International Falls (MN)": [
+      {
+        "code": "INL"
+      }
+    ],
+    "Inykern (CA)": [
+      {
+        "code": "IYK"
+      }
+    ],
+    "Ithaca/Cortland (NY)": [
+      {
+        "code": "ITH"
+      }
+    ],
+    "Jackson (MI) - Reynolds Municipal": [
+      {
+        "code": "JXN"
+      }
+    ],
+    "Jackson (MS) - Hawkins Field ": [
+      {
+        "code": "HKS"
+      }
+    ],
+    "Jackson (MS) - Jackson Internationall": [
+      {
+        "code": "JAN"
+      }
+    ],
+    "Jackson (TN) - Mckellar": [
+      {
+        "code": "MKL"
+      }
+    ],
+    "Jackson Hole (WY)": [
+      {
+        "code": "JAC"
+      },
+      {
+        "code": "JAC"
+      }
+    ],
+    "Jackson, MN": [
+      {
+        "code": "MJQ"
+      }
+    ],
+    "Jacksonville (AR) Little Rock AFB ": [
+      {
+        "code": "LRF"
+      }
+    ],
+    "Jacksonville (FL) - Cecil Field NAS ": [
+      {
+        "code": "NZC"
+      }
+    ],
+    "Jacksonville (FL) - Craig Municipal ": [
+      {
+        "code": "CRG"
+      }
+    ],
+    "Jacksonville (FL) - International": [
+      {
+        "code": "JAX"
+      }
+    ],
+    "Jacksonville (FL) Jacksonville NAS ": [
+      {
+        "code": "NIP"
+      }
+    ],
+    "Jacksonville (IL) - Municipal Airport": [
+      {
+        "code": "IJX"
+      }
+    ],
+    "Jacksonville (NC)": [
+      {
+        "code": "OAJ"
+      }
+    ],
+    "Jacksonville (TX)": [
+      {
+        "code": "JKV"
+      }
+    ],
+    "Jamestown (ND)": [
+      {
+        "code": "JMS"
+      }
+    ],
+    "Jamestown (NY)": [
+      {
+        "code": "JHW"
+      }
+    ],
+    "Janesville (WI) - Rock County": [
+      {
+        "code": "JVL"
+      }
+    ],
+    "Jefferson City (MO) - Jefferson Memorial": [
+      {
+        "code": "JEF"
+      }
+    ],
+    "Johnson City (NY) - Binghamton/Endicott/Johnson": [
+      {
+        "code": "BGM"
+      }
+    ],
+    "Johnston Island": [
+      {
+        "code": "JON"
+      }
+    ],
+    "Johnstown (PA)": [
+      {
+        "code": "JST"
+      }
+    ],
+    "Jonesboro (AR) Jonesboro Airport": [
+      {
+        "code": "JBR"
+      }
+    ],
+    "Joplin (MO)": [
+      {
+        "code": "JLN"
+      }
+    ],
+    "Juneau (AK) - Juneau International Airport": [
+      {
+        "code": "JNU"
+      }
+    ],
+    "Kahului (HI)": [
+      {
+        "code": "OGG"
+      }
+    ],
+    "Kalamazoo/Battle Creek (MI)": [
+      {
+        "code": "AZO"
+      }
+    ],
+    "Kalispell (MT)": [
+      {
+        "code": "FCA"
+      }
+    ],
+    "Kamuela (HI)": [
+      {
+        "code": "MUE"
+      }
+    ],
+    "Kansas City (MO) - Kansas City International Airport": [
+      {
+        "code": "MCI"
+      }
+    ],
+    "Kapalua West (HI)": [
+      {
+        "code": "JHM"
+      }
+    ],
+    "Kaunakakai (HI)": [
+      {
+        "code": "MKK"
+      }
+    ],
+    "Kenai (AK)": [
+      {
+        "code": "ENA"
+      }
+    ],
+    "Ketchikan (AK)": [
+      {
+        "code": "KTN"
+      }
+    ],
+    "Key West (FL)": [
+      {
+        "code": "EYW"
+      }
+    ],
+    "Killeem (TX)": [
+      {
+        "code": "ILE"
+      }
+    ],
+    "King Salomon (AK)": [
+      {
+        "code": "AKN"
+      }
+    ],
+    "Kingston (NC)": [
+      {
+        "code": "ISO"
+      }
+    ],
+    "Klamath Fall (OR)": [
+      {
+        "code": "LMT"
+      }
+    ],
+    "Klawock (AK)": [
+      {
+        "code": "KLW"
+      }
+    ],
+    "Knoxville (TN)": [
+      {
+        "code": "TYS"
+      }
+    ],
+    "Kodiak (AK)": [
+      {
+        "code": "ADQ"
+      }
+    ],
+    "Kona (HI)": [
+      {
+        "code": "KOA"
+      }
+    ],
+    "Kotzbue (AK)": [
+      {
+        "code": "OTZ"
+      }
+    ],
+    "La Crosse (WI)": [
+      {
+        "code": "LSE"
+      }
+    ],
+    "Labouchere Bay (AK)": [
+      {
+        "code": "WLB"
+      }
+    ],
+    "Lafayette (IN)": [
+      {
+        "code": "LAF"
+      }
+    ],
+    "Lafayette, La": [
+      {
+        "code": "LFT"
+      }
+    ],
+    "Lake Charles (LA)": [
+      {
+        "code": "LCH"
+      }
+    ],
+    "Lake Havasu City (AZ)": [
+      {
+        "code": "HII"
+      }
+    ],
+    "Lake Tahoe (CA)": [
+      {
+        "code": "TVL"
+      }
+    ],
+    "Lanai City (HI)": [
+      {
+        "code": "LNY"
+      }
+    ],
+    "Lancaster (PA)": [
+      {
+        "code": "LNS"
+      }
+    ],
+    "Lansing (MI)": [
+      {
+        "code": "LAN"
+      }
+    ],
+    "Laramie (WY)": [
+      {
+        "code": "LAR"
+      }
+    ],
+    "Laredo (TX)": [
+      {
+        "code": "LRD"
+      }
+    ],
+    "Las Vegas (NV)": [
+      {
+        "code": "LAS"
+      }
+    ],
+    "Latrobe (PA)": [
+      {
+        "code": "LBE"
+      }
+    ],
+    "Laurel/Hattisburg (MS)": [
+      {
+        "code": "PIB"
+      }
+    ],
+    "Lawton (OK)": [
+      {
+        "code": "LAW"
+      }
+    ],
+    "Lebanon (NH)": [
+      {
+        "code": "LEB"
+      }
+    ],
+    "Lewiston (ID)": [
+      {
+        "code": "LWS"
+      }
+    ],
+    "Lewistown (MT)": [
+      {
+        "code": "LWT"
+      }
+    ],
+    "Lexington (KY)": [
+      {
+        "code": "LEX"
+      }
+    ],
+    "Lihue (HI)": [
+      {
+        "code": "LIH"
+      }
+    ],
+    "Lincoln (NE)": [
+      {
+        "code": "LNK"
+      }
+    ],
+    "Little Rock (AR)": [
+      {
+        "code": "LIT"
+      }
+    ],
+    "Long Beach (CA)": [
+      {
+        "code": "LGB"
+      }
+    ],
+    "Long Island (AK)": [
+      {
+        "code": "LIJ"
+      }
+    ],
+    "Long Island, Islip (NY) - Mac Arthur": [
+      {
+        "code": "ISP"
+      }
+    ],
+    "Longview/Kilgore (TX)": [
+      {
+        "code": "GGG"
+      }
+    ],
+    "Los Angeles (CA) - International": [
+      {
+        "code": "LAX"
+      }
+    ],
+    "Louisville (KY)": [
+      {
+        "code": "SDF"
+      }
+    ],
+    "Lubbock (TX)": [
+      {
+        "code": "LBB"
+      }
+    ],
+    "Lynchburg (VA)": [
+      {
+        "code": "LYH"
+      }
+    ],
+    "Lyons (KS) - Rice County Municipal": [
+      {
+        "code": "LYO"
+      }
+    ],
+    "Macon (GA)": [
+      {
+        "code": "MCN"
+      }
+    ],
+    "Madison (WI) - Dane County Regional Airport": [
+      {
+        "code": "MSN"
+      }
+    ],
+    "Manchester (NH)": [
+      {
+        "code": "MHT"
+      }
+    ],
+    "Marathon (FL)": [
+      {
+        "code": "MTH"
+      }
+    ],
+    "Marquette (MI)": [
+      {
+        "code": "MQT"
+      }
+    ],
+    "Martha's Vineyard (MA)": [
+      {
+        "code": "MVY"
+      }
+    ],
+    "Martinsburg (WV)": [
+      {
+        "code": "MRB"
+      }
+    ],
+    "Mason City IA": [
+      {
+        "code": "MCW"
+      }
+    ],
+    "Mattoon (IL)": [
+      {
+        "code": "MTO"
+      }
+    ],
+    "McAllen (TX)": [
+      {
+        "code": "MFE"
+      }
+    ],
+    "Medford (OR)": [
+      {
+        "code": "MFR"
+      }
+    ],
+    "Melbourne (FL)": [
+      {
+        "code": "MLB"
+      }
+    ],
+    "Memphis (TN)": [
+      {
+        "code": "MEM"
+      }
+    ],
+    "Merced (CA)": [
+      {
+        "code": "MCE"
+      }
+    ],
+    "Meridian (MS)": [
+      {
+        "code": "MEI"
+      }
+    ],
+    "Metlakatla (AK)": [
+      {
+        "code": "MTM"
+      }
+    ],
+    "Miami (FL)": [
+      {
+        "code": "MIA"
+      }
+    ],
+    "Midland/Odessa (TX)": [
+      {
+        "code": "MAF"
+      }
+    ],
+    "Miles City (MT)": [
+      {
+        "code": "MLS"
+      }
+    ],
+    "Milwaukee (WI)": [
+      {
+        "code": "MKE"
+      }
+    ],
+    "Minneapolis - St. Paul International Airport (MN)": [
+      {
+        "code": "MSP"
+      }
+    ],
+    "Minot (ND)": [
+      {
+        "code": "MOT"
+      }
+    ],
+    "Missula (MT)": [
+      {
+        "code": "MSO"
+      }
+    ],
+    "Mitchell (SD)": [
+      {
+        "code": "MHE"
+      }
+    ],
+    "Mobile (AL) - Pascagoula (MS)": [
+      {
+        "code": "MOB"
+      }
+    ],
+    "Modesto (CA)": [
+      {
+        "code": "MOD"
+      }
+    ],
+    "Moline/Quad Cities (IL)": [
+      {
+        "code": "MLI"
+      }
+    ],
+    "Monroe (LA)": [
+      {
+        "code": "MLU"
+      }
+    ],
+    "Monterey (CA)": [
+      {
+        "code": "MRY"
+      }
+    ],
+    "Montgomery (AL) - Montgomery Regional Airport": [
+      {
+        "code": "MGM"
+      }
+    ],
+    "Montrose/Tellruide (CO)": [
+      {
+        "code": "MTJ"
+      }
+    ],
+    "Morgantown (WV)": [
+      {
+        "code": "MGW"
+      }
+    ],
+    "Moses Lake (WA)": [
+      {
+        "code": "MWH"
+      }
+    ],
+    "Mt. McKinley (AK)": [
+      {
+        "code": "MCL"
+      }
+    ],
+    "Muscle Shoals (AL)": [
+      {
+        "code": "MSL"
+      }
+    ],
+    "Muskegon (MI)": [
+      {
+        "code": "MKG"
+      }
+    ],
+    "Myrtle Beach (SC) - Grand Strand Airport": [
+      {
+        "code": "CRE"
+      }
+    ],
+    "Myrtle Beach (SC) - Myrtle Beach AFB": [
+      {
+        "code": "MYR"
+      }
+    ],
+    "Nantucket (MA)": [
+      {
+        "code": "ACK"
+      }
+    ],
+    "Naples (FL)": [
+      {
+        "code": "APF"
+      }
+    ],
+    "Nashville (TN)": [
+      {
+        "code": "BNA"
+      }
+    ],
+    "New Bern (NC)": [
+      {
+        "code": "EWN"
+      }
+    ],
+    "New Haven (CT)": [
+      {
+        "code": "HVN"
+      }
+    ],
+    "New Orleans, La": [
+      {
+        "code": "MSY"
+      }
+    ],
+    "New York (NY)": [
+      {
+        "code": "NYC"
+      }
+    ],
+    "New York - John F. Kennedy (NY)": [
+      {
+        "code": "JFK"
+      }
+    ],
+    "New York - LaGuardia (NY)": [
+      {
+        "code": "LGA"
+      }
+    ],
+    "New York - Newark (NJ)": [
+      {
+        "code": "EWR"
+      }
+    ],
+    "Newburgh (NY)": [
+      {
+        "code": "SWF"
+      }
+    ],
+    "Newport News/Williamsburg (VA)": [
+      {
+        "code": "PHF"
+      }
+    ],
+    "Niagara Falls International": [
+      {
+        "code": "IAG"
+      }
+    ],
+    "Nome (AK)": [
+      {
+        "code": "OME"
+      }
+    ],
+    "Norfolk/Virginia Beach (VA)": [
+      {
+        "code": "ORF"
+      }
+    ],
+    "North Bend (OR)": [
+      {
+        "code": "OTH"
+      }
+    ],
+    "Oakland (CA)": [
+      {
+        "code": "OAK"
+      }
+    ],
+    "Oklahoma City (OK) - Will Rogers World": [
+      {
+        "code": "OKC"
+      }
+    ],
+    "Omaha (NE)": [
+      {
+        "code": "OMA"
+      }
+    ],
+    "Ontario (CA)": [
+      {
+        "code": "ONT"
+      }
+    ],
+    "Orange County (Santa Ana) (CA)": [
+      {
+        "code": "SNA"
+      }
+    ],
+    "Orlando - International Airport (FL)": [
+      {
+        "code": "MCO"
+      }
+    ],
+    "Orlando Metropolitan Area (FL)": [
+      {
+        "code": "ORL"
+      }
+    ],
+    "Oshkosh (WI)": [
+      {
+        "code": "OSH"
+      }
+    ],
+    "Owensboro (KY)": [
+      {
+        "code": "OWB"
+      }
+    ],
+    "Oxnard (CA)": [
+      {
+        "code": "OXR"
+      }
+    ],
+    "Paducah (KY)": [
+      {
+        "code": "PAH"
+      }
+    ],
+    "Page/Lake Powell (AZ)": [
+      {
+        "code": "PGA"
+      }
+    ],
+    "Pakersburg (WV) /Marietta (OH)": [
+      {
+        "code": "PKB"
+      }
+    ],
+    "Palm Springs (CA)": [
+      {
+        "code": "PSP"
+      }
+    ],
+    "Palmdale/Lancaster (CA)": [
+      {
+        "code": "PMD"
+      }
+    ],
+    "Panama City (FL)": [
+      {
+        "code": "PFN"
+      }
+    ],
+    "Pasco (WA)": [
+      {
+        "code": "PSC"
+      }
+    ],
+    "Pellston (MI)": [
+      {
+        "code": "PLN"
+      }
+    ],
+    "Pendelton (OR)": [
+      {
+        "code": "PDT"
+      }
+    ],
+    "Pensacola (FL)": [
+      {
+        "code": "PNS"
+      }
+    ],
+    "Peoria/Bloomington (IL)": [
+      {
+        "code": "PIA"
+      }
+    ],
+    "Petersburg (AK)": [
+      {
+        "code": "PSG"
+      }
+    ],
+    "Philadelphia (PA) - International": [
+      {
+        "code": "PHL"
+      }
+    ],
+    "Phoenix (AZ) - Sky Harbor International": [
+      {
+        "code": "PHX"
+      }
+    ],
+    "Pierre (SD)": [
+      {
+        "code": "PIR"
+      }
+    ],
+    "Pittsburgh International Airport (PA)": [
+      {
+        "code": "PIT"
+      }
+    ],
+    "Plattsburgh (NY)": [
+      {
+        "code": "PLB"
+      }
+    ],
+    "Pocatello (ID)": [
+      {
+        "code": "PIH"
+      }
+    ],
+    "Port Angeles (WA)": [
+      {
+        "code": "CLM"
+      }
+    ],
+    "Portland (ME)": [
+      {
+        "code": "PWM"
+      }
+    ],
+    "Portland International (OR)": [
+      {
+        "code": "PDX"
+      }
+    ],
+    "Poughkeepsie (NY)": [
+      {
+        "code": "POU"
+      }
+    ],
+    "Presque Island (ME)": [
+      {
+        "code": "PQI"
+      }
+    ],
+    "Providence (RI)": [
+      {
+        "code": "PVD"
+      }
+    ],
+    "Prudhoe Bay (AK)": [
+      {
+        "code": "SCC"
+      }
+    ],
+    "Pueblo (CO)": [
+      {
+        "code": "PUB"
+      }
+    ],
+    "Pullman (WA)": [
+      {
+        "code": "PUW"
+      }
+    ],
+    "Quincy (IL)": [
+      {
+        "code": "UIN"
+      }
+    ],
+    "Raleigh/Durham (NC)": [
+      {
+        "code": "RDU"
+      }
+    ],
+    "Rapid City (SD)": [
+      {
+        "code": "RAP"
+      }
+    ],
+    "Reading (PA)": [
+      {
+        "code": "RDG"
+      }
+    ],
+    "Redding (CA)": [
+      {
+        "code": "RDD"
+      }
+    ],
+    "Redmond (OR)": [
+      {
+        "code": "RDM"
+      }
+    ],
+    "Reno (NV)": [
+      {
+        "code": "RNO"
+      }
+    ],
+    "Rhinelander (WI)": [
+      {
+        "code": "RHI"
+      }
+    ],
+    "Richmond (VA)": [
+      {
+        "code": "RIC"
+      }
+    ],
+    "Roanoke (VA)": [
+      {
+        "code": "ROA"
+      }
+    ],
+    "Rochester (MN)": [
+      {
+        "code": "RST"
+      }
+    ],
+    "Rochester (NY)": [
+      {
+        "code": "ROC"
+      }
+    ],
+    "Rock Springs (WY)": [
+      {
+        "code": "RKS"
+      }
+    ],
+    "Rockford (IL)": [
+      {
+        "code": "RFD"
+      }
+    ],
+    "Rockland (ME)": [
+      {
+        "code": "RKD"
+      }
+    ],
+    "Rocky Mount - Wilson (NC)": [
+      {
+        "code": "RWI"
+      }
+    ],
+    "Sacramento (CA)": [
+      {
+        "code": "SMF"
+      }
+    ],
+    "Saginaw/Bay City/Midland (MI)": [
+      {
+        "code": "MBS"
+      }
+    ],
+    "Salem (OR)": [
+      {
+        "code": "SLE"
+      }
+    ],
+    "Salinas (CA)": [
+      {
+        "code": "SNS"
+      }
+    ],
+    "Salisbury (MD)": [
+      {
+        "code": "SBY"
+      }
+    ],
+    "Salt Lake City (UT)": [
+      {
+        "code": "SLC"
+      }
+    ],
+    "San Angelo (TX)": [
+      {
+        "code": "SJT"
+      }
+    ],
+    "San Antonio (TX)": [
+      {
+        "code": "SAT"
+      }
+    ],
+    "San Diego - Lindberg Field International (CA)": [
+      {
+        "code": "SAN"
+      }
+    ],
+    "San Francisco - International Airport, SA": [
+      {
+        "code": "SFO"
+      }
+    ],
+    "San Jose (CA)": [
+      {
+        "code": "SJC"
+      }
+    ],
+    "San Luis Obisco (CA)": [
+      {
+        "code": "SBP"
+      }
+    ],
+    "Santa Ana - John Wayne Airport (CA)": [
+      {
+        "code": "SNA"
+      }
+    ],
+    "Santa Barbara (CA)": [
+      {
+        "code": "SBA"
+      }
+    ],
+    "Santa Maria (CA)": [
+      {
+        "code": "SMX"
+      }
+    ],
+    "Santa Rosa (CA)": [
+      {
+        "code": "STS"
+      }
+    ],
+    "Sarasota/Bradenton (FL)": [
+      {
+        "code": "SRQ"
+      }
+    ],
+    "Savannah (GA)": [
+      {
+        "code": "SAV"
+      }
+    ],
+    "Scottsdale (AZ)": [
+      {
+        "code": "SCF"
+      }
+    ],
+    "Seattle/Tacoma (WA)": [
+      {
+        "code": "SEA"
+      }
+    ],
+    "Shenandoah Valley/Stauton (VA)": [
+      {
+        "code": "SHD"
+      }
+    ],
+    "Sheridan (WY)": [
+      {
+        "code": "SHR"
+      }
+    ],
+    "Shreveport, La": [
+      {
+        "code": "SHV"
+      }
+    ],
+    "Sidney (MT)": [
+      {
+        "code": "SDY"
+      }
+    ],
+    "Sioux City IA": [
+      {
+        "code": "SUX"
+      }
+    ],
+    "Sioux Falls (SD)": [
+      {
+        "code": "FSD"
+      }
+    ],
+    "Sitka (AK)": [
+      {
+        "code": "SIT"
+      }
+    ],
+    "Skagway (AK)": [
+      {
+        "code": "SGY"
+      }
+    ],
+    "South Bend (IN)": [
+      {
+        "code": "SBN"
+      }
+    ],
+    "Spokane (WA)": [
+      {
+        "code": "GEG"
+      }
+    ],
+    "Springfield (IL)": [
+      {
+        "code": "SPI"
+      }
+    ],
+    "Springfield (MO)": [
+      {
+        "code": "SGF"
+      }
+    ],
+    "St. George (UT)": [
+      {
+        "code": "SGU"
+      }
+    ],
+    "St. Louis (MO) Lambert-St. Louis International Airport": [
+      {
+        "code": "STL"
+      }
+    ],
+    "State College/Belefonte (PA)": [
+      {
+        "code": "SCE"
+      }
+    ],
+    "Steamboat Springs (CO)": [
+      {
+        "code": "HDN"
+      }
+    ],
+    "Stockton (CA)": [
+      {
+        "code": "SCK"
+      }
+    ],
+    "Sun Valley (ID)": [
+      {
+        "code": "SUN"
+      }
+    ],
+    "Syracuse (NY)": [
+      {
+        "code": "SYR"
+      }
+    ],
+    "Talkeetna (AK)": [
+      {
+        "code": "TKA"
+      }
+    ],
+    "Tallahassee (FL)": [
+      {
+        "code": "TLH"
+      }
+    ],
+    "Tampa - International (FL)": [
+      {
+        "code": "TPA"
+      }
+    ],
+    "Telluride (CO)": [
+      {
+        "code": "TEX"
+      }
+    ],
+    "Terre Haute (IN)": [
+      {
+        "code": "HUF"
+      }
+    ],
+    "Texarkana (AR)": [
+      {
+        "code": "TXK"
+      }
+    ],
+    "Thief River Falls (MN)": [
+      {
+        "code": "TVF"
+      }
+    ],
+    "Thorne Bay (AK)": [
+      {
+        "code": "KTB"
+      }
+    ],
+    "Toledo (OH)": [
+      {
+        "code": "TOL"
+      }
+    ],
+    "Traverse City (MI)": [
+      {
+        "code": "TVC"
+      }
+    ],
+    "Trenton/Princeton (NJ)": [
+      {
+        "code": "TTN"
+      }
+    ],
+    "Tri-Cities Regional (TN) /VA": [
+      {
+        "code": "TRI"
+      }
+    ],
+    "Tucson (AZ)": [
+      {
+        "code": "TUS"
+      }
+    ],
+    "Tulepo (MS)": [
+      {
+        "code": "TUP"
+      }
+    ],
+    "Tulsa (OK)": [
+      {
+        "code": "TUL"
+      }
+    ],
+    "Tuscaloosa (AL)": [
+      {
+        "code": "TCL"
+      }
+    ],
+    "Twin Falls (ID)": [
+      {
+        "code": "TWF"
+      }
+    ],
+    "Tyler (TX)": [
+      {
+        "code": "TYR"
+      }
+    ],
+    "Ukiah (CA)": [
+      {
+        "code": "UKI"
+      }
+    ],
+    "Unalakleet (AK)": [
+      {
+        "code": "UNK"
+      }
+    ],
+    "Upolu Point (HI)": [
+      {
+        "code": "UPP"
+      }
+    ],
+    "Utica (NY) - Oneida County Airport": [
+      {
+        "code": "UCA"
+      }
+    ],
+    "Vail (CO)": [
+      {
+        "code": "EGE"
+      }
+    ],
+    "Valdez (AK)": [
+      {
+        "code": "VDZ"
+      }
+    ],
+    "Valdosta (GA)": [
+      {
+        "code": "VLD"
+      }
+    ],
+    "Vernal (UT)": [
+      {
+        "code": "VEL"
+      }
+    ],
+    "Vero Beach/Ft. Pierce (FL)": [
+      {
+        "code": "VRB"
+      }
+    ],
+    "Visalia (CA)": [
+      {
+        "code": "VIS"
+      }
+    ],
+    "Waco (TX)": [
+      {
+        "code": "ACT"
+      }
+    ],
+    "Walla Walla (WA)": [
+      {
+        "code": "ALW"
+      }
+    ],
+    "Washington DC": [
+      {
+        "code": "WAS"
+      }
+    ],
+    "Washington DC - Baltimore Washington International": [
+      {
+        "code": "BWI"
+      }
+    ],
+    "Washington DC - Dulles International": [
+      {
+        "code": "IAD"
+      }
+    ],
+    "Washington DC - Ronald Reagan National": [
+      {
+        "code": "DCA"
+      }
+    ],
+    "Waterloo IA": [
+      {
+        "code": "ALO"
+      }
+    ],
+    "Watertown (SD)": [
+      {
+        "code": "ATY"
+      }
+    ],
+    "Wausau/Stevens Point (WI)": [
+      {
+        "code": "CWA"
+      }
+    ],
+    "Wenatchee (WA)": [
+      {
+        "code": "EAT"
+      }
+    ],
+    "West Palm Beach (FL)": [
+      {
+        "code": "PBI"
+      }
+    ],
+    "West Yellowstone (MT)": [
+      {
+        "code": "WYS"
+      }
+    ],
+    "White Plains (NY)": [
+      {
+        "code": "HPN"
+      }
+    ],
+    "Wichita (KS)": [
+      {
+        "code": "ICT"
+      }
+    ],
+    "Wichita Falls (TX)": [
+      {
+        "code": "SPS"
+      }
+    ],
+    "Wilkes Barre/Scranton (PA)": [
+      {
+        "code": "AVP"
+      }
+    ],
+    "Williamsport (PA)": [
+      {
+        "code": "IPT"
+      }
+    ],
+    "Williston (ND)": [
+      {
+        "code": "ISL"
+      }
+    ],
+    "Wilmington (NC)": [
+      {
+        "code": "ILM"
+      }
+    ],
+    "Wolf Point (MT)": [
+      {
+        "code": "OLF"
+      }
+    ],
+    "Worcester (MA)": [
+      {
+        "code": "ORH"
+      }
+    ],
+    "Worland (WY)": [
+      {
+        "code": "WRL"
+      }
+    ],
+    "Wrangell (AK)": [
+      {
+        "code": "WRG"
+      }
+    ],
+    "Yakima (WA)": [
+      {
+        "code": "YKM"
+      }
+    ],
+    "Yakutat (AK)": [
+      {
+        "code": "YAK"
+      }
+    ],
+    "Yuma (AZ)": [
+      {
+        "code": "YUM"
+      }
+    ]
+  },
+  "USA (LA)": {
+    "Alexandria - Esler Field": [
+      {
+        "code": "ESF"
+      }
+    ]
+  },
+  "Uganda": {
+    "Entebbe - Entebbe International Airport": [
+      {
+        "code": "EBB"
+      }
+    ],
+    "Gulu": [
+      {
+        "code": "ULU"
+      }
+    ],
+    "Jinja": [
+      {
+        "code": "JIN"
+      }
+    ]
+  },
+  "Ukraine": {
+    "Kharkov": [
+      {
+        "code": "HRK"
+      }
+    ],
+    "Kiev - Borispol": [
+      {
+        "code": "KBP"
+      }
+    ],
+    "Kiev - Zhulhany": [
+      {
+        "code": "IEV"
+      }
+    ],
+    "Lvov (Lwow, Lemberg)": [
+      {
+        "code": "LWO"
+      }
+    ],
+    "Nikolaev": [
+      {
+        "code": "NLV"
+      }
+    ],
+    "Odessa": [
+      {
+        "code": "ODS"
+      }
+    ],
+    "Simferopol": [
+      {
+        "code": "SIP"
+      }
+    ],
+    "Uzhgorod": [
+      {
+        "code": "UDJ"
+      }
+    ]
+  },
+  "United Arab Emirates": {
+    "Abu Dhabi - Abu Dhabi International": [
+      {
+        "code": "AUH"
+      }
+    ],
+    "Al Ain": [
+      {
+        "code": "AAN"
+      }
+    ],
+    "Alfujairah (Fujairah)": [
+      {
+        "code": "FJR"
+      }
+    ],
+    "Dubai - Dubai International Airport": [
+      {
+        "code": "DXB"
+      }
+    ],
+    "Fujairah, International Airport": [
+      {
+        "code": "FJR"
+      }
+    ],
+    "Ras al Khaymah (Ras al Khaimah)": [
+      {
+        "code": "RKT"
+      }
+    ],
+    "Sharjah": [
+      {
+        "code": "SHJ"
+      }
+    ]
+  },
+  "United Kingdom": {
+    "Aberdeen": [
+      {
+        "code": "ABZ"
+      }
+    ],
+    "Barra (the famous tidal beach landing)": [
+      {
+        "code": "BRR"
+      }
+    ],
+    "Belfast - Belfast International Airport": [
+      {
+        "code": "BFS"
+      }
+    ],
+    "Belfast - George Best Belfast City Airport": [
+      {
+        "code": "BHD"
+      }
+    ],
+    "Benbecula": [
+      {
+        "code": "BEB"
+      }
+    ],
+    "Birmingham - Birmingham International Airport": [
+      {
+        "code": "BHX"
+      }
+    ],
+    "Blackpool": [
+      {
+        "code": "BLK"
+      }
+    ],
+    "Bournemouth": [
+      {
+        "code": "BOH"
+      }
+    ],
+    "Bristol": [
+      {
+        "code": "BRS"
+      }
+    ],
+    "Cambrigde": [
+      {
+        "code": "CBG"
+      }
+    ],
+    "Campbeltown": [
+      {
+        "code": "CAL"
+      }
+    ],
+    "Cardiff - Cardiff Airport": [
+      {
+        "code": "CWL"
+      }
+    ],
+    "Coventry - Baginton": [
+      {
+        "code": "CVT"
+      }
+    ],
+    "Derry (Londonderry)": [
+      {
+        "code": "LDY"
+      }
+    ],
+    "Doncaster/Sheffield, Robin Hood International Airport": [
+      {
+        "code": "DSA"
+      }
+    ],
+    "Dundee": [
+      {
+        "code": "DND"
+      }
+    ],
+    "Exeter": [
+      {
+        "code": "EXT"
+      }
+    ],
+    "Fair Isle (Shetland)": [
+      {
+        "code": "FIE"
+      }
+    ],
+    "Foula (Shetland)": [
+      {
+        "code": "FOU"
+      }
+    ],
+    "Glasgow": [
+      {
+        "code": "GLA"
+      }
+    ],
+    "Glasgow, Prestwick": [
+      {
+        "code": "PIK"
+      }
+    ],
+    "Humberside": [
+      {
+        "code": "HUY"
+      }
+    ],
+    "Inverness": [
+      {
+        "code": "INV"
+      }
+    ],
+    "Islay": [
+      {
+        "code": "ILY"
+      }
+    ],
+    "Kent (Manston) Kent International": [
+      {
+        "code": "MSE"
+      }
+    ],
+    "Kirkwall (Orkney)": [
+      {
+        "code": "KOI"
+      }
+    ],
+    "Land's End": [
+      {
+        "code": "LEQ"
+      }
+    ],
+    "Leeds/Bradford": [
+      {
+        "code": "LBA"
+      }
+    ],
+    "Lerwick/Tingwall (Shetland Islands)": [
+      {
+        "code": "LWK"
+      }
+    ],
+    "Liverpool": [
+      {
+        "code": "LPL"
+      }
+    ],
+    "London - City Airport": [
+      {
+        "code": "LCY"
+      }
+    ],
+    "London - Gatwick": [
+      {
+        "code": "LGW"
+      }
+    ],
+    "London - Heathrow": [
+      {
+        "code": "LHR"
+      }
+    ],
+    "London - Luton": [
+      {
+        "code": "LTN"
+      }
+    ],
+    "London - Stansted": [
+      {
+        "code": "STN"
+      }
+    ],
+    "London Metropolitan Area": [
+      {
+        "code": "LON"
+      }
+    ],
+    "Londonderry - Eglinton": [
+      {
+        "code": "LDY"
+      }
+    ],
+    "Lydd - Lydd International Airport": [
+      {
+        "code": "LYX"
+      }
+    ],
+    "Manchester": [
+      {
+        "code": "MAN"
+      }
+    ],
+    "Newcastle": [
+      {
+        "code": "NCL"
+      }
+    ],
+    "Newquay": [
+      {
+        "code": "NQY"
+      }
+    ],
+    "Norwich": [
+      {
+        "code": "NWI"
+      }
+    ],
+    "Nottingham - East Midlands": [
+      {
+        "code": "EMA"
+      }
+    ],
+    "Orkney - Kirkwall": [
+      {
+        "code": "KOI"
+      }
+    ],
+    "Out Skerries (Shetland)": [
+      {
+        "code": "OUK"
+      }
+    ],
+    "Sheffield, City Airport": [
+      {
+        "code": "SZD"
+      }
+    ],
+    "Sheffield, Doncaster, Robin Hood International Airport": [
+      {
+        "code": "DSA"
+      }
+    ],
+    "Southampton - Eastleigh": [
+      {
+        "code": "SOU"
+      }
+    ],
+    "Southend (London)": [
+      {
+        "code": "SEN"
+      }
+    ],
+    "Stansted (London)": [
+      {
+        "code": "STN"
+      }
+    ],
+    "Stornway": [
+      {
+        "code": "SYY"
+      }
+    ],
+    "Sumburgh (Shetland)": [
+      {
+        "code": "LSI"
+      }
+    ],
+    "Teesside, Durham Tees Valley": [
+      {
+        "code": "MME"
+      }
+    ],
+    "Unst (Shetland Island) - Baltasound Airport": [
+      {
+        "code": "UNT"
+      }
+    ],
+    "Wick": [
+      {
+        "code": "WIC"
+      }
+    ]
+  },
+  "Uruguay": {
+    "Montevideo - Carrasco International Airport": [
+      {
+        "code": "MVD"
+      }
+    ]
+  },
+  "Uzbekistan": {
+    "Samarkand - Samarkand International Airport": [
+      {
+        "code": "SKD"
+      }
+    ],
+    "Tashkent - International": [
+      {
+        "code": "TAS"
+      }
+    ],
+    "Termez (Termes)": [
+      {
+        "code": "TMZ"
+      }
+    ],
+    "Urgench": [
+      {
+        "code": "UGC"
+      }
+    ]
+  },
+  "Vanuatu": {
+    "Port Vila": [
+      {
+        "code": "VLI"
+      }
+    ],
+    "Santo": [
+      {
+        "code": "SON"
+      }
+    ],
+    "Ulei": [
+      {
+        "code": "ULB"
+      }
+    ]
+  },
+  "Venezuela": {
+    "Barcelona": [
+      {
+        "code": "BLA"
+      }
+    ],
+    "Caracas - Simn Bolvar International Airport": [
+      {
+        "code": "CCS"
+      }
+    ],
+    "Ciudad Guayana": [
+      {
+        "code": "CGU"
+      }
+    ],
+    "Maracaibo - La Chinita International": [
+      {
+        "code": "MAR"
+      }
+    ],
+    "Margerita": [
+      {
+        "code": "PMV"
+      }
+    ],
+    "Puerto Ordaz": [
+      {
+        "code": "PZO"
+      }
+    ],
+    "Uriman": [
+      {
+        "code": "URM"
+      }
+    ],
+    "Valencia": [
+      {
+        "code": "VLN"
+      }
+    ]
+  },
+  "Viet Nam": {
+    "Ho Chi Minh City (Saigon) - Tan Son Nhat International": [
+      {
+        "code": "SGN"
+      }
+    ],
+    "Hue - Phu Bai": [
+      {
+        "code": "HUI"
+      }
+    ],
+    "Saigon (Ho Chi Minh City) - Tan Son Nhat International": [
+      {
+        "code": "SGN"
+      }
+    ]
+  },
+  "Vietnam": {
+    "Hanoi - Noi Bai International Airport": [
+      {
+        "code": "HAN"
+      }
+    ]
+  },
+  "Virgin Islands (British)": {
+    "Beef Island - Terrance B. Lettsome": [
+      {
+        "code": "EIS"
+      }
+    ],
+    "Virgin Gorda": [
+      {
+        "code": "VIJ"
+      }
+    ]
+  },
+  "Virgin Islands (U.S.)": {
+    "St. Croix": [
+      {
+        "code": "STX"
+      }
+    ],
+    "St. Thomas": [
+      {
+        "code": "STT"
+      }
+    ]
+  },
+  "Wallis and Futuna Islands": {
+    "Futuna": [
+      {
+        "code": "FUT"
+      }
+    ],
+    "Wallis": [
+      {
+        "code": "WLS"
+      }
+    ]
+  },
+  "Xinjiang, PR China": {
+    "Urumqi": [
+      {
+        "code": "URC"
+      }
+    ]
+  },
+  "Yemen": {
+    "Aden - Aden International Airport": [
+      {
+        "code": "ADE"
+      }
+    ],
+    "Sanaa (Sana'a) - Sana'a International": [
+      {
+        "code": "SAH"
+      }
+    ]
+  },
+  "Yunnan, PR China": {
+    "Luxi - Mangshi": [
+      {
+        "code": "LUM"
+      }
+    ]
+  },
+  "Zambia": {
+    "Chipata": [
+      {
+        "code": "CIP"
+      }
+    ],
+    "Kitwe": [
+      {
+        "code": "KIW"
+      }
+    ],
+    "Lusaka - Lusaka International Airport": [
+      {
+        "code": "LUN"
+      }
+    ],
+    "Mfuwe": [
+      {
+        "code": "MFU"
+      }
+    ],
+    "N'Dola": [
+      {
+        "code": "NLA"
+      }
+    ]
+  },
+  "Zhejiang, PR China": {
+    "Hangchow (Hangzhou)": [
+      {
+        "code": "HGH"
+      }
+    ]
+  },
+  "Zimbabwe": {
+    "Buffalo Range": [
+      {
+        "code": "BFO"
+      }
+    ],
+    "Bulawayo": [
+      {
+        "code": "BUQ"
+      }
+    ],
+    "Gweru": [
+      {
+        "code": "GWE"
+      }
+    ],
+    "Harare - Harare International Airport": [
+      {
+        "code": "HRE"
+      }
+    ],
+    "Hwange National Park": [
+      {
+        "code": "HWN"
+      }
+    ],
+    "Masvingo": [
+      {
+        "code": "MVZ"
+      }
+    ],
+    "Salisbury": [
+      {
+        "code": "SAY"
+      }
+    ],
+    "Victoria Falls": [
+      {
+        "code": "VFA"
+      }
+    ]
+  }
+}
