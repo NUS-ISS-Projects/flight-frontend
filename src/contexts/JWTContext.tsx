@@ -2,14 +2,11 @@
 
 import React, {
   createContext,
-  useEffect,
   useReducer,
   ReactNode,
   useState,
+  useEffect,
 } from "react";
-
-// third-party
-import { jwtDecode } from "jwt-decode";
 
 // reducer - state management
 import { LOGIN, LOGOUT } from "@/store/actions";
@@ -22,7 +19,7 @@ import { useRouter } from "next/navigation";
 
 // types
 import { JWTContextType } from "@/types/auth";
-import { InitialLoginContextProps, KeyedObject } from "@/types";
+import { InitialLoginContextProps } from "@/types";
 
 import ErrorPopup from "@/components/authentication/AuthErrorPopUp";
 const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
@@ -32,17 +29,6 @@ const initialState: InitialLoginContextProps = {
   isLoggedIn: false,
   isInitialized: false,
   user: null,
-};
-
-const verifyToken: (st: string) => boolean = (serviceToken) => {
-  if (!serviceToken) {
-    return false;
-  }
-  const decoded: KeyedObject = jwtDecode(serviceToken);
-  /**
-   * Property 'exp' does not exist on type '<T = unknown>(token: string, options?: JwtDecodeOptions | undefined) => T'.
-   */
-  return decoded.exp > Date.now() / 1000;
 };
 
 const setSession = (serviceToken?: string | null) => {
@@ -63,7 +49,6 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(accountReducer, initialState);
   const [showErrorPopup, setShowErrorPopup] = useState(false);
 
-  // Function to handle closing the error popup
   const handleCloseErrorPopup = () => {
     setShowErrorPopup(false);
   };
@@ -73,14 +58,10 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
       try {
         const serviceToken = window.localStorage.getItem("serviceToken");
         if (serviceToken) {
-          setSession(serviceToken);
-          const response = await axios.get("/api/");
-          const { user } = response.data;
           dispatch({
             type: LOGIN,
             payload: {
               isLoggedIn: true,
-              user,
             },
           });
         } else {
@@ -95,7 +76,6 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
         });
       }
     };
-
     init();
   }, []);
 
@@ -105,20 +85,13 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
         username,
         password,
       });
-      const { serviceToken, user } = response.data;
+      const serviceToken = response.data;
+      console.log(response.data);
       setSession(serviceToken);
       localStorage.setItem("sessionUsername", username);
-      dispatch({
-        type: LOGIN,
-        payload: {
-          isLoggedIn: true,
-          user,
-        },
-      });
       if (response.status === 200) {
-        router.push("/profile");
+        router.push("/");
       } else {
-        // Throw an error if status is not 200
         throw new Error("Login failed");
       }
     } catch (err: unknown) {
@@ -133,22 +106,32 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
     email: string,
     password: string
   ) => {
-    const response = await axios.post(`${API_URL}/user/signup`, {
-      name,
-      username,
-      email,
-      password,
-    });
-    console.log(response);
-    let users: any[] = [];
-    if (response.data) {
-      users = response.data;
-      console.log(users);
+    try {
+      const response = await axios.post(`${API_URL}/user/signup`, {
+        name,
+        username,
+        email,
+        password,
+      });
+      if (response.status === 200) {
+        let users: any[] = [];
+        if (response.data) {
+          users = response.data;
+          console.log(users);
+        }
+        router.push("/login");
+      } else {
+        throw new Error("Login failed");
+      }
+    } catch (err: unknown) {
+      console.error(err);
+      setShowErrorPopup(true);
     }
   };
 
   const logout = () => {
-    localStorage.setItem("sessionUsername", "");
+    localStorage.removeItem("sessionUsername");
+    localStorage.removeItem("serviceToken");
     setSession(null);
     dispatch({ type: LOGOUT });
   };

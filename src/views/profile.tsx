@@ -1,80 +1,104 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { UserProfile } from '@/types/user-profile';
+import React, { ReactElement } from "react";
+import Link from "next/link";
 import { styled, useTheme } from "@mui/material/styles";
-import NavBar from '@/components/landingpage/NavBar';
-import LoginRedirectButton from '@/components/LoginRedirectButton';
+import NavBar from "@/components/landingpage/NavBar";
+import { Box, Tab, Tabs } from "@mui/material";
+import LAYOUT from "@/constants";
+import Layout from "@/layout";
+import MainCard from "@/components/ui-component/cards/MainCard";
 
+// types
+import { TabsProps } from "@/types";
+
+import Profile from "@/components/profile/profile";
 
 const SectionWrapper = styled("div")(({ theme }) => ({
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: "100vh",
-    backgroundColor: theme.palette.grey[100],
-  }));
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: "80vh",
+}));
+
+function TabPanel({ children, value, index, ...other }: TabsProps) {
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box sx={{ p: 0 }}>{children}</Box>}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 const ProfilePage = () => {
-  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const userNameFromSession = localStorage.getItem('sessionUsername')
-        console.log(userNameFromSession)
-        const response = await axios.post('http://localhost:8888/api/userProfile/'+userNameFromSession)
-        const userData = response.data; // Assuming response.data is in the format { id: string, name: string, email: string, ... }
-        console.log(userData)
-        // Extract the properties from the string
-        const id = userData.match(/id='(.*?)'/)?.[1] || '';
-        const name = userData.match(/name='(.*?)'/)?.[1] || '';
-        const email = userData.match(/email='(.*?)'/)?.[1] || '';
-        const username = userData.match(/userName='(.*?)'/)?.[1] || '';
-
-        const userProfileData: UserProfile = {
-            id,
-            name,
-            email,
-            username
-        };
-
-        setUserProfile(userProfileData);
-      } catch (error) {
-        console.error('Error fetching user profile:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUserProfile();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
   return (
     <SectionWrapper>
-    <NavBar />
-    <div style={{ textAlign: 'center' }}>
-      {userProfile ? (
+      <NavBar />
+      <MainCard>
         <div>
-          <h1>Welcome, {userProfile.name}!</h1>
-          <p>Email: {userProfile.email}</p>
-          <p>Username: {userProfile.username}</p>
-          {/* Display other user information */}
+          <Tabs
+            value={value}
+            indicatorColor="primary"
+            onChange={handleChange}
+            sx={{
+              mb: 3,
+              minHeight: "auto",
+              "& button": {
+                minWidth: 100,
+              },
+              "& a": {
+                minHeight: "auto",
+                minWidth: 10,
+                py: 1.5,
+                px: 1,
+                mr: 2.25,
+              },
+              "& a.Mui-selected": {
+                color: "primary.main",
+              },
+            }}
+            aria-label="tabs"
+            variant="scrollable"
+          >
+            <Tab
+              component={Link}
+              href="#"
+              label="Profile Information"
+              {...a11yProps(0)}
+            />
+            <Tab
+              component={Link}
+              href="#"
+              label="Saved Flights"
+              {...a11yProps(1)}
+            />
+          </Tabs>
+          <TabPanel value={value} index={0}>
+            <Profile />
+          </TabPanel>
+          <TabPanel value={value} index={1}></TabPanel>
         </div>
-      ) : (
-        <div>
-          <h1>Please log in</h1>
-          <LoginRedirectButton/>
-        </div>
-      )}
-    </div>
+      </MainCard>
     </SectionWrapper>
   );
+};
+ProfilePage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout variant={LAYOUT.auth}>{page}</Layout>;
 };
 
 export default ProfilePage;

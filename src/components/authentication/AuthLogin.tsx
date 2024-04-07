@@ -31,7 +31,6 @@ import useScriptRef from "@/hooks/useScriptRef";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
-
 // ===============================|| JWT LOGIN ||=============================== //
 
 const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
@@ -61,20 +60,23 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
       }}
       validationSchema={Yup.object().shape({
         username: Yup.string().max(255).required("Username is required"),
-      
+
         password: Yup.string().max(255).required("Password is required"),
       })}
-      onSubmit={async (values: { username: any; password: any; }, { setErrors, setStatus, setSubmitting }: any) => {
+      onSubmit={async (
+        values: { username: any; password: any },
+        { setErrors, setStatus, setSubmitting }: any
+      ) => {
         try {
           login(values.username, values.password);
           if (scriptedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
           }
-          
         } catch (err: any) {
           console.error(err);
-          if (scriptedRef.current) {631
+          if (scriptedRef.current) {
+            631;
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
@@ -169,9 +171,9 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
                     onChange={(event) => setChecked(event.target.checked)}
                     name="checked"
                     sx={{
-                      color: "#6246ea", // Color when the checkbox is not checked
+                      color: "#6246ea",
                       "&.Mui-checked": {
-                        color: "#6246ea", // Color when the checkbox is checked
+                        color: "#6246ea",
                       },
                     }}
                   />
@@ -204,6 +206,7 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
                 "&:hover": {
                   backgroundColor: "#4431a3",
                 },
+                fontWeight: "bold",
               }}
               disabled={isSubmitting}
               fullWidth

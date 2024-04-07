@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 // material-ui
-import { useTheme } from "@mui/material/styles";
 import {
   Box,
   Button,
@@ -39,14 +38,9 @@ const JWTRegister = ({
 }: {
   registerProp?: number;
 }) => {
-  const theme = useTheme();
   const router = useRouter();
   const { register } = useAuth();
-
   const scriptedRef = useScriptRef();
-
-  const [checked, setChecked] = React.useState(true);
-
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -88,11 +82,11 @@ const JWTRegister = ({
           if (scriptedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
+            router.push("/login");
           }
         } catch (err: any) {
           console.error(err);
           if (scriptedRef.current) {
-            631;
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
@@ -110,6 +104,33 @@ const JWTRegister = ({
         values,
       }) => (
         <form noValidate onSubmit={handleSubmit} {...others}>
+          <FormControl
+            fullWidth
+            error={Boolean(touched.name && errors.name)}
+            sx={{ mb: 2 }}
+          >
+            <InputLabel htmlFor="outlined-adornment-email-login">
+              Full Name
+            </InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-email-login"
+              type="name"
+              value={values.name}
+              name="name"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              label="Name"
+              inputProps={{}}
+            />
+            {touched.name && errors.name && (
+              <FormHelperText
+                error
+                id="standard-weight-helper-text-email-login"
+              >
+                {errors.name}
+              </FormHelperText>
+            )}
+          </FormControl>
           <FormControl
             fullWidth
             error={Boolean(touched.email && errors.email)}
@@ -134,34 +155,6 @@ const JWTRegister = ({
                 id="standard-weight-helper-text-email-login"
               >
                 {errors.email}
-              </FormHelperText>
-            )}
-          </FormControl>
-
-          <FormControl
-            fullWidth
-            error={Boolean(touched.name && errors.name)}
-            sx={{ mb: 2 }}
-          >
-            <InputLabel htmlFor="outlined-adornment-email-login">
-              Name
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-email-login"
-              type="name"
-              value={values.name}
-              name="name"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              label="Name"
-              inputProps={{}}
-            />
-            {touched.name && errors.name && (
-              <FormHelperText
-                error
-                id="standard-weight-helper-text-email-login"
-              >
-                {errors.name}
               </FormHelperText>
             )}
           </FormControl>
@@ -246,6 +239,7 @@ const JWTRegister = ({
                 "&:hover": {
                   backgroundColor: "#4431a3",
                 },
+                fontWeight: "bold",
               }}
               disabled={isSubmitting}
               fullWidth
@@ -253,7 +247,7 @@ const JWTRegister = ({
               type="submit"
               variant="contained"
             >
-              Register now
+              Sign up
             </Button>
           </Box>
         </form>
