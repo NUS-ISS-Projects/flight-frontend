@@ -2,7 +2,7 @@
 import { ReactElement } from "react";
 
 import Image from "next/image";
-import React from 'react';
+import React from "react";
 import { Typography, useMediaQuery, Grid, Stack, Divider } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 import Link from "next/link";
@@ -21,13 +21,11 @@ const SectionWrapper = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.grey[100],
 }));
 
-
 const RegisterPage = () => {
   const theme = useTheme();
   const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-  
     <SectionWrapper>
       <NavBar />
       <Grid
@@ -49,7 +47,8 @@ const RegisterPage = () => {
                   container
                   spacing={2}
                   alignItems="center"
-                  justifyContent="center">
+                  justifyContent="center"
+                >
                   <Grid item sx={{ mb: 0.5 }}>
                     <Link href="/" aria-label="theme-logo">
                       <Image
@@ -60,9 +59,8 @@ const RegisterPage = () => {
                         height={1080}
                       />
                     </Link>
-                  </Grid>    
+                  </Grid>
                   <Grid item xs={12}>
-                  
                     <Grid
                       container
                       direction={matchDownSM ? "column-reverse" : "row"}
@@ -79,16 +77,20 @@ const RegisterPage = () => {
                             color="#6246ea"
                             gutterBottom
                             variant={matchDownSM ? "h3" : "h5"}
-                            sx={{ fontWeight: "bold" }}
+                            sx={{
+                              fontWeight: "bold",
+                              fontSize: "18px",
+                              textAlign: "center",
+                            }}
                           >
-                            Hi, Welcome please register to continue
+                            Hi, welcome to Sky Scout.
                           </Typography>
                           <Typography
                             variant="caption"
                             fontSize="16px"
                             textAlign={matchDownSM ? "center" : "inherit"}
                           >
-                            Enter your credentials to continue
+                            Please register to continue
                           </Typography>
                         </Stack>
                       </Grid>
@@ -118,7 +120,6 @@ const RegisterPage = () => {
                       </Typography>
                     </Grid>
                   </Grid>
-               
                 </Grid>
               </RegisterCardWrapper>
             </Grid>

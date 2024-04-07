@@ -31,10 +31,14 @@ import useScriptRef from "@/hooks/useScriptRef";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
-
 // ===============================|| JWT REGISTER ||=============================== //
 
-const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => {
+const JWTRegister = ({
+  registerProp,
+  ...others
+}: {
+  registerProp?: number;
+}) => {
   const theme = useTheme();
   const router = useRouter();
   const { register } = useAuth();
@@ -70,19 +74,25 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
           .required("Email is required"),
         password: Yup.string().max(255).required("Password is required"),
       })}
-      onSubmit={async (values: {
+      onSubmit={async (
+        values: {
           name: string;
-          email: string; username: any; password: any; 
-}, { setErrors, setStatus, setSubmitting }: any) => {
+          email: string;
+          username: any;
+          password: any;
+        },
+        { setErrors, setStatus, setSubmitting }: any
+      ) => {
         try {
-          register(values.name,values.email,values.username, values.password);
+          register(values.name, values.email, values.username, values.password);
           if (scriptedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
           }
         } catch (err: any) {
           console.error(err);
-          if (scriptedRef.current) {631
+          if (scriptedRef.current) {
+            631;
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
@@ -100,7 +110,7 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
         values,
       }) => (
         <form noValidate onSubmit={handleSubmit} {...others}>
-            <FormControl
+          <FormControl
             fullWidth
             error={Boolean(touched.email && errors.email)}
             sx={{ mb: 2 }}
@@ -127,7 +137,6 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
               </FormHelperText>
             )}
           </FormControl>
-
 
           <FormControl
             fullWidth
@@ -156,7 +165,6 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
               </FormHelperText>
             )}
           </FormControl>
-                
 
           <FormControl
             fullWidth
@@ -185,7 +193,7 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
               </FormHelperText>
             )}
           </FormControl>
-                
+
           <FormControl
             fullWidth
             error={Boolean(touched.password && errors.password)}
@@ -226,38 +234,6 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
             )}
           </FormControl>
 
-          <Grid container alignItems="center" justifyContent="space-between">
-            <Grid item>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={checked}
-                    onChange={(event) => setChecked(event.target.checked)}
-                    name="checked"
-                    sx={{
-                      color: "#6246ea", // Color when the checkbox is not checked
-                      "&.Mui-checked": {
-                        color: "#6246ea", // Color when the checkbox is checked
-                      },
-                    }}
-                  />
-                }
-                label="Keep me logged in"
-              />
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="subtitle1"
-                component={Link}
-                href={"/"}
-                color="#6246ea"
-                sx={{ textDecoration: "none", fontWeight: "bold" }}
-              >
-                Forgot Password?
-              </Typography>
-            </Grid>
-          </Grid>
-
           {errors.submit && (
             <Box sx={{ mt: 3 }}>
               <FormHelperText error>{errors.submit}</FormHelperText>
@@ -277,7 +253,7 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
               type="submit"
               variant="contained"
             >
-              Sign In
+              Register now
             </Button>
           </Box>
         </form>

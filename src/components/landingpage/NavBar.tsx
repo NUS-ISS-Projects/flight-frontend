@@ -22,8 +22,6 @@ interface ElevationScrollProps {
   window?: Window | Node;
 }
 
-
-
 function ElevationScroll({ children, window }: ElevationScrollProps) {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -44,7 +42,11 @@ const NavBar = ({ ...others }) => {
       <MuiAppBar sx={{ backgroundColor: "#fffffe" }}>
         <Container>
           <Toolbar sx={{ py: 1.0, px: `0 !important` }}>
-            <Typography component="div" sx={{ flexGrow: 1, textAlign: "left" }}>
+            <Typography
+              component={Link}
+              href="/"
+              sx={{ flexGrow: 1, textAlign: "left" }}
+            >
               <Image
                 src="/skyscoutlogo-menu.svg"
                 alt="Logo"
@@ -109,7 +111,7 @@ const NavBar = ({ ...others }) => {
               >
                 Profile
               </Button>
-              <LogoutButton/>
+              <LogoutButton />
             </Stack>
           </Toolbar>
         </Container>
