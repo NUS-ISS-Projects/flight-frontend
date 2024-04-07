@@ -29,6 +29,7 @@ const LoginPage = () => {
 
   return (
     <SectionWrapper>
+      <NavBar />
       <Grid
         container
         direction="column"

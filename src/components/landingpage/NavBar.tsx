@@ -1,6 +1,6 @@
 "use client";
 
-import { cloneElement, ReactElement } from "react";
+import { cloneElement, ReactElement, useContext } from "react";
 import Image from "next/image";
 
 // material-ui
@@ -14,12 +14,15 @@ import {
   Typography,
   useScrollTrigger,
 } from "@mui/material";
+import LogoutButton from "../authentication/AuthLogOut";
 
 // elevation scroll
 interface ElevationScrollProps {
   children: ReactElement;
   window?: Window | Node;
 }
+
+
 
 function ElevationScroll({ children, window }: ElevationScrollProps) {
   const trigger = useScrollTrigger({
@@ -96,6 +99,17 @@ const NavBar = ({ ...others }) => {
               >
                 Log in
               </Button>
+              <Button
+                component={Link}
+                href="/profile"
+                disableElevation
+                variant="contained"
+                color="secondary"
+                sx={{ fontWeight: "bold" }}
+              >
+                Profile
+              </Button>
+              <LogoutButton/>
             </Stack>
           </Toolbar>
         </Container>

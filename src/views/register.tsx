@@ -10,6 +10,7 @@ import LAYOUT from "@/constants";
 import Layout from "@/layout";
 import RegisterCardWrapper from "@/components/registration/RegisterCardWrapper";
 import RegistrationForm from "@/components/registration/RegistrationForm";
+import NavBar from "@/components/landingpage/NavBar";
 
 // Define the styled SectionWrapper
 const SectionWrapper = styled("div")(({ theme }) => ({
@@ -26,7 +27,9 @@ const RegisterPage = () => {
   const matchDownSM = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
+  
     <SectionWrapper>
+      <NavBar />
       <Grid
         container
         direction="column"
