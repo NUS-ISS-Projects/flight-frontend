@@ -1,7 +1,7 @@
 "use client";
 import { ReactElement } from "react";
 import theme from "../themes/theme";
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
 
 import Image from "next/image";
 import React from "react";

@@ -42,106 +42,6 @@ export const mockFlightsData = [
       model: "AK 706",
     },
   },
-  // {
-  //   id: "2",
-  //   logoUrl: "/assets/images/airline/scoot.png",
-  //   flightTime: "08:00 AM - 12:00 PM",
-  //   duration: "4hr 20 mins",
-  //   route: "SIN-LGK",
-  //   price: "USD 500",
-  //   trip: "round trip",
-  //   stop: "1 stop",
-  //   departureDate: "Sat, March 16",
-  //   planeDetails: {
-  //     airportFrom: "Changi Airport (SIN)",
-  //     airportTo: "Langkawi International Airport (LGK)",
-  //     travelTime: "4h",
-  //     planeSeries: "Scoot",
-  //     class: "Economy",
-  //     family: "Airbus A320",
-  //     model: "AK 706",
-  //   },
-  // },
-  // {
-  //   id: "3",
-  //   logoUrl: "/assets/images/airline/sgairlines.png",
-  //   flightTime: "08:00 AM - 12:00 PM",
-  //   duration: "4hr 25 mins",
-  //   route: "SIN-LGK",
-  //   price: "USD 500",
-  //   trip: "one way",
-  //   stop: "2 stop",
-  //   departureDate: "Fri, March 15",
-  //   planeDetails: {
-  //     airportFrom: "Changi Airport (SIN)",
-  //     airportTo: "Langkawi International Airport (LGK)",
-  //     travelTime: "4h",
-  //     planeSeries: "Singapre Airlines",
-  //     class: "Economy",
-  //     family: "Airbus A320",
-  //     model: "AK 706",
-  //   },
-  // },
-  // {
-  //   id: "4",
-  //   logoUrl: "/assets/images/airline/sgairlines.png",
-  //   flightTime: "08:00 AM - 12:00 PM",
-  //   duration: "4hr 25 mins",
-  //   route: "SIN-LGK",
-  //   price: "USD 500",
-  //   trip: "one way",
-  //   stop: "2 stop",
-  //   departureDate: "Fri, March 15",
-  //   planeDetails: {
-  //     airportFrom: "Changi Airport (SIN)",
-  //     airportTo: "Langkawi International Airport (LGK)",
-  //     travelTime: "4h",
-  //     planeSeries: "Singapre Airlines",
-  //     class: "Economy",
-  //     family: "Airbus A320",
-  //     model: "AK 706",
-  //   },
-  // },
-  // {
-  //   id: "5",
-  //   logoUrl: "/assets/images/airline/sgairlines.png",
-  //   flightTime: "08:00 AM - 12:00 PM",
-  //   duration: "4hr 25 mins",
-  //   route: "SIN-LGK",
-  //   price: "USD 500",
-  //   trip: "one way",
-  //   stop: "2 stop",
-  //   departureDate: "Fri, March 15",
-  //   planeDetails: {
-  //     airportFrom: "Changi Airport (SIN)",
-  //     airportTo: "Langkawi International Airport (LGK)",
-  //     travelTime: "4h",
-  //     planeSeries: "Singapre Airlines",
-  //     class: "Economy",
-  //     family: "Airbus A320",
-  //     model: "AK 706",
-  //   },
-  // },
-  // {
-  //   id: "6",
-  //   logoUrl: "/assets/images/airline/sgairlines.png",
-  //   flightTime: "08:00 AM - 12:00 PM",
-  //   duration: "4hr 25 mins",
-  //   route: "SIN-LGK",
-  //   price: "USD 500",
-  //   trip: "one way",
-  //   stop: "2 stop",
-  //   departureDate: "Fri, March 15",
-  //   planeDetails: {
-  //     airportFrom: "Changi Airport (SIN)",
-  //     airportTo: "Langkawi International Airport (LGK)",
-  //     travelTime: "4h",
-  //     planeSeries: "Singapre Airlines",
-  //     class: "Economy",
-  //     family: "Airbus A320",
-  //     model: "AK 706",
-  //   },
-  // },
 ];
 
 const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
@@ -283,11 +183,9 @@ const MainFlightsFlightResult = () => {
           </Grid>
         </Grid>
       </Box>
-      {flightsResult
-        .slice(0, viewMore ? undefined : 2)
-        .map((flight, index) => (
-          <FlightCard key={index} data={flight} queryData={flightData} />
-        ))}
+      {flightsResult.slice(0, viewMore ? undefined : 2).map((flight, index) => (
+        <FlightCard key={index} data={flight} queryData={flightData} />
+      ))}
       {!viewMore && flightsResult.length > 2 && (
         <Box
           sx={{

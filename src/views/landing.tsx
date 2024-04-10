@@ -1,7 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { ThemeProvider, styled } from "@mui/material/styles";
 import theme from "../themes/theme";
 
 import NavBar from "../components/landingpage/NavBar";

@@ -8,99 +8,54 @@ import {
   Box,
   CardActions,
   Divider,
+  Button,
 } from "@mui/material";
 
 //Project Import
 import PlaneFeatures from "./PlaneFeatures";
-import RouteInfo from "./RouteInfo";
-import PlaneDetails from "./PlaneDetails";
+import RouteInfo from "./RouteInfoBookmark";
+import PlaneDetails from "./PlaneDetailsBookmark";
 
 //Icons Import
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import { Segment } from "@mui/icons-material";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const logoUrl = "assets/images/airline/sgairlines.png";
 
-interface FlightData {
-  id: string;
-  itineraries: ItinerariesDetails[];
-  price: FlightPrice;
+//Mock Data Interface
+interface FlightCardProps {
+  data: MockFlightData;
 }
-
-interface ItinerariesDetails {
+interface MockFlightData {
+  id: string;
+  tripType: string;
+  noOfAdults: string;
+  noOfChildren: string;
+  cabinClass: string;
+  route: string;
+  price: string;
+  stop: string;
+  departureDetails: FlightDetails;
+  returnDetails: FlightDetails;
+}
+interface FlightDetails {
   duration: string;
+  date: string;
   segments: Segment[];
 }
-interface FlightPrice {
-  total: number;
-  currency: string;
-}
-
 interface Segment {
-  departure: DepartureArrivalDetails;
-  arrival: DepartureArrivalDetails;
+  id: string;
+  departureTime: string;
+  arrivalTime: string;
+  travelTime: string;
+  departureAirport: string;
+  arrivalAirport: string;
+  flightNumber: string;
+  airCraftNumber: string;
   carrierCode: string;
-  number: string; //flight number
-  aircraft: AircraftDetails;
-  duration: string;
-  numberOfStops: number;
-}
-interface DepartureArrivalDetails {
-  iataCode: string;
-  terminal?: string;
-  at: string;
-}
-interface AircraftDetails {
-  code: string;
 }
 
-interface QueryData {
-  selectedTripType: string;
-  selectedCabinClass: string;
-  selectedOriginAirportName: string;
-  selectedOriginAirportCode: string;
-  selectedReturnAirportName: string;
-  selectedReturnAirportCode: string;
-  selectedDepartureDate: string;
-  selectedReturnDate: string;
-}
-
-interface FlightCardProps {
-  data: FlightData;
-  queryData: QueryData;
-}
-
-const formatDuration = (duration: string): string => {
-  let formattedDuration = duration
-    .replace("PT", "")
-    .replace("H", " hrs ")
-    .replace("M", " min");
-  return formattedDuration;
-};
-const formatDateTimeToTime = (dateTime: string): string => {
-  const date = new Date(dateTime);
-  let hours = date.getHours();
-  const minutes = date.getMinutes();
-  const ampm = hours >= 12 ? "PM" : "AM";
-  hours = hours % 12;
-  hours = hours ? hours : 12;
-  const minutesStr = minutes < 10 ? "0" + minutes : minutes;
-  return `${hours}:${minutesStr} ${ampm}`;
-};
-
-const formatDate = (dateStr: string): string => {
-  const dateObj = new Date(dateStr);
-  const options: Intl.DateTimeFormatOptions = {
-    weekday: "short",
-    month: "long",
-    day: "2-digit",
-  };
-  return dateObj.toLocaleDateString("en-US", options);
-};
-
-const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
+const FlightBookmarkCard: React.FC<FlightCardProps> = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
   const [favorited, setFavorited] = useState(false);
 
@@ -119,6 +74,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
         boxShadow: "none",
         border: "1px solid #e0e0e0",
         borderRadius: expanded ? "15px" : "2px",
+        width: "100%",
       }}
     >
       <Box
@@ -139,25 +95,20 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
           >
             <Typography sx={{ fontWeight: "bold" }}>
               {expanded
-                ? `Departure・ ${formatDuration(
-                    data.itineraries[0]?.duration
-                  )} ・ ${
-                    data.itineraries[0]?.segments.length - 1 == 0
+                ? `Departure・ ${data.departureDetails.duration} ・ ${
+                    data.departureDetails.segments.length - 1 == 0
                       ? "Non-Stop"
-                      : `${data.itineraries[0]?.segments.length - 1} Stops`
+                      : `${data.departureDetails.segments.length - 1} Stops`
                   }`
-                : `${formatDateTimeToTime(
-                    data.itineraries[0].segments[0].departure.at
-                  )} - ${formatDateTimeToTime(
-                    data.itineraries[0].segments[
-                      data.itineraries[0].segments.length - 1
-                    ].arrival.at
-                  )}`}
+                : `${data.departureDetails.segments[0].departureTime} - ${
+                    data.departureDetails.segments[
+                      data.departureDetails.segments.length - 1
+                    ].arrivalTime
+                  }`}
             </Typography>
             {!expanded && (
               <Typography variant="caption" sx={{ color: "grey.600" }}>
-                Deperature ・ {queryData.selectedOriginAirportCode} -{" "}
-                {queryData.selectedReturnAirportCode}
+                Deperature ・ {data.route}
               </Typography>
             )}
           </Box>
@@ -168,12 +119,12 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
             {!expanded && (
               <>
                 <Typography sx={{ fontWeight: "bold" }}>
-                  {formatDuration(data.itineraries[0]?.duration)}
+                  {data.departureDetails.duration}
                 </Typography>
                 <Typography variant="caption" sx={{ color: "grey.600" }}>
-                  {data.itineraries[0]?.segments.length - 1 == 0
+                  {data.departureDetails.segments.length - 1 == 0
                     ? "Non-Stop"
-                    : `${data.itineraries[0]?.segments.length - 1} Stops`}
+                    : `${data.departureDetails.segments.length - 1} Stops`}
                 </Typography>
               </>
             )}
@@ -183,25 +134,20 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
           >
             <Typography sx={{ fontWeight: "bold" }}>
               {expanded
-                ? `Return・ ${formatDuration(
-                    data.itineraries[1]?.duration
-                  )} ・  ${
-                    data.itineraries[1]?.segments.length - 1 == 0
+                ? `Return・ ${data.returnDetails.duration} ・  ${
+                    data.returnDetails.segments.length - 1 == 0
                       ? "Non-Stop"
-                      : `${data.itineraries[1]?.segments.length - 1} Stops`
+                      : `${data.returnDetails.segments.length - 1} Stops`
                   }`
-                : `${formatDateTimeToTime(
-                    data.itineraries[1].segments[0].departure.at
-                  )} - ${formatDateTimeToTime(
-                    data.itineraries[1].segments[
-                      data.itineraries[1].segments.length - 1
-                    ].arrival.at
-                  )}`}
+                : `${data.returnDetails.segments[0].departureTime} - ${
+                    data.returnDetails.segments[
+                      data.returnDetails.segments.length - 1
+                    ].arrivalTime
+                  }`}
             </Typography>
             {!expanded && (
               <Typography variant="caption" sx={{ color: "grey.600" }}>
-                Return ・ {queryData.selectedReturnAirportCode} -{" "}
-                {queryData.selectedOriginAirportCode}
+                Return ・ {data.route}
               </Typography>
             )}
           </Box>
@@ -211,18 +157,16 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
             {!expanded && (
               <>
                 <Typography sx={{ fontWeight: "bold" }}>
-                  {formatDuration(data.itineraries[1]?.duration)}
+                  {data.returnDetails.duration}
                 </Typography>
                 <Typography variant="caption" sx={{ color: "grey.600" }}>
-                  {data.itineraries[1]?.segments.length - 1 == 0
+                  {data.returnDetails.segments.length - 1 == 0
                     ? "Non-Stop"
-                    : `${data.itineraries[1]?.segments.length - 1} Stops`}
+                    : `${data.returnDetails.segments.length - 1} Stops`}
                 </Typography>
               </>
             )}
           </Box>
-        </CardContent>
-        <CardActions disableSpacing>
           <Box
             sx={{
               display: "flex",
@@ -232,19 +176,33 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
             }}
           >
             <Typography sx={{ fontWeight: "bold" }}>
-              SGD ${data.price.total}
+              SGD ${data.price}
             </Typography>
             <Typography variant="caption" sx={{ color: "grey.600" }}>
-              {queryData.selectedTripType}
+              {data.tripType}
             </Typography>
           </Box>
-          <IconButton aria-label="add to favorites" onClick={toggleFavorite}>
-            {favorited ? (
-              <FavoriteIcon color="error" />
-            ) : (
-              <FavoriteBorderIcon />
-            )}
-          </IconButton>
+        </CardContent>
+        <CardActions disableSpacing>
+          <Button
+            variant="outlined"
+            startIcon={<DeleteIcon />}
+            // onClick={toggleFavorite}
+            sx={{
+              color: "error.main",
+              borderColor: "error.main",
+              backgroundColor: "white",
+              fontWeight: "bold",
+              "&:hover": {
+                backgroundColor: "error.main",
+                color: "white",
+                borderColor: "error.main",
+                fontWeight: "bold",
+              },
+            }}
+          >
+            Delete
+          </Button>
           <IconButton
             onClick={handleExpandClick}
             aria-expanded={expanded}
@@ -267,7 +225,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
           }}
         >
           <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-            Departuring Flight ・ {formatDate(queryData.selectedDepartureDate)}
+            Departuring Flight ・ {data.departureDetails.date}
           </Typography>
         </Box>
         <CardContent
@@ -277,7 +235,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
             alignItems: "center",
           }}
         >
-          {data.itineraries[0].segments.map((segment, index, array) => (
+          {data.departureDetails.segments.map((segment, index, array) => (
             <Box
               key={index}
               sx={{
@@ -293,7 +251,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
                 <RouteInfo segment={segment} />
                 <PlaneFeatures />
               </Box>
-              <PlaneDetails data={segment} searchQuery={queryData} />
+              <PlaneDetails data={segment} />
               {index < array.length - 1 && (
                 <Divider
                   sx={{
@@ -309,7 +267,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
         </CardContent>
 
         {/* Return Plane information */}
-        {queryData.selectedTripType === "Round Trip" && (
+        {data.tripType === "Round Trip" && (
           <>
             <Divider />
             <Box
@@ -321,7 +279,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
               }}
             >
               <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                Returning Flight ・ {formatDate(queryData.selectedReturnDate)}
+                Returning Flight ・ {data.returnDetails.date}
               </Typography>
             </Box>
             <CardContent
@@ -331,7 +289,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
                 alignItems: "center",
               }}
             >
-              {data.itineraries[1].segments.map((segment, index, array) => (
+              {data.returnDetails.segments.map((segment, index, array) => (
                 <Box
                   key={index}
                   sx={{
@@ -347,7 +305,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
                     <RouteInfo segment={segment} />
                     <PlaneFeatures />
                   </Box>
-                  <PlaneDetails data={segment} searchQuery={queryData} />
+                  <PlaneDetails data={segment} />
                   {index < array.length - 1 && (
                     <Divider
                       sx={{
@@ -367,4 +325,4 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
     </Card>
   );
 };
-export default FlightCard;
+export default FlightBookmarkCard;

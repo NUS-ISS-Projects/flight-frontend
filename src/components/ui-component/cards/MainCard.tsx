@@ -6,9 +6,6 @@ import { useTheme } from "@mui/material/styles";
 import {
   Card,
   CardContent,
-  CardHeader,
-  Divider,
-  Typography,
   CardProps,
   CardHeaderProps,
   CardContentProps,
