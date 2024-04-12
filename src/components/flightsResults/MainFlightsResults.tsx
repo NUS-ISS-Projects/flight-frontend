@@ -16,34 +16,6 @@ import CheckIcon from "@mui/icons-material/Check";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import FlightCard from "../ui-component/cards/FlightResultsCard";
 
-//assets
-
-export const mockFlightsData = [
-  {
-    id: "1",
-    logoUrl: "/assets/images/airline/airasia.png",
-    flightTime: "08:00 AM - 12:00 PM",
-    duration: "1 hr 25 mins",
-    route: "SIN-LGK",
-    price: "USD 500",
-    trip: "round trip",
-    stop: "Nonstop",
-    departureDate: "Fri, March 15",
-    departureTime: "08:00 AM",
-    returnDate: "Sun, March 17",
-    returnTime: "12:00 PM",
-    planeDetails: {
-      airportFrom: "Changi Airport (SIN)",
-      airportTo: "Langkawi International Airport (LGK)",
-      travelTime: "4h",
-      planeSeries: "Air Asia",
-      class: "Economy",
-      family: "Airbus A320",
-      model: "AK 706",
-    },
-  },
-];
-
 const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
 
 const MainFlightsFlightResult = () => {

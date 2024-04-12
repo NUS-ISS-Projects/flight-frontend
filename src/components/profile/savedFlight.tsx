@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Box, Button, Grid } from "@mui/material";
 import FlightBookmarkCard from "../ui-component/cards/FlightBookmarkCard";
+import axios from "axios";
 
 export const mockSavedFlightData = [
   {
@@ -12,7 +13,6 @@ export const mockSavedFlightData = [
     cabinClass: "Economy",
     route: "SIN - NRT",
     price: "$888",
-    stop: "2",
     departureDetails: {
       duration: "10 hrs 15 min",
       date: "Fri, March 15",
@@ -204,21 +204,37 @@ export const mockSavedFlightData = [
   },
 ];
 
+const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
+
 const SavedFlightTab = () => {
   const [viewMore, setViewMore] = useState(false);
-  //   const [flightsResult, setFlightsResults] = useState([]);
+  const userName = localStorage.getItem("sessionUsername");
+  const [savedFlights, setSavedFlights] = useState([]);
   const handleViewMore = () => {
     setViewMore(true);
   };
+
+  useEffect(() => {
+    if (userName) {
+      axios
+        .get(`${API_URL}/user/${userName}/bookmarks`)
+        .then((response) => {
+          console.log(response.data);
+          setSavedFlights(response.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching bookmark flight data", error);
+        });
+    }
+  }, [userName]);
+
   return (
     <Grid container>
-      {mockSavedFlightData
-        .slice(0, viewMore ? undefined : 2)
-        .map((flight, index) => (
-          <FlightBookmarkCard key={index} data={flight} />
-        ))}
+      {savedFlights.slice(0, viewMore ? undefined : 2).map((flight, index) => (
+        <FlightBookmarkCard key={index} data={flight} />
+      ))}
 
-      {!viewMore && mockSavedFlightData.length > 2 && (
+      {!viewMore && savedFlights.length > 2 && (
         <Grid item xs={12}>
           <Box
             sx={{

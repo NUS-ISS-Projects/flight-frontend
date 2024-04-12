@@ -14,6 +14,7 @@ import {
 import PlaneFeatures from "./PlaneFeatures";
 import RouteInfo from "./RouteInfo";
 import PlaneDetails from "./PlaneDetails";
+import airportsData from "@/store/countries.json";
 
 //Icons Import
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -21,7 +22,11 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Segment } from "@mui/icons-material";
 
+import axios from "axios";
+
 const logoUrl = "assets/images/airline/sgairlines.png";
+
+const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
 
 interface FlightData {
   id: string;
@@ -65,6 +70,8 @@ interface QueryData {
   selectedReturnAirportCode: string;
   selectedDepartureDate: string;
   selectedReturnDate: string;
+  totalAdults: number;
+  totalChildren: number;
 }
 
 interface FlightCardProps {
@@ -100,6 +107,18 @@ const formatDate = (dateStr: string): string => {
   return dateObj.toLocaleDateString("en-US", options);
 };
 
+const findAirportNameByCode = (code: string): string => {
+  for (const [country, cities] of Object.entries(airportsData)) {
+    for (const [city, airports] of Object.entries(cities)) {
+      const airportFound = airports.find((airport) => airport.code === code);
+      if (airportFound) {
+        return city;
+      }
+    }
+  }
+  return "";
+};
+
 const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
   const [expanded, setExpanded] = useState(false);
   const [favorited, setFavorited] = useState(false);
@@ -107,9 +126,60 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  const getFormattedSegments = (segments: any) => {
+    return segments.map((segment: any) => ({
+      departureTime: formatDateTimeToTime(segment.departure.at),
+      arrivalTime: formatDateTimeToTime(segment.arrival.at),
+      travelTime: formatDuration(segment.duration),
+      departureAirport: findAirportNameByCode(segment.departure.iataCode),
+      arrivalAirport: findAirportNameByCode(segment.arrival.iataCode),
+      flightNumber: segment.number,
+      airCraftNumber: segment.aircraft.code,
+      carrierCode: segment.carrierCode,
+    }));
+  };
 
-  const toggleFavorite = () => {
-    setFavorited(!favorited);
+  const toggleFavorite = async () => {
+    const userName = localStorage.getItem("sessionUsername");
+    if (userName && favorited == false) {
+      const flightDetails = {
+        tripType: queryData.selectedTripType,
+        noOfAdults: queryData.totalAdults.toString(),
+        noOfChildren: queryData.totalChildren.toString(),
+        cabinClass: queryData.selectedCabinClass,
+        route: `${queryData.selectedOriginAirportCode} - ${queryData.selectedReturnAirportCode}`,
+        price: data.price.total.toString(),
+        departureDetails: {
+          duration: formatDuration(data.itineraries[0]?.duration),
+          date: formatDate(queryData.selectedDepartureDate),
+          segments: getFormattedSegments(data.itineraries[0].segments),
+        },
+        returnDetails: {
+          duration: formatDuration(data.itineraries[1]?.duration),
+          date: formatDate(queryData.selectedReturnDate),
+          segments: getFormattedSegments(data.itineraries[1].segments),
+        },
+      };
+      try {
+        const response = await axios.post(
+          `${API_URL}/user/${userName}/bookmark`,
+          flightDetails
+        );
+        if (response.status === 200) {
+          console.log("Bookmark Saved!");
+          console.log(response.data.bookmark);
+          setFavorited(true);
+        }
+      } catch (error) {
+        //todo: Delete saved record
+        console.error("Error saving Bookmark:", error);
+      }
+    } else if (userName && favorited == true) {
+      setFavorited(false);
+    } else {
+      alert("Please log in to favourite this flight.");
+      return;
+    }
   };
 
   return (

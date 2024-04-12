@@ -9,6 +9,7 @@ import {
   CardActions,
   Divider,
   Button,
+  Tooltip,
 } from "@mui/material";
 
 //Project Import
@@ -19,6 +20,8 @@ import PlaneDetails from "./PlaneDetailsBookmark";
 //Icons Import
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import DeleteIcon from "@mui/icons-material/Delete";
+import PersonIcon from "@mui/icons-material/Person";
+import ChildCareIcon from "@mui/icons-material/ChildCare";
 
 const logoUrl = "assets/images/airline/sgairlines.png";
 
@@ -34,7 +37,6 @@ interface MockFlightData {
   cabinClass: string;
   route: string;
   price: string;
-  stop: string;
   departureDetails: FlightDetails;
   returnDetails: FlightDetails;
 }
@@ -57,14 +59,9 @@ interface Segment {
 
 const FlightBookmarkCard: React.FC<FlightCardProps> = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
-  const [favorited, setFavorited] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
-  };
-
-  const toggleFavorite = () => {
-    setFavorited(!favorited);
   };
 
   return (
@@ -147,7 +144,7 @@ const FlightBookmarkCard: React.FC<FlightCardProps> = ({ data }) => {
             </Typography>
             {!expanded && (
               <Typography variant="caption" sx={{ color: "grey.600" }}>
-                Return ・ {data.route}
+                Return ・ {data.route.split(" - ").reverse().join(" - ")}
               </Typography>
             )}
           </Box>
@@ -180,6 +177,36 @@ const FlightBookmarkCard: React.FC<FlightCardProps> = ({ data }) => {
             </Typography>
             <Typography variant="caption" sx={{ color: "grey.600" }}>
               {data.tripType}
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              marginLeft: 2,
+            }}
+          >
+            <Typography sx={{ fontWeight: "bold" }} component="div">
+              <Tooltip title="Number of adults">
+                <PersonIcon sx={{ verticalAlign: "middle", mr: 0.5 }} />
+              </Tooltip>
+              {data.noOfAdults} Adults
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              marginLeft: 2,
+            }}
+          >
+            <Typography sx={{ fontWeight: "bold" }} component="div">
+              <Tooltip title="Number of children">
+                <ChildCareIcon sx={{ verticalAlign: "middle", mr: 0.5 }} />
+              </Tooltip>
+              {data.noOfChildren} Children
             </Typography>
           </Box>
         </CardContent>
