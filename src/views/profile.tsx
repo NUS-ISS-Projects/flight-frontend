@@ -15,6 +15,7 @@ import { TabsProps } from "@/types";
 
 import Profile from "@/components/profile/profile";
 import SavedFlights from "@/components/profile/savedFlight";
+import ChangePassword from "@/components/profile/changePassword";
 
 const SectionWrapper = styled("div")(({ theme }) => ({
   display: "flex",
@@ -84,21 +85,30 @@ const ProfilePage = () => {
             >
               <Tab
                 component={Link}
-                href="#"
+                href=""
                 label="Profile Information"
                 {...a11yProps(0)}
               />
               <Tab
                 component={Link}
-                href="#"
-                label="Saved Flights"
+                href=""
+                label="Change Password"
                 {...a11yProps(1)}
+              />
+              <Tab
+                component={Link}
+                href=""
+                label="Saved Flights"
+                {...a11yProps(2)}
               />
             </Tabs>
             <TabPanel value={value} index={0}>
               <Profile />
             </TabPanel>
             <TabPanel value={value} index={1}>
+              <ChangePassword />
+            </TabPanel>
+            <TabPanel value={value} index={2}>
               <SavedFlights />
             </TabPanel>
           </div>

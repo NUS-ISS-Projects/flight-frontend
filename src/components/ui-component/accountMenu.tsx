@@ -31,6 +31,7 @@ const AccountMenu = () => {
   };
   const handleLogout = () => {
     logout();
+    router.push("/");
   };
   return (
     <>

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { UserProfile } from "@/types/user-profile";
 import SubCard from "../ui-component/cards/SubCard";
 
 import {
@@ -12,58 +11,54 @@ import {
   TextField,
   Typography,
   FormHelperText,
-  OutlinedInput,
-  IconButton,
-  InputAdornment,
 } from "@mui/material";
 
 //Icons
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
+
+const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
 
 const ProfileTab = () => {
-  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [currentPassword, setCurrentPassword] = useState("");
+  const [name, setName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleCurrentPasswordChange = (event: any) => {
-    setCurrentPassword(event.target.value);
-  };
-  const handleClickShowPassword = () => {
-    setShowPassword(!showPassword);
+  const handleUpdateDetails = async () => {
+    try {
+      const sessionUsername = localStorage.getItem("sessionUsername");
+      const response = await axios.put(
+        `${API_URL}/user/editProfile/${sessionUsername}`,
+        {
+          name,
+          userName,
+          email,
+        }
+      );
+      if (response.status === 200) {
+        alert("Profile updated successfully");
+      } else {
+        throw new Error("Failed to update profile");
+      }
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      alert("Error updating profile");
+    }
   };
 
   useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const userNameFromSession = localStorage.getItem("sessionUsername");
-        //console.log(userNameFromSession);
-        const response = await axios.post(
-          "http://localhost:8888/api/user/userProfile/" + userNameFromSession
-        );
-        const userData = response.data;
-        console.log(userData);
-        const id = userData.match(/id='(.*?)'/)?.[1] || "";
-        const name = userData.match(/name='(.*?)'/)?.[1] || "";
-        const email = userData.match(/email='(.*?)'/)?.[1] || "";
-        const username = userData.match(/userName='(.*?)'/)?.[1] || "";
-
-        const userProfileData: UserProfile = {
-          id,
-          name,
-          email,
-          username,
-        };
-
-        setUserProfile(userProfileData);
-      } catch (error) {
-        console.error("Error fetching user profile:", error);
-      } finally {
-      }
-    };
-
-    fetchUserProfile();
+    try {
+      const sessionUsername = localStorage.getItem("sessionUsername");
+      axios
+        .get(`${API_URL}/user/userProfile/${sessionUsername}`)
+        .then((response) => {
+          setName(response.data.name);
+          setUserName(response.data.userName);
+          setEmail(response.data.email);
+          console.log(response.data);
+        });
+    } catch (error) {
+      console.error("Error fetching user profile:", error);
+    }
   }, []);
 
   return (
@@ -109,42 +104,36 @@ const ProfileTab = () => {
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <FormHelperText>Full Name</FormHelperText>
-              <TextField id="outlined-basic1" fullWidth />
+              <TextField
+                id="fullName-field"
+                fullWidth
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </Grid>
             <Grid item xs={12}>
               <FormHelperText>Username</FormHelperText>
-              <TextField id="outlined-basic1" fullWidth value="" />
+              <TextField
+                id="userName-field"
+                fullWidth
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
             </Grid>
             <Grid item xs={12}>
               <FormHelperText>Email</FormHelperText>
-              <TextField id="outlined-basic6" fullWidth />
-            </Grid>
-            <Grid item xs={12}>
-              <FormHelperText>Change Password</FormHelperText>
-              <OutlinedInput
-                id="outlined-basic9"
-                type={showPassword ? "text" : "password"}
+              <TextField
+                id="email-field"
                 fullWidth
-                value={currentPassword}
-                onChange={handleCurrentPasswordChange}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={handleClickShowPassword}
-                      edge="end"
-                      size="large"
-                    >
-                      {showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                }
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
               <Stack direction="row" spacing={2}>
                 <Button
                   variant="contained"
+                  onClick={handleUpdateDetails}
                   sx={{
                     fontWeight: "bold",
                     backgroundColor: "#6246ea",
