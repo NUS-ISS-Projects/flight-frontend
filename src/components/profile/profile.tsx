@@ -1,203 +1,153 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { UserProfile } from "@/types/user-profile";
 import SubCard from "../ui-component/cards/SubCard";
 
 import {
+  Avatar,
   Button,
   Grid,
   Stack,
   TextField,
+  Typography,
   FormHelperText,
-  OutlinedInput,
-  IconButton,
-  InputAdornment,
 } from "@mui/material";
 
 //Icons
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { Console } from "console";
 
 const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
 
 const ProfileTab = () => {
-  const [userProfile, setUserProfile] = useState<UserProfile>({
-    id: "",
-    name: "",
-    email: "",
-    username: "",
-  });
-  const [fullName, setFullName] = useState("");
-  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-  const [oldPassword, setOldPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const userNameFromSession = localStorage.getItem("sessionUsername");
-
-  useEffect(() => {
-    const userNameFromSession = localStorage.getItem("sessionUsername");
-  
-    const fetchUserProfile = async () => {
-      try {
-        const response = await axios.get(
-          `${API_URL}/user/userProfile/` + userNameFromSession
-        );
-        const userData = response.data;
-        const id = userData.match(/id='(.*?)'/)?.[1] || "";
-        const name = userData.match(/name='(.*?)'/)?.[1] || "";
-        const email = userData.match(/email='(.*?)'/)?.[1] || "";
-        const username = userData.match(/userName='(.*?)'/)?.[1] || "";
-  
-        const userProfileData: UserProfile = {
-          id,
-          name,
-          email,
-          username,
-        };
-  
-        setUserProfile(userProfileData);
-        setFullName(name);
-        setUsername(username);
-        setEmail(email);
-      } catch (error) {
-        console.error("Error fetching user profile:", error);
-      }
-    };
-  
-    fetchUserProfile();
-  }, [localStorage.getItem("sessionUsername")]);
-  
-
-  const handleNewPasswordChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setNewPassword(event.target.value);
-  };
-
-  const handleOldPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setOldPassword(event.target.value);
-  };
-
-  const handleClickShowPassword = () => {
-    setShowPassword(!showPassword);
-  };
 
   const handleUpdateDetails = async () => {
     try {
-      console.log("Username:", username);
+      const sessionUsername = localStorage.getItem("sessionUsername");
       const response = await axios.put(
-        `${API_URL}/user/editProfile/` + userNameFromSession,
+        `${API_URL}/user/editProfile/${sessionUsername}`,
         {
-          id: parseInt(userProfile.id ?? '0'),
-          name: fullName,
-          username: username,
-          email: email,
-          password: null
-        },
-      );
-      const responseStatus = response.status; 
-      console.log(responseStatus);
-      // Handle success
-    } catch (error) {
-      console.error("Error updating user profile:", error);
-      // Handle error
-    }
-    if(newPassword) {
-      const newPasswordResponse = await axios.put(
-        `${API_URL}/user/change-password/` + userNameFromSession,
-        {
-          id: parseInt(userProfile.id ?? '0'),
-          name: fullName,
-          username: username,
-          email: email,
-          newPassword: newPassword,
-          oldPassword: oldPassword
+          name,
+          userName,
+          email,
         }
       );
-      // Handle response for password change
+      if (response.status === 200) {
+        alert("Profile updated successfully");
+      } else {
+        throw new Error("Failed to update profile");
+      }
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      alert("Error updating profile");
     }
   };
 
+  useEffect(() => {
+    try {
+      const sessionUsername = localStorage.getItem("sessionUsername");
+      axios
+        .get(`${API_URL}/user/userProfile/${sessionUsername}`)
+        .then((response) => {
+          setName(response.data.name);
+          setUserName(response.data.userName);
+          setEmail(response.data.email);
+          console.log(response.data);
+        });
+    } catch (error) {
+      console.error("Error fetching user profile:", error);
+    }
+  }, []);
+
   return (
     <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <FormHelperText>Full Name</FormHelperText>
-        <TextField
-          id="fullName"
-          fullWidth
-          value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <FormHelperText>Username</FormHelperText>
-        <TextField
-          id="username"
-          fullWidth
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <FormHelperText>Email</FormHelperText>
-        <TextField
-          id="email"
-          fullWidth
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <FormHelperText>Change Password: New password</FormHelperText>
-        <OutlinedInput
-          id="password"
-          type={showPassword ? "text" : "password"}
-          fullWidth
-          value={newPassword}
-          onChange={handleNewPasswordChange}
-          endAdornment={
-            <InputAdornment position="end">
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                edge="end"
-                size="large"
+      <Grid item sm={6} md={4}>
+        <SubCard title={"Welcome!"} contentSX={{ textAlign: "center" }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Avatar
+                alt="avatar"
+                src=""
+                sx={{ width: 100, height: 100, margin: "0 auto" }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Typography variant="subtitle2" align="center">
+                Upload/Change Your Profile Image
+              </Typography>
+            </Grid>
+            <Grid item xs={12} display="flex" justifyContent="center">
+              <Button
+                component="label"
+                variant="contained"
+                tabIndex={-1}
+                startIcon={<CloudUploadIcon />}
+                sx={{
+                  fontWeight: "bold",
+                  backgroundColor: "#6246ea",
+                  "&:hover": {
+                    backgroundColor: "#4431a3",
+                  },
+                }}
               >
-                {showPassword ? <Visibility /> : <VisibilityOff />}
-              </IconButton>
-            </InputAdornment>
-          }
-        />
+                Upload Avatar
+              </Button>
+            </Grid>
+          </Grid>
+        </SubCard>
       </Grid>
-      <Grid item xs={12}>
-          <FormHelperText>Old Password</FormHelperText>
-            <TextField
-              id="oldPassword"
-              type="password"
-              fullWidth
-              value={oldPassword}
-              onChange={handleOldPasswordChange}
-            />
-      </Grid>
-      <Grid item xs={12}>
-        <Stack direction="row" spacing={2}>
-          <Button
-            variant="contained"
-            onClick={handleUpdateDetails}
-            sx={{
-              fontWeight: "bold",
-              backgroundColor: "#6246ea",
-              "&:hover": {
-                backgroundColor: "#4431a3",
-              },
-            }}
-          >
-            Update Details
-          </Button>
-        </Stack>
+
+      <Grid item sm={6} md={8}>
+        <SubCard title="Edit Account Details">
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <FormHelperText>Full Name</FormHelperText>
+              <TextField
+                id="fullName-field"
+                fullWidth
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormHelperText>Username</FormHelperText>
+              <TextField
+                id="userName-field"
+                fullWidth
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormHelperText>Email</FormHelperText>
+              <TextField
+                id="email-field"
+                fullWidth
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Stack direction="row" spacing={2}>
+                <Button
+                  variant="contained"
+                  onClick={handleUpdateDetails}
+                  sx={{
+                    fontWeight: "bold",
+                    backgroundColor: "#6246ea",
+                    "&:hover": {
+                      backgroundColor: "#4431a3",
+                    },
+                  }}
+                >
+                  Update Details
+                </Button>
+              </Stack>
+            </Grid>
+          </Grid>
+        </SubCard>
       </Grid>
     </Grid>
   );

@@ -18,6 +18,42 @@ import FlightCard from "../ui-component/cards/FlightResultsCard";
 
 const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
 
+interface Flight {
+  id: string;
+  price: FlightPrice;
+  itineraries: ItinerariesDetails[];
+}
+
+interface ItinerariesDetails {
+  duration: string; // Make sure this is always a string, not undefined
+  segments: Segment[];
+}
+
+interface Segment {
+  departure: DepartureArrivalDetails;
+  arrival: DepartureArrivalDetails;
+  carrierCode: string;
+  number: string;
+  aircraft: AircraftDetails;
+  duration: string;
+  numberOfStops: number;
+}
+
+interface DepartureArrivalDetails {
+  iataCode: string;
+  terminal?: string;
+  at: string;
+}
+
+interface AircraftDetails {
+  code: string;
+}
+
+interface FlightPrice {
+  total: number;
+  currency: string;
+}
+
 const MainFlightsFlightResult = () => {
   const [selectedSortType, setSelectedSortType] = useState("Best Flight");
   const [anchorEl, setAnchorEl] = useState(null);
@@ -35,7 +71,7 @@ const MainFlightsFlightResult = () => {
     totalAdults: 0,
     totalChildren: 0,
   });
-  const [flightsResult, setFlightsResults] = useState([]);
+  const [flightsResult, setFlightsResults] = useState<Flight[]>([]);
 
   useEffect(() => {
     const storedFlightData = localStorage.getItem("SearchQuery");
@@ -84,11 +120,61 @@ const MainFlightsFlightResult = () => {
 
   const handleSelect = (sortType: any) => {
     setSelectedSortType(sortType);
+    const sortedFlights = sortFlights([...flightsResult], sortType);
+    setFlightsResults(sortedFlights);
     handleClose();
   };
 
   const handleViewMore = () => {
     setViewMore(true);
+  };
+  const sortFlights = (flights: Flight[], sortType: string): Flight[] => {
+    switch (sortType) {
+      case "Price":
+        return flights.sort((a, b) => a.price.total - b.price.total);
+      case "Departure Time":
+        return flights.sort(
+          (a, b) =>
+            new Date(a.itineraries[0].segments[0].departure.at).getTime() -
+            new Date(b.itineraries[0].segments[0].departure.at).getTime()
+        );
+      case "Arrival Time":
+        return flights.sort(
+          (a, b) =>
+            new Date(
+              a.itineraries[0].segments[
+                a.itineraries[0].segments.length - 1
+              ].arrival.at
+            ).getTime() -
+            new Date(
+              b.itineraries[0].segments[
+                b.itineraries[0].segments.length - 1
+              ].arrival.at
+            ).getTime()
+        );
+      case "Deperature Time (Return)":
+        return flights.sort(
+          (a, b) =>
+            new Date(a.itineraries[1].segments[0].departure.at).getTime() -
+            new Date(b.itineraries[1].segments[0].departure.at).getTime()
+        );
+      case "Arrival Time (Return)":
+        return flights.sort(
+          (a, b) =>
+            new Date(
+              a.itineraries[1].segments[
+                a.itineraries[1].segments.length - 1
+              ].arrival.at
+            ).getTime() -
+            new Date(
+              b.itineraries[1].segments[
+                b.itineraries[1].segments.length - 1
+              ].arrival.at
+            ).getTime()
+        );
+      default:
+        return flights;
+    }
   };
 
   return (
@@ -133,24 +219,28 @@ const MainFlightsFlightResult = () => {
               </IconButton>
             </Tooltip>
             <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-              {["Price", "Departure Time", "Arrival Time", "Duration"].map(
-                (sortType) => (
-                  <MenuItem
-                    key={sortType}
-                    onClick={() => handleSelect(sortType)}
-                    sx={{ fontSize: "0.875rem", pl: 4 }}
-                  >
-                    {selectedSortType === sortType && (
-                      <CheckIcon
-                        color="primary"
-                        fontSize="small"
-                        sx={{ mr: 1, position: "absolute", left: 8 }}
-                      />
-                    )}
-                    <ListItemText primary={sortType} />
-                  </MenuItem>
-                )
-              )}
+              {[
+                "Price",
+                "Departure Time",
+                "Arrival Time",
+                "Deperature Time (Return)",
+                "Arrival Time (Return)",
+              ].map((sortType) => (
+                <MenuItem
+                  key={sortType}
+                  onClick={() => handleSelect(sortType)}
+                  sx={{ fontSize: "0.875rem", pl: 4 }}
+                >
+                  {selectedSortType === sortType && (
+                    <CheckIcon
+                      color="primary"
+                      fontSize="small"
+                      sx={{ mr: 1, position: "absolute", left: 8 }}
+                    />
+                  )}
+                  <ListItemText primary={sortType} />
+                </MenuItem>
+              ))}
             </Menu>
           </Grid>
         </Grid>

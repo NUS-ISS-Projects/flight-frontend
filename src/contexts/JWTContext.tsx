@@ -21,7 +21,6 @@ import { useRouter } from "next/navigation";
 import { JWTContextType } from "@/types/auth";
 import { InitialLoginContextProps } from "@/types";
 
-import ErrorPopup from "@/components/authentication/AuthErrorPopUp";
 const API_URL = process.env.NEXT_PUBLIC_WEB_API_URL;
 
 // constant
@@ -96,7 +95,8 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
       }
     } catch (err: unknown) {
       console.error(err);
-      setShowErrorPopup(true);
+      alert("Invalid credentials");
+      return;
     }
   };
 
@@ -125,7 +125,8 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
       }
     } catch (err: unknown) {
       console.error(err);
-      setShowErrorPopup(true);
+      alert("User is already registered");
+      return;
     }
   };
 
@@ -146,12 +147,6 @@ export const JWTProvider = ({ children }: { children: ReactNode }) => {
       }}
     >
       {children}
-      {showErrorPopup && (
-        <ErrorPopup
-          message="An error occurred."
-          onClose={handleCloseErrorPopup}
-        />
-      )}
     </JWTContext.Provider>
   );
 };

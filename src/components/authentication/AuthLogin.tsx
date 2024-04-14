@@ -34,8 +34,6 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 // ===============================|| JWT LOGIN ||=============================== //
 
 const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
-  const theme = useTheme();
-  const router = useRouter();
   const { login } = useAuth();
 
   const scriptedRef = useScriptRef();
