@@ -1,22 +1,16 @@
 import React from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 // material-ui
-import { useTheme } from "@mui/material/styles";
 import {
   Box,
   Button,
-  Checkbox,
   FormControl,
-  FormControlLabel,
   FormHelperText,
-  Grid,
   IconButton,
   InputAdornment,
   InputLabel,
   OutlinedInput,
-  Typography,
 } from "@mui/material";
 
 // third party
@@ -31,18 +25,17 @@ import useScriptRef from "@/hooks/useScriptRef";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
-
 // ===============================|| JWT REGISTER ||=============================== //
 
-const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => {
-  const theme = useTheme();
+const JWTRegister = ({
+  registerProp,
+  ...others
+}: {
+  registerProp?: number;
+}) => {
   const router = useRouter();
   const { register } = useAuth();
-
   const scriptedRef = useScriptRef();
-
-  const [checked, setChecked] = React.useState(true);
-
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -70,19 +63,25 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
           .required("Email is required"),
         password: Yup.string().max(255).required("Password is required"),
       })}
-      onSubmit={async (values: {
+      onSubmit={async (
+        values: {
           name: string;
-          email: string; username: any; password: any; 
-}, { setErrors, setStatus, setSubmitting }: any) => {
+          email: string;
+          username: any;
+          password: any;
+        },
+        { setErrors, setStatus, setSubmitting }: any
+      ) => {
         try {
-          register(values.name,values.email,values.username, values.password);
+          register(values.name, values.email, values.username, values.password);
           if (scriptedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
+            router.push("/login");
           }
         } catch (err: any) {
           console.error(err);
-          if (scriptedRef.current) {631
+          if (scriptedRef.current) {
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
@@ -100,7 +99,34 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
         values,
       }) => (
         <form noValidate onSubmit={handleSubmit} {...others}>
-            <FormControl
+          <FormControl
+            fullWidth
+            error={Boolean(touched.name && errors.name)}
+            sx={{ mb: 2 }}
+          >
+            <InputLabel htmlFor="outlined-adornment-email-login">
+              Full Name
+            </InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-email-login"
+              type="name"
+              value={values.name}
+              name="name"
+              onBlur={handleBlur}
+              onChange={handleChange}
+              label="Name"
+              inputProps={{}}
+            />
+            {touched.name && errors.name && (
+              <FormHelperText
+                error
+                id="standard-weight-helper-text-email-login"
+              >
+                {errors.name}
+              </FormHelperText>
+            )}
+          </FormControl>
+          <FormControl
             fullWidth
             error={Boolean(touched.email && errors.email)}
             sx={{ mb: 2 }}
@@ -127,36 +153,6 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
               </FormHelperText>
             )}
           </FormControl>
-
-
-          <FormControl
-            fullWidth
-            error={Boolean(touched.name && errors.name)}
-            sx={{ mb: 2 }}
-          >
-            <InputLabel htmlFor="outlined-adornment-email-login">
-              Name
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-email-login"
-              type="name"
-              value={values.name}
-              name="name"
-              onBlur={handleBlur}
-              onChange={handleChange}
-              label="Name"
-              inputProps={{}}
-            />
-            {touched.name && errors.name && (
-              <FormHelperText
-                error
-                id="standard-weight-helper-text-email-login"
-              >
-                {errors.name}
-              </FormHelperText>
-            )}
-          </FormControl>
-                
 
           <FormControl
             fullWidth
@@ -185,7 +181,7 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
               </FormHelperText>
             )}
           </FormControl>
-                
+
           <FormControl
             fullWidth
             error={Boolean(touched.password && errors.password)}
@@ -226,38 +222,6 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
             )}
           </FormControl>
 
-          <Grid container alignItems="center" justifyContent="space-between">
-            <Grid item>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={checked}
-                    onChange={(event) => setChecked(event.target.checked)}
-                    name="checked"
-                    sx={{
-                      color: "#6246ea", // Color when the checkbox is not checked
-                      "&.Mui-checked": {
-                        color: "#6246ea", // Color when the checkbox is checked
-                      },
-                    }}
-                  />
-                }
-                label="Keep me logged in"
-              />
-            </Grid>
-            <Grid item>
-              <Typography
-                variant="subtitle1"
-                component={Link}
-                href={"/"}
-                color="#6246ea"
-                sx={{ textDecoration: "none", fontWeight: "bold" }}
-              >
-                Forgot Password?
-              </Typography>
-            </Grid>
-          </Grid>
-
           {errors.submit && (
             <Box sx={{ mt: 3 }}>
               <FormHelperText error>{errors.submit}</FormHelperText>
@@ -270,6 +234,7 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
                 "&:hover": {
                   backgroundColor: "#4431a3",
                 },
+                fontWeight: "bold",
               }}
               disabled={isSubmitting}
               fullWidth
@@ -277,7 +242,7 @@ const JWTRegister = ({ registerProp, ...others }: { registerProp?: number }) => 
               type="submit"
               variant="contained"
             >
-              Sign In
+              Sign up
             </Button>
           </Box>
         </form>

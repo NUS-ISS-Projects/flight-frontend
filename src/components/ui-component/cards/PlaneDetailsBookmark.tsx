@@ -1,23 +1,14 @@
 import { Box, Typography } from "@mui/material";
 interface Segment {
-  aircraft: Aircraft;
-  number: string;
+  flightNumber: string;
+  airCraftNumber: string;
   carrierCode: string;
 }
-interface Aircraft {
-  code: string;
-}
-
-interface searchQuery {
-  selectedCabinClass: string;
-}
-
 interface PlaneDetailsProps {
   data: Segment;
-  searchQuery: searchQuery;
 }
 
-const PlaneDetails: React.FC<PlaneDetailsProps> = ({ data, searchQuery }) => {
+const PlaneDetailsBookmark: React.FC<PlaneDetailsProps> = ({ data }) => {
   return (
     <Box
       sx={{
@@ -29,10 +20,10 @@ const PlaneDetails: React.FC<PlaneDetailsProps> = ({ data, searchQuery }) => {
       }}
     >
       <Typography variant="caption" color="#70757a">
-        {searchQuery.selectedCabinClass}・ Flight Number: {data.number}・
-        Aircraft: {data.aircraft.code}・ Carrier: {data.carrierCode}
+        Flight Number: {data.flightNumber}・ Aircraft: {data.airCraftNumber}・
+        Carrier: {data.carrierCode}
       </Typography>
     </Box>
   );
 };
-export default PlaneDetails;
+export default PlaneDetailsBookmark;

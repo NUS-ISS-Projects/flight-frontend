@@ -1,7 +1,7 @@
 "use client";
 
-import { Divider, ThemeProvider, Box } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Divider, Box } from "@mui/material";
+import { ThemeProvider, styled } from "@mui/material/styles";
 import theme from "../themes/theme";
 
 import NavBar from "../components/landingpage/NavBar";

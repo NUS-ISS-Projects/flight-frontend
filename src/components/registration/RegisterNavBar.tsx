@@ -14,8 +14,6 @@ import {
   Typography,
   useScrollTrigger,
 } from "@mui/material";
-import AccountProfile from "../ui-component/accountMenu";
-import useAuth from "@/hooks/useAuth";
 
 // elevation scroll
 interface ElevationScrollProps {
@@ -37,8 +35,7 @@ function ElevationScroll({ children, window }: ElevationScrollProps) {
 
 // ==============================|| NAV BAR ||============================== //
 
-const NavBar = ({ ...others }) => {
-  const { isLoggedIn } = useAuth();
+const RegisterNavBar = ({ ...others }) => {
   return (
     <ElevationScroll {...others}>
       <MuiAppBar sx={{ backgroundColor: "#fffffe" }}>
@@ -61,39 +58,34 @@ const NavBar = ({ ...others }) => {
             <Stack
               direction="row"
               sx={{ display: { xs: "none", sm: "flex" } }}
-              spacing={{ xs: 1.5, md: 2.5 }}
+              alignItems="center"
             >
-              {!isLoggedIn ? (
-                <>
-                  <Button
-                    component={Link}
-                    href="/login"
-                    disableElevation
-                    variant="contained"
-                    color="secondary"
-                    sx={{
-                      color: "black",
-                      backgroundColor: "white",
-                      "&:hover": {
-                        backgroundColor: "#DCDCDC",
-                      },
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Log in
-                  </Button>
-                  <Button
-                    color="inherit"
-                    component={Link}
-                    href="/register"
-                    sx={{ fontWeight: "bold" }}
-                  >
-                    Sign up
-                  </Button>
-                </>
-              ) : (
-                <AccountProfile />
-              )}
+              <Typography
+                sx={{
+                  display: "flex",
+                  color: "black",
+                }}
+              >
+                Already have an account?
+              </Typography>
+              <Button
+                component={Link}
+                href="/login"
+                disableElevation
+                variant="contained"
+                color="secondary"
+                sx={{
+                  color: "black",
+                  backgroundColor: "white",
+                  textDecoration: "underline",
+                  "&:hover": {
+                    backgroundColor: "#DCDCDC",
+                  },
+                  fontWeight: "bold",
+                }}
+              >
+                Sign in
+              </Button>
             </Stack>
           </Toolbar>
         </Container>
@@ -102,4 +94,4 @@ const NavBar = ({ ...others }) => {
   );
 };
 
-export default NavBar;
+export default RegisterNavBar;
