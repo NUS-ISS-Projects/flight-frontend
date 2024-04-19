@@ -18,7 +18,7 @@ import { useRouter } from "next/navigation";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import CheckIcon from "@mui/icons-material/Check";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { FlightCard } from "../ui-component/cards/FlightResultsCard";
+//import FlightCard from "../ui-component/cards/FlightResultsCard";
 
 //styling
 const FlightLink = styled("span")(({ theme }) => ({
@@ -273,8 +273,8 @@ const DepartingFlights: NextPage = () => {
           </Grid>
         </Grid>
       </Box>
-      {mockFlightsData.slice(0, viewMore ? undefined : 2).map((flight) => (
-        <FlightCard key={flight.id} data={flight} isReturnView={false} />
+      {/* {mockFlightsData.slice(0, viewMore ? undefined : 2).map((flight) => (
+        <FlightCard key={flight.id} data={flight} />
       ))}
       {!viewMore && mockFlightsData.length > 2 && (
         <Box
@@ -293,7 +293,7 @@ const DepartingFlights: NextPage = () => {
             View More
           </Button>
         </Box>
-      )}
+      )} */}
     </Container>
   );
 };
