@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  createContext,
-  useReducer,
-  ReactNode,
-  useState,
-  useEffect,
-} from "react";
+import React, { createContext, useReducer, ReactNode, useEffect } from "react";
 
 // reducer - state management
 import { LOGIN, LOGOUT } from "@/store/actions";
@@ -46,11 +40,6 @@ const JWTContext = createContext<JWTContextType | null>(null);
 export const JWTProvider = ({ children }: { children: ReactNode }) => {
   const router = useRouter();
   const [state, dispatch] = useReducer(accountReducer, initialState);
-  const [showErrorPopup, setShowErrorPopup] = useState(false);
-
-  const handleCloseErrorPopup = () => {
-    setShowErrorPopup(false);
-  };
 
   useEffect(() => {
     const init = async () => {

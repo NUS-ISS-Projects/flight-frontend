@@ -1,5 +1,6 @@
 "use client";
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import theme from "../themes/theme";
 import Link from "next/link";
 import { styled, ThemeProvider } from "@mui/material/styles";
@@ -50,6 +51,14 @@ const ProfilePage = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+  const router = useRouter();
+  useEffect(() => {
+    const serviceToken = window.localStorage.getItem("serviceToken");
+    if (!serviceToken) {
+      router.push("/login");
+    }
+  });
+
   return (
     <ThemeProvider theme={theme}>
       <SectionWrapper>

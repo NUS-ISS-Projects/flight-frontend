@@ -141,7 +141,8 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
 
   const toggleFavorite = async () => {
     const userName = localStorage.getItem("sessionUsername");
-    if (userName && favorited == false) {
+    const serviceToken = window.localStorage.getItem("serviceToken");
+    if (userName && serviceToken && favorited == false) {
       const flightDetails = {
         tripType: queryData.selectedTripType,
         noOfAdults: queryData.totalAdults.toString(),
@@ -174,7 +175,7 @@ const FlightCard: React.FC<FlightCardProps> = ({ data, queryData }) => {
         //todo: Delete saved record
         console.error("Error saving Bookmark:", error);
       }
-    } else if (userName && favorited == true) {
+    } else if (userName && serviceToken && favorited == true) {
       setFavorited(false);
     } else {
       alert("Please log in to favourite this flight.");

@@ -74,7 +74,6 @@ const JWTLogin = ({ loginProp, ...others }: { loginProp?: number }) => {
         } catch (err: any) {
           console.error(err);
           if (scriptedRef.current) {
-            631;
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);

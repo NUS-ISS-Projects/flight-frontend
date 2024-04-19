@@ -19,7 +19,6 @@ import PlaneDetails from "./PlaneDetailsBookmark";
 
 //Icons Import
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import DeleteIcon from "@mui/icons-material/Delete";
 import PersonIcon from "@mui/icons-material/Person";
 import ChildCareIcon from "@mui/icons-material/ChildCare";
 
@@ -211,25 +210,6 @@ const FlightBookmarkCard: React.FC<FlightCardProps> = ({ data }) => {
           </Box>
         </CardContent>
         <CardActions disableSpacing>
-          <Button
-            variant="outlined"
-            startIcon={<DeleteIcon />}
-            // onClick={toggleFavorite}
-            sx={{
-              color: "error.main",
-              borderColor: "error.main",
-              backgroundColor: "white",
-              fontWeight: "bold",
-              "&:hover": {
-                backgroundColor: "error.main",
-                color: "white",
-                borderColor: "error.main",
-                fontWeight: "bold",
-              },
-            }}
-          >
-            Delete
-          </Button>
           <IconButton
             onClick={handleExpandClick}
             aria-expanded={expanded}
