@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The Sky Scout web application is crafted to offer a detailed platform for users to compare flight fares, along with other critical flight details like departure and arrival times, across various airlines. This enables travellers to choose the most suitable option for their itinerary based on their specific preferences.
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Before running application locally, ensure .env file is updated with correct url (NEXT_PUBLIC_WEB_API_URL=http://localhost:8888) and run the backend.
+Before running application locally, ensure .env file is updated with correct url (NEXT_PUBLIC_WEB_API_URL=http://localhost:8888/api) and run the backend at: https://github.com/NUS-ISS-Projects/flight-backend
 
 ## Deploy on Vercel
 
@@ -26,7 +26,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Application on Vercel
 
+Check out the application at: https://flight-frontend-lilac.vercel.app/
 
-Firebase set up 
-npm install firebase
+![alt text](image.png)
